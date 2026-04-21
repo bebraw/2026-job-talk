@@ -1,94 +1,19 @@
-const { addPageBadge, addSectionTitle } = require("../generator/helpers");
+const {
+  addAccentRule,
+  addBulletItem,
+  addCompactCard,
+  addPageBadge,
+  addPanel,
+  addSectionTitle
+} = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 3,
-  title: "Why this setup works"
+  index: 4,
+  title: "Hybrid rendering models"
 };
-
-function addMetric(canvas, theme, x, y, value, label, id) {
-  canvas.addText(`${id}-value`, value, {
-    x,
-    y,
-    w: 1.2,
-    h: 0.4,
-    fontFace,
-    fontSize: 20,
-    bold: true,
-    color: theme.accent,
-    margin: 0
-  }, {
-    group: "content-stats-panel"
-  });
-
-  canvas.addText(`${id}-label`, label, {
-    x,
-    y: y + 0.42,
-    w: 1.6,
-    h: 0.3,
-    fontFace,
-    fontSize: 10.5,
-    color: theme.muted,
-    margin: 0
-  }, {
-    group: "content-stats-panel"
-  });
-}
-
-function addSignalBar(canvas, pres, theme, x, y, width, label, value, group) {
-  canvas.addText(`${group}-label`, label, {
-    x,
-    y,
-    w: 1.3,
-    h: 0.22,
-    fontFace,
-    fontSize: 10,
-    color: theme.accent,
-    margin: 0
-  }, {
-    group: "content-chart-panel"
-  });
-
-  canvas.addShape(`${group}-track`, pres.ShapeType.roundRect, {
-    x: x + 1.38,
-    y: y + 0.03,
-    w: width,
-    h: 0.14,
-    rectRadius: 0.04,
-    line: { color: theme.light, transparency: 100 },
-    fill: { color: theme.light }
-  }, {
-    group: "content-chart-panel"
-  });
-
-  canvas.addShape(`${group}-fill`, pres.ShapeType.roundRect, {
-    x: x + 1.38,
-    y: y + 0.03,
-    w: width * value,
-    h: 0.14,
-    rectRadius: 0.04,
-    line: { color: theme.secondary, transparency: 100 },
-    fill: { color: theme.secondary }
-  }, {
-    group: "content-chart-panel"
-  });
-
-  canvas.addText(`${group}-value`, `${Math.round(value * 100)}%`, {
-    x: x + 3.62,
-    y: y - 0.02,
-    w: 0.52,
-    h: 0.24,
-    fontFace,
-    fontSize: 10,
-    color: theme.muted,
-    align: "right",
-    margin: 0
-  }, {
-    group: "content-chart-panel"
-  });
-}
 
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
@@ -98,99 +23,111 @@ function createSlide(pres, theme, options = {}) {
   addSectionTitle(
     canvas,
     theme,
-    "Signals",
+    "Highlight 1",
     slideConfig.title,
-    "The deck now borrows the SurviveJS content rhythm: dense information sits inside light utility-style containers with mint and teal doing the work."
+    "Hybrid rendering reframes the architecture space of modern web systems."
   );
 
-  canvas.addShape("content-header-rule", pres.ShapeType.roundRect, {
-    x: 7.56,
+  addAccentRule(canvas, pres, theme, {
+    id: "hybrid-rule",
+    x: 7.46,
     y: 0.68,
-    w: 1.8,
-    h: 0.08,
-    rectRadius: 0.03,
-    line: { color: theme.secondary, transparency: 100 },
-    fill: { color: theme.secondary }
-  }, {
-    group: "content-header"
+    w: 1.82,
+    group: "section-header"
   });
 
-  canvas.addShape("content-chart-panel", pres.ShapeType.roundRect, {
-    x: 0.6,
-    y: 2.24,
-    w: 4.65,
-    h: 2.1,
-    rectRadius: 0.08,
-    line: { color: theme.light, pt: 1 },
-    fill: { color: theme.panel }
-  }, {
-    group: "content-chart-panel"
+  addPanel(canvas, pres, theme, "hybrid-left-panel", {
+    x: 0.62,
+    y: 2.08,
+    w: 4.55,
+    h: 2.58,
+    lineColor: theme.light,
+    fillColor: theme.panel,
+    group: "hybrid-left"
   });
 
-  canvas.addText("content-chart-title", "Migration signals", {
-    x: 0.88,
-    y: 2.5,
-    w: 2.2,
-    h: 0.24,
+  canvas.addText("hybrid-left-title", "Dissertation backbone", {
+    x: 0.9,
+    y: 2.34,
+    w: 2.1,
+    h: 0.2,
     fontFace,
-    fontSize: 12,
+    fontSize: 11.6,
     bold: true,
     color: theme.accent,
     margin: 0
   }, {
-    group: "content-chart-panel"
+    group: "hybrid-left"
   });
 
-  addSignalBar(canvas, pres, theme, 0.88, 2.98, 2.1, "Skill", 0.96, "signal-skill");
-  addSignalBar(canvas, pres, theme, 0.88, 3.36, 2.1, "Runtime", 0.88, "signal-runtime");
-  addSignalBar(canvas, pres, theme, 0.88, 3.74, 2.1, "Slides", 0.92, "signal-slides");
-  addSignalBar(canvas, pres, theme, 0.88, 4.12, 2.1, "Docs", 0.85, "signal-docs");
-
-  canvas.addShape("content-stats-panel", pres.ShapeType.roundRect, {
-    x: 5.65,
-    y: 2.24,
-    w: 3.75,
-    h: 2.1,
-    rectRadius: 0.08,
-    line: { color: theme.primary, pt: 1.2 },
-    fill: { color: theme.secondary }
-  }, {
-    group: "content-stats-panel"
+  addBulletItem(canvas, pres, theme, {
+    id: "hybrid-bullet-space",
+    x: 0.9,
+    y: 2.72,
+    w: 3.96,
+    title: "Study the space between static and dynamic.",
+    body: "A middle ground between performance, maintainability, and interactivity.",
+    bodyH: 0.42,
+    group: "hybrid-left"
   });
 
-  canvas.addText("content-stats-title", "Key properties", {
-    x: 5.95,
-    y: 2.46,
-    w: 2,
-    h: 0.3,
+  addBulletItem(canvas, pres, theme, {
+    id: "hybrid-bullet-experience",
+    x: 0.9,
+    y: 3.6,
+    w: 3.96,
+    title: "Evaluate both user and developer experience.",
+    body: "Compare choices by their cost for users and teams.",
+    bodyH: 0.42,
+    group: "hybrid-left"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "hybrid-card-islands",
+    x: 5.62,
+    y: 2.08,
+    w: 3.18,
+    h: 0.76,
+    title: "Islands",
+    body: "Defer interactivity and isolate the dynamic parts that truly need it.",
+    group: "hybrid-right"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "hybrid-card-resumability",
+    x: 5.62,
+    y: 2.98,
+    w: 3.18,
+    h: 0.76,
+    title: "Resumability",
+    body: "Avoid hydration costs by serializing enough structure into HTML.",
+    group: "hybrid-right"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "hybrid-card-edge",
+    x: 5.62,
+    y: 3.88,
+    w: 3.18,
+    h: 0.76,
+    title: "Edge techniques",
+    body: "Move computation closer to users while keeping payload and latency under control.",
+    group: "hybrid-right"
+  });
+
+  canvas.addText("hybrid-note", "Teaching consequence: students need architectural models, not tool opinions.", {
+    x: 0.72,
+    y: 4.88,
+    w: 7.8,
+    h: 0.28,
     fontFace,
-    fontSize: 13.5,
+    fontSize: 9.6,
     bold: true,
-    color: theme.accent,
+    color: theme.muted,
     margin: 0
   }, {
-    group: "content-stats-panel"
-  });
-
-  [
-    { id: "modules", x: 5.95, y: 2.92, value: "4", label: "Slide modules" },
-    { id: "compile", x: 7.35, y: 2.92, value: "1", label: "PDF build path" },
-    { id: "theme", x: 5.95, y: 3.68, value: "0", label: "PPTX outputs" },
-    { id: "readme", x: 7.35, y: 3.68, value: "1", label: "Quality gate" }
-  ].forEach((metric) => {
-    canvas.addShape(`metric-card-${metric.id}`, pres.ShapeType.roundRect, {
-      x: metric.x - 0.14,
-      y: metric.y - 0.1,
-      w: 1.22,
-      h: 0.7,
-      rectRadius: 0.05,
-      line: { color: "FFFFFF", pt: 1 },
-      fill: { color: "FFFFFF", transparency: 0 }
-    }, {
-      group: "content-stats-panel"
-    });
-
-    addMetric(canvas, theme, metric.x, metric.y, metric.value, metric.label, `metric-${metric.id}`);
+    group: "hybrid-note",
+    skipOverlap: true
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

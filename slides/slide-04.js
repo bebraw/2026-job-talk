@@ -1,63 +1,19 @@
-const { addPageBadge, addSectionTitle } = require("../generator/helpers");
+const {
+  addAccentRule,
+  addBulletItem,
+  addCompactCard,
+  addPageBadge,
+  addPanel,
+  addSectionTitle
+} = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
-  type: "summary",
-  index: 4,
-  title: "Next steps"
+  type: "content",
+  index: 5,
+  title: "Simplification as a design principle"
 };
-
-function createChecklistItem(canvas, pres, theme, y, title, text, group) {
-  canvas.addShape(`${group}-bullet`, pres.ShapeType.ellipse, {
-    x: 0.72,
-    y,
-    w: 0.28,
-    h: 0.28,
-    line: { color: theme.primary, pt: 1 },
-    fill: { color: "FFFFFF" }
-  }, {
-    group
-  });
-
-  canvas.addShape(`${group}-bullet-center`, pres.ShapeType.ellipse, {
-    x: 0.81,
-    y: y + 0.09,
-    w: 0.1,
-    h: 0.1,
-    line: { color: theme.primary, transparency: 100 },
-    fill: { color: theme.primary }
-  }, {
-    group
-  });
-
-  canvas.addText(`${group}-title`, title, {
-    x: 1.08,
-    y: y - 0.01,
-    w: 3.2,
-    h: 0.24,
-    fontFace,
-    fontSize: 13,
-    bold: true,
-    color: theme.accent,
-    margin: 0
-  }, {
-    group
-  });
-
-  canvas.addText(`${group}-body`, text, {
-    x: 1.08,
-    y: y + 0.28,
-    w: 4.2,
-    h: 0.42,
-    fontFace,
-    fontSize: 11,
-    color: theme.muted,
-    margin: 0
-  }, {
-    group
-  });
-}
 
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
@@ -67,80 +23,108 @@ function createSlide(pres, theme, options = {}) {
   addSectionTitle(
     canvas,
     theme,
-    "Summary",
+    "Highlight 2",
     slideConfig.title,
-    "The visual language is now closer to SurviveJS: bright mint framing, quiet white surfaces, and compact informational blocks with a single cyan accent."
+    "Simplification is a research strategy, not nostalgia."
   );
 
-  canvas.addShape("summary-header-rule", pres.ShapeType.roundRect, {
-    x: 7.72,
+  addAccentRule(canvas, pres, theme, {
+    id: "simple-rule",
+    x: 7.52,
     y: 0.68,
-    w: 1.64,
-    h: 0.08,
-    rectRadius: 0.03,
-    line: { color: theme.secondary, transparency: 100 },
-    fill: { color: theme.secondary }
-  }, {
-    group: "summary-header"
+    w: 1.76,
+    group: "section-header"
   });
 
-  createChecklistItem(canvas, pres, theme, 2.22, "Install dependencies", "Run npm install once to pull in pdfkit, qrcode, and pptxgenjs locally.", "checklist-install");
-  createChecklistItem(canvas, pres, theme, 3.02, "Build the deck", "Run npm run build to emit the demo presentation as a PDF.", "checklist-build");
-  createChecklistItem(canvas, pres, theme, 3.82, "Validate visual changes", "Run npm run quality:gate after intentional design edits.", "checklist-extend");
-
-  canvas.addShape("summary-output-panel", pres.ShapeType.roundRect, {
-    x: 6.15,
-    y: 2.24,
-    w: 3.05,
-    h: 2.26,
-    rectRadius: 0.08,
-    line: { color: theme.primary, pt: 1.2 },
-    fill: { color: theme.panel }
-  }, {
-    group: "summary-output-panel"
+  addCompactCard(canvas, pres, theme, {
+    id: "simple-card-html",
+    x: 0.62,
+    y: 2.08,
+    w: 2.6,
+    h: 0.94,
+    title: "HTML-first",
+    body: "Use the platform more directly and keep HTML at the center where possible.",
+    group: "simple-left"
   });
 
-  canvas.addText("summary-output-title", "Output", {
-    x: 6.45,
-    y: 2.5,
-    w: 1.2,
-    h: 0.25,
+  addCompactCard(canvas, pres, theme, {
+    id: "simple-card-hypermedia",
+    x: 0.62,
+    y: 3.16,
+    w: 2.6,
+    h: 0.94,
+    title: "Hypermedia",
+    body: "Revisit a forgotten web paradigm that is again relevant under modern complexity pressures.",
+    group: "simple-left"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "simple-card-frameworks",
+    x: 0.62,
+    y: 4.24,
+    w: 2.6,
+    h: 0.78,
+    title: "Disappearing frameworks",
+    body: "Less client-side machinery can be a feature, not a limitation.",
+    group: "simple-left"
+  });
+
+  addPanel(canvas, pres, theme, "simple-right-panel", {
+    x: 3.58,
+    y: 2.08,
+    w: 5.34,
+    h: 2.94,
+    lineColor: theme.primary,
+    linePt: 1.1,
+    fillColor: theme.panel,
+    group: "simple-right"
+  });
+
+  canvas.addText("simple-right-title", "Why it matters", {
+    x: 3.92,
+    y: 2.34,
+    w: 2.3,
+    h: 0.2,
     fontFace,
-    fontSize: 13,
-    bold: true,
-    color: theme.primary,
-    allCaps: true,
-    margin: 0
-  }, {
-    group: "summary-output-panel"
-  });
-
-  canvas.addText("summary-output-path", "slides/output/\ndemo-presentation.pdf", {
-    x: 6.45,
-    y: 2.88,
-    w: 2.25,
-    h: 0.55,
-    fontFace,
-    fontSize: 13,
+    fontSize: 11.6,
     bold: true,
     color: theme.accent,
-    breakLine: false,
     margin: 0
   }, {
-    group: "summary-output-panel"
+    group: "simple-right"
   });
 
-  canvas.addText("summary-output-body", "Output stays local. Approved render snapshots live in generator/render-baseline/.", {
-    x: 6.45,
-    y: 3.6,
-    w: 2.25,
-    h: 0.72,
-    fontFace,
-    fontSize: 10.5,
-    color: theme.muted,
-    margin: 0
-  }, {
-    group: "summary-output-panel"
+  addBulletItem(canvas, pres, theme, {
+    id: "simple-bullet-maintain",
+    x: 3.92,
+    y: 2.74,
+    w: 4.68,
+    title: "Conceptual simplicity helps maintainability.",
+    body: "Smaller system models are easier to learn and maintain.",
+    bodyH: 0.42,
+    group: "simple-right"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "simple-bullet-performance",
+    x: 3.92,
+    y: 3.62,
+    w: 4.68,
+    title: "Lighter architectures often improve performance.",
+    body: "Less machinery can improve payload, startup, and energy use.",
+    bodyH: 0.42,
+    group: "simple-right"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "simple-bullet-agents",
+    x: 3.92,
+    y: 4.4,
+    w: 4.68,
+    title: "This also aligns with agentic use.",
+    body: "Structured, linkable systems are easier for humans and agents.",
+    bodyH: 0.3,
+    group: "simple-right"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

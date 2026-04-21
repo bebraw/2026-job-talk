@@ -9,11 +9,11 @@ const theme = {
 };
 
 const deckMeta = {
-  title: "Presentation Template Demo",
-  subtitle: "A small runnable deck built around the pdf-slide-generator skill",
-  author: "OpenAI Codex",
-  company: "presentation-template",
-  subject: "Demonstration presentation"
+  title: "Teaching the Next Web",
+  subtitle: "From hybrid rendering to agentic hypermedia",
+  author: "Juho Vepsäläinen",
+  company: "Aalto University",
+  subject: "Job talk presentation"
 };
 
 const displayFont = "Helvetica Neue";
