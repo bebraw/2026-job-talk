@@ -1,9 +1,11 @@
 const theme = {
-  primary: "183153",
-  secondary: "275d8c",
-  accent: "f28f3b",
-  light: "d7e6f5",
-  bg: "f5f8fc"
+  primary: "09b5c4",
+  secondary: "b6fff8",
+  accent: "183b40",
+  muted: "346065",
+  light: "dcefed",
+  bg: "ffffff",
+  panel: "f7fcfb"
 };
 
 const deckMeta = {
@@ -14,8 +16,8 @@ const deckMeta = {
   subject: "Demonstration presentation"
 };
 
-const displayFont = "Avenir Next";
-const bodyFont = "Avenir Next";
+const displayFont = "Helvetica Neue";
+const bodyFont = "Helvetica Neue";
 const fontFace = bodyFont;
 
 module.exports = {

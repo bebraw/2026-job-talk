@@ -1,4 +1,5 @@
 const { fontFace } = require("../generator/theme");
+const { addPageBadge } = require("../generator/helpers");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -10,75 +11,29 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  slide.background = { color: "f4f8fc" };
+  slide.background = { color: theme.bg };
 
-  canvas.addShape("cover-background", pres.ShapeType.rect, {
-    x: 0,
-    y: 0,
-    w: 10,
-    h: 5.625,
-    line: { color: theme.bg, transparency: 100 },
-    fill: {
-      color: theme.bg,
-      transparency: 0
-    }
-  }, {
-    group: "background",
-    skipBounds: true,
-    skipOverlap: true
-  });
-
-  canvas.addShape("cover-right-panel", pres.ShapeType.rect, {
-    x: 6.45,
-    y: 0,
-    w: 3.55,
-    h: 5.625,
+  canvas.addShape("cover-top-rule", pres.ShapeType.roundRect, {
+    x: 0.62,
+    y: 0.42,
+    w: 2.2,
+    h: 0.08,
+    rectRadius: 0.03,
     line: { color: theme.secondary, transparency: 100 },
     fill: { color: theme.secondary }
   }, {
-    group: "background",
-    skipBounds: true,
-    skipOverlap: true
+    group: "cover-header"
   });
 
-  canvas.addShape("cover-overlay-panel", pres.ShapeType.rect, {
-    x: 5.95,
-    y: 0.4,
-    w: 3.55,
-    h: 4.85,
-    line: { color: theme.primary, transparency: 100 },
-    fill: { color: theme.primary, transparency: 6 }
-  }, {
-    group: "background",
-    skipBounds: true,
-    skipOverlap: true
-  });
-
-  canvas.addShape("cover-accent-arc", pres.ShapeType.arc, {
-    x: 6.15,
-    y: 1.2,
-    w: 2.6,
-    h: 2.6,
-    line: { color: theme.accent, pt: 2.5 },
-    fill: { color: theme.accent, transparency: 100 },
-    adjustPoint: 0.21
-  }, {
-    group: "background",
-    skipBounds: true,
-    skipOverlap: true
-  });
-
-  canvas.addText("cover-eyebrow", "pdf-slide-generator skill", {
+  canvas.addText("cover-eyebrow", "From an apprentice to a master of JavaScript", {
     x: 0.7,
-    y: 0.7,
-    w: 2.8,
+    y: 0.68,
+    w: 4.1,
     h: 0.3,
     fontFace,
-    fontSize: 13,
+    fontSize: 11.5,
     bold: true,
-    color: theme.accent,
-    charSpace: 1.4,
-    allCaps: true,
+    color: theme.muted,
     margin: 0
   }, {
     group: "cover-header"
@@ -86,13 +41,13 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("cover-title", slideConfig.title, {
     x: 0.7,
-    y: 1.15,
-    w: 4.6,
-    h: 0.88,
+    y: 1.04,
+    w: 4.75,
+    h: 0.8,
     fontFace,
-    fontSize: 24,
+    fontSize: 26,
     bold: true,
-    color: theme.primary,
+    color: theme.accent,
     margin: 0
   }, {
     group: "cover-header"
@@ -100,58 +55,154 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("cover-summary", "A compact deck that shows the imported skill, a shared theme, and the native PDF compile flow used to emit presentation files locally.", {
     x: 0.72,
-    y: 2.35,
-    w: 4.4,
-    h: 0.7,
+    y: 1.92,
+    w: 4.3,
+    h: 0.82,
     fontFace,
-    fontSize: 12.5,
-    color: "4d657d",
+    fontSize: 12,
+    color: theme.muted,
     valign: "mid",
     margin: 0
   }, {
     group: "cover-summary"
   });
 
+  canvas.addShape("cover-right-panel", pres.ShapeType.roundRect, {
+    x: 5.92,
+    y: 0.76,
+    w: 3.18,
+    h: 3.98,
+    rectRadius: 0.08,
+    line: { color: theme.primary, pt: 1.1 },
+    fill: { color: theme.panel }
+  }, {
+    group: "cover-panel"
+  });
+
+  canvas.addShape("cover-panel-accent", pres.ShapeType.roundRect, {
+    x: 6.28,
+    y: 1.08,
+    w: 2.26,
+    h: 0.16,
+    rectRadius: 0.04,
+    line: { color: theme.secondary, transparency: 100 },
+    fill: { color: theme.secondary }
+  }, {
+    group: "cover-panel"
+  });
+
+  canvas.addText("cover-panel-title", "Theme direction", {
+    x: 6.22,
+    y: 1.46,
+    w: 1.6,
+    h: 0.18,
+    fontFace,
+    fontSize: 11,
+    bold: true,
+    color: theme.primary,
+    allCaps: true,
+    margin: 0
+  }, {
+    group: "cover-panel"
+  });
+
+  [
+    { id: "books", y: 1.84, title: "Light surfaces", body: "Quiet cards, subtle borders, and compact spacing." },
+    { id: "blog", y: 2.74, title: "Teal accent", body: "One bright cyan highlight against muted ink colors." },
+    { id: "research", y: 3.64, title: "System sans", body: "The same `system-ui` feel, embedded as Helvetica Neue." }
+  ].forEach((item) => {
+    canvas.addShape(`cover-card-${item.id}`, pres.ShapeType.roundRect, {
+      x: 6.2,
+      y: item.y,
+      w: 2.62,
+      h: 0.72,
+      rectRadius: 0.06,
+      line: { color: theme.light, pt: 1 },
+      fill: { color: "FFFFFF" }
+    }, {
+      group: "cover-panel"
+    });
+
+    canvas.addText(`cover-card-title-${item.id}`, item.title, {
+      x: 6.4,
+      y: item.y + 0.13,
+      w: 1.5,
+      h: 0.16,
+      fontFace,
+      fontSize: 12,
+      bold: true,
+      color: theme.accent,
+      margin: 0
+    }, {
+      group: "cover-panel"
+    });
+
+    canvas.addText(`cover-card-body-${item.id}`, item.body, {
+      x: 6.4,
+      y: item.y + 0.34,
+      w: 2.08,
+      h: 0.24,
+      fontFace,
+      fontSize: 9.4,
+      color: theme.muted,
+      margin: 0
+    }, {
+      group: "cover-panel"
+    });
+  });
+
   canvas.addText("cover-footnote", "Slides are authored as CommonJS modules and assembled by generator/compile.js into a final PDF.", {
     x: 0.72,
-    y: 4.55,
+    y: 4.38,
     w: 4.9,
-    h: 0.45,
+    h: 0.36,
     fontFace,
     fontSize: 10.5,
-    color: "6b8096",
+    color: theme.muted,
     margin: 0
   }, {
     group: "cover-footer"
   });
 
-  canvas.addText("cover-index", "01", {
-    x: 6.6,
-    y: 4.62,
-    w: 2.3,
-    h: 0.56,
+  canvas.addShape("cover-tag", pres.ShapeType.roundRect, {
+    x: 0.72,
+    y: 3.26,
+    w: 1.9,
+    h: 0.34,
+    rectRadius: 0.08,
+    line: { color: theme.primary, pt: 1 },
+    fill: { color: "FFFFFF" }
+  }, {
+    group: "cover-footer"
+  });
+
+  canvas.addText("cover-tag-text", "presentation / pdf", {
+    x: 0.82,
+    y: 3.37,
+    w: 1.7,
+    h: 0.12,
     fontFace,
-    fontSize: 30,
+    fontSize: 10,
     bold: true,
-    color: "FFFFFF",
+    color: theme.primary,
     margin: 0
   }, {
-    group: "cover-side-panel"
+    group: "cover-footer"
   });
 
-  canvas.addText("cover-side-label", "PDF deck", {
-    x: 6.62,
-    y: 5.02,
-    w: 2.1,
-    h: 0.25,
-    fontFace,
-    fontSize: 11,
-    color: "d7e6f5",
-    margin: 0
+  canvas.addShape("cover-soft-block", pres.ShapeType.roundRect, {
+    x: 0.72,
+    y: 2.96,
+    w: 4.56,
+    h: 0.08,
+    rectRadius: 0.03,
+    line: { color: theme.secondary, transparency: 100 },
+    fill: { color: theme.secondary }
   }, {
-    group: "cover-side-panel"
+    group: "cover-footer"
   });
 
+  addPageBadge(canvas, pres, theme, slideConfig.index);
   return canvas.finalize();
 }
 

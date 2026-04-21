@@ -17,7 +17,7 @@ function addMetric(canvas, theme, x, y, value, label, id) {
     fontFace,
     fontSize: 20,
     bold: true,
-    color: theme.primary,
+    color: theme.accent,
     margin: 0
   }, {
     group: "content-stats-panel"
@@ -30,7 +30,7 @@ function addMetric(canvas, theme, x, y, value, label, id) {
     h: 0.3,
     fontFace,
     fontSize: 10.5,
-    color: "5d7591",
+    color: theme.muted,
     margin: 0
   }, {
     group: "content-stats-panel"
@@ -45,7 +45,7 @@ function addSignalBar(canvas, pres, theme, x, y, width, label, value, group) {
     h: 0.22,
     fontFace,
     fontSize: 10,
-    color: theme.primary,
+    color: theme.accent,
     margin: 0
   }, {
     group: "content-chart-panel"
@@ -57,8 +57,8 @@ function addSignalBar(canvas, pres, theme, x, y, width, label, value, group) {
     w: width,
     h: 0.14,
     rectRadius: 0.04,
-    line: { color: "dbe7f1", transparency: 100 },
-    fill: { color: "dbe7f1" }
+    line: { color: theme.light, transparency: 100 },
+    fill: { color: theme.light }
   }, {
     group: "content-chart-panel"
   });
@@ -82,7 +82,7 @@ function addSignalBar(canvas, pres, theme, x, y, width, label, value, group) {
     h: 0.24,
     fontFace,
     fontSize: 10,
-    color: "5d7591",
+    color: theme.muted,
     align: "right",
     margin: 0
   }, {
@@ -93,77 +93,105 @@ function addSignalBar(canvas, pres, theme, x, y, width, label, value, group) {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  slide.background = { color: "ffffff" };
+  slide.background = { color: theme.bg };
 
   addSectionTitle(
     canvas,
     theme,
     "Signals",
     slideConfig.title,
-    "The demo now emphasizes repeatability through a native PDF renderer, explicit slide modules, and a render-based quality gate."
+    "The deck now borrows the SurviveJS content rhythm: dense information sits inside light utility-style containers with mint and teal doing the work."
   );
+
+  canvas.addShape("content-header-rule", pres.ShapeType.roundRect, {
+    x: 7.56,
+    y: 0.68,
+    w: 1.8,
+    h: 0.08,
+    rectRadius: 0.03,
+    line: { color: theme.secondary, transparency: 100 },
+    fill: { color: theme.secondary }
+  }, {
+    group: "content-header"
+  });
 
   canvas.addShape("content-chart-panel", pres.ShapeType.roundRect, {
     x: 0.6,
-    y: 2,
+    y: 2.24,
     w: 4.65,
-    h: 2.45,
+    h: 2.1,
     rectRadius: 0.08,
-    line: { color: "dbe7f1", pt: 1 },
-    fill: { color: "f8fbfe" }
+    line: { color: theme.light, pt: 1 },
+    fill: { color: theme.panel }
   }, {
     group: "content-chart-panel"
   });
 
   canvas.addText("content-chart-title", "Migration signals", {
     x: 0.88,
-    y: 2.26,
+    y: 2.5,
     w: 2.2,
     h: 0.24,
     fontFace,
     fontSize: 12,
     bold: true,
-    color: theme.primary,
+    color: theme.accent,
     margin: 0
   }, {
     group: "content-chart-panel"
   });
 
-  addSignalBar(canvas, pres, theme, 0.88, 2.74, 2.1, "Skill", 0.96, "signal-skill");
-  addSignalBar(canvas, pres, theme, 0.88, 3.16, 2.1, "Runtime", 0.88, "signal-runtime");
-  addSignalBar(canvas, pres, theme, 0.88, 3.58, 2.1, "Slides", 0.92, "signal-slides");
-  addSignalBar(canvas, pres, theme, 0.88, 4, 2.1, "Docs", 0.85, "signal-docs");
+  addSignalBar(canvas, pres, theme, 0.88, 2.98, 2.1, "Skill", 0.96, "signal-skill");
+  addSignalBar(canvas, pres, theme, 0.88, 3.36, 2.1, "Runtime", 0.88, "signal-runtime");
+  addSignalBar(canvas, pres, theme, 0.88, 3.74, 2.1, "Slides", 0.92, "signal-slides");
+  addSignalBar(canvas, pres, theme, 0.88, 4.12, 2.1, "Docs", 0.85, "signal-docs");
 
   canvas.addShape("content-stats-panel", pres.ShapeType.roundRect, {
     x: 5.65,
-    y: 2,
+    y: 2.24,
     w: 3.75,
-    h: 2.45,
+    h: 2.1,
     rectRadius: 0.08,
-    line: { color: theme.primary, transparency: 100 },
-    fill: { color: theme.primary }
+    line: { color: theme.primary, pt: 1.2 },
+    fill: { color: theme.secondary }
   }, {
     group: "content-stats-panel"
   });
 
   canvas.addText("content-stats-title", "Key properties", {
     x: 5.95,
-    y: 2.24,
+    y: 2.46,
     w: 2,
     h: 0.3,
     fontFace,
-    fontSize: 15,
+    fontSize: 13.5,
     bold: true,
-    color: "FFFFFF",
+    color: theme.accent,
     margin: 0
   }, {
     group: "content-stats-panel"
   });
 
-  addMetric(canvas, theme, 5.95, 2.9, "4", "Slide modules", "metric-modules");
-  addMetric(canvas, theme, 7.35, 2.9, "1", "PDF build path", "metric-compile");
-  addMetric(canvas, theme, 5.95, 3.72, "0", "PPTX outputs", "metric-theme");
-  addMetric(canvas, theme, 7.35, 3.72, "1", "Quality gate", "metric-readme");
+  [
+    { id: "modules", x: 5.95, y: 2.92, value: "4", label: "Slide modules" },
+    { id: "compile", x: 7.35, y: 2.92, value: "1", label: "PDF build path" },
+    { id: "theme", x: 5.95, y: 3.68, value: "0", label: "PPTX outputs" },
+    { id: "readme", x: 7.35, y: 3.68, value: "1", label: "Quality gate" }
+  ].forEach((metric) => {
+    canvas.addShape(`metric-card-${metric.id}`, pres.ShapeType.roundRect, {
+      x: metric.x - 0.14,
+      y: metric.y - 0.1,
+      w: 1.22,
+      h: 0.7,
+      rectRadius: 0.05,
+      line: { color: "FFFFFF", pt: 1 },
+      fill: { color: "FFFFFF", transparency: 0 }
+    }, {
+      group: "content-stats-panel"
+    });
+
+    addMetric(canvas, theme, metric.x, metric.y, metric.value, metric.label, `metric-${metric.id}`);
+  });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);
   return canvas.finalize();

@@ -18,20 +18,20 @@ const ShapeType = {
 
 const embeddedFonts = {
   bodyBold: {
-    family: "AvenirNext-Bold",
-    path: "/System/Library/Fonts/Avenir Next.ttc"
+    family: "HelveticaNeue-Bold",
+    path: "/System/Library/Fonts/HelveticaNeue.ttc"
   },
   bodyRegular: {
-    family: "AvenirNext-Regular",
-    path: "/System/Library/Fonts/Avenir Next.ttc"
+    family: "HelveticaNeue",
+    path: "/System/Library/Fonts/HelveticaNeue.ttc"
   },
   displayBold: {
-    family: "Didot-Bold",
-    path: "/System/Library/Fonts/Supplemental/Didot.ttc"
+    family: "HelveticaNeue-Bold",
+    path: "/System/Library/Fonts/HelveticaNeue.ttc"
   },
   displayRegular: {
-    family: "Didot",
-    path: "/System/Library/Fonts/Supplemental/Didot.ttc"
+    family: "HelveticaNeue-Medium",
+    path: "/System/Library/Fonts/HelveticaNeue.ttc"
   }
 };
 

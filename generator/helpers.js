@@ -3,26 +3,27 @@ const { bodyFont, displayFont } = require("./theme");
 const liveDemoUrl = "https://french-cheese-shop-demo.survivejs.workers.dev";
 
 function addPageBadge(canvas, pres, theme, number) {
-  canvas.addShape("page-badge-circle", pres.ShapeType.ellipse, {
-    x: 9.24,
-    y: 5.01,
-    w: 0.44,
-    h: 0.44,
-    line: { color: theme.secondary, transparency: 100 },
-    fill: { color: theme.secondary }
+  canvas.addShape("page-badge-pill", pres.ShapeType.roundRect, {
+    x: 9.05,
+    y: 5.21,
+    w: 0.55,
+    h: 0.22,
+    rectRadius: 0.08,
+    line: { color: theme.primary, pt: 1 },
+    fill: { color: "FFFFFF" }
   }, {
     group: "page-badge"
   });
 
   canvas.addText("page-badge-label", String(number).padStart(2, "0"), {
-    x: 9.24,
-    y: 5.01,
-    w: 0.44,
-    h: 0.44,
+    x: 9.05,
+    y: 5.21,
+    w: 0.55,
+    h: 0.22,
     fontFace: bodyFont,
-    fontSize: 11,
+    fontSize: 10,
     bold: true,
-    color: "FFFFFF",
+    color: theme.primary,
     align: "center",
     valign: "middle",
     margin: 0
@@ -34,14 +35,14 @@ function addPageBadge(canvas, pres, theme, number) {
 function addSectionTitle(canvas, theme, eyebrow, title, body) {
   canvas.addText("section-eyebrow", eyebrow, {
     x: 0.62,
-    y: 0.46,
+    y: 0.56,
     w: 3.8,
     h: 0.26,
     fontFace: bodyFont,
-    fontSize: 11.5,
+    fontSize: 10.5,
     bold: true,
-    color: theme.secondary,
-    charSpace: 1.2,
+    color: theme.muted,
+    charSpace: 0.8,
     allCaps: true,
     margin: 0
   }, {
@@ -50,13 +51,13 @@ function addSectionTitle(canvas, theme, eyebrow, title, body) {
 
   canvas.addText("section-title", title, {
     x: 0.62,
-    y: 0.78,
+    y: 0.84,
     w: 6.6,
     h: 0.64,
     fontFace: displayFont,
-    fontSize: 24,
-    bold: false,
-    color: theme.primary,
+    fontSize: 22,
+    bold: true,
+    color: theme.accent,
     margin: 0
   }, {
     group: "section-header"
@@ -65,12 +66,12 @@ function addSectionTitle(canvas, theme, eyebrow, title, body) {
   if (body) {
     canvas.addText("section-body", body, {
       x: 0.64,
-      y: 1.48,
-      w: 5.95,
-      h: 0.5,
+      y: 1.34,
+      w: 6.15,
+      h: 0.46,
       fontFace: bodyFont,
-      fontSize: 11.2,
-      color: "56677C",
+      fontSize: 11,
+      color: theme.muted,
       margin: 0
     }, {
       group: "section-header"
