@@ -120,7 +120,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText(
     "cover-date",
-    "05.06.2026",
+    "6.5.2026",
     {
       x: 0.72,
       y: 2.7,
