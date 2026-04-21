@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 4,
+  index: 5,
   title: "Hybrid rendering models"
 };
 
@@ -24,8 +24,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Highlight 1",
-    slideConfig.title,
-    "Hybrid rendering reframes the architecture space of modern web systems."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

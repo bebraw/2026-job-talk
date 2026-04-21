@@ -12,7 +12,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 7,
+  index: 8,
   title: "AI and computing education"
 };
 
@@ -25,8 +25,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "CSEd",
-    slideConfig.title,
-    "AI in CSEd requires institutional, not only individual, adaptation."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

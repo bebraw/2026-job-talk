@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 9,
+  index: 10,
   title: "Supervision as frontier teaching"
 };
 
@@ -24,8 +24,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Supervision",
-    slideConfig.title,
-    "Supervision is where research, curriculum, and student growth meet."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

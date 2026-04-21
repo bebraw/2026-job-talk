@@ -9,7 +9,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 11,
+  index: 13,
   title: "Goals as a tenure-track lecturer"
 };
 
@@ -22,8 +22,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Goals",
-    slideConfig.title,
-    "The fit with Aalto CS is interdisciplinary, collaborative, and outward-facing."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

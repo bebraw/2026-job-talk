@@ -22,8 +22,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Motivation",
-    slideConfig.title,
-    "Why this matters to a broader CS audience."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

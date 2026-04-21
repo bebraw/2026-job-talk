@@ -5,14 +5,17 @@ const slideModules = [
   require("../slides/slide-01"),
   require("../slides/slide-02-contents"),
   require("../slides/slide-02"),
+  require("../slides/slide-03-section-part1"),
   require("../slides/slide-03"),
   require("../slides/slide-04"),
   require("../slides/slide-05"),
   require("../slides/slide-06"),
   require("../slides/slide-07"),
   require("../slides/slide-08"),
+  require("../slides/slide-09-section-part2"),
   require("../slides/slide-09"),
   require("../slides/slide-10"),
+  require("../slides/slide-11-section-part3"),
   require("../slides/slide-11"),
   require("../slides/slide-12")
 ];

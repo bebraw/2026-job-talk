@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "closing",
-  index: 12,
+  index: 15,
   title: "Discussion"
 };
 
@@ -23,8 +23,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Closing",
-    slideConfig.title,
-    "A closing question for discussion."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

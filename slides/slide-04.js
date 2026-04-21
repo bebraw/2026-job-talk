@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 5,
+  index: 6,
   title: "Simplification as a design principle"
 };
 
@@ -24,8 +24,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Highlight 2",
-    slideConfig.title,
-    "Simplification is a research strategy, not nostalgia."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

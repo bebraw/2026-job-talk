@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 10,
+  index: 12,
   title: "Future vision: agentic hypermedia"
 };
 
@@ -24,8 +24,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Vision",
-    slideConfig.title,
-    "Agentic hypermedia is the center of my future agenda."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {

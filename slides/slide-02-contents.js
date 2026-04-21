@@ -6,7 +6,6 @@ const {
   addPanel,
   addSectionTitle
 } = require("../generator/helpers");
-const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -24,8 +23,7 @@ function createSlide(pres, theme, options = {}) {
     canvas,
     theme,
     "Outline",
-    slideConfig.title,
-    "Talk structure at a glance."
+    slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {
@@ -47,24 +45,10 @@ function createSlide(pres, theme, options = {}) {
     group: "contents-left"
   });
 
-  canvas.addText("contents-left-title", "Talk structure", {
-    x: 0.94,
-    y: 2.34,
-    w: 2.2,
-    h: 0.2,
-    fontFace,
-    fontSize: 11.6,
-    bold: true,
-    color: theme.accent,
-    margin: 0
-  }, {
-    group: "contents-left"
-  });
-
   addBulletItem(canvas, pres, theme, {
     id: "contents-bullet-motivation",
     x: 0.94,
-    y: 2.72,
+    y: 2.46,
     w: 4.06,
     title: "Why this matters now",
     body: "Complexity and AI are reshaping the web.",
@@ -75,7 +59,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "contents-bullet-highlights",
     x: 0.94,
-    y: 3.44,
+    y: 3.18,
     w: 4.06,
     title: "Research and teaching highlights",
     body: "Hybrid rendering, simplification, AI, and teaching.",
@@ -86,7 +70,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "contents-bullet-future",
     x: 0.94,
-    y: 4.26,
+    y: 4,
     w: 4.06,
     title: "Future vision and discussion",
     body: "Agentic hypermedia, lecturer goals, and discussion.",
