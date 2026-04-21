@@ -1,0 +1,137 @@
+const {
+  addAccentRule,
+  addBulletItem,
+  addPageBadge,
+  addSectionTitle,
+  addStatChip
+} = require("../generator/helpers");
+const { fontFace } = require("../generator/theme");
+const { createSlideCanvas } = require("../generator/validation");
+const path = require("path");
+
+const slideConfig = {
+  type: "content",
+  index: 18,
+  title: "How research informs my teaching"
+};
+
+function createSlide(pres, theme, options = {}) {
+  const canvas = createSlideCanvas(pres, slideConfig, options);
+  const { slide } = canvas;
+  slide.background = { color: theme.bg };
+
+  addSectionTitle(
+    canvas,
+    theme,
+    "Teaching",
+    slideConfig.title
+  );
+
+  addAccentRule(canvas, pres, theme, {
+    id: "vision-rule",
+    x: 7.62,
+    y: 0.68,
+    w: 1.66,
+    group: "section-header"
+  });
+
+  addStatChip(canvas, pres, theme, {
+    id: "teach-stat-bsc",
+    x: 0.62,
+    y: 2.02,
+    w: 2.28,
+    value: "20+",
+    label: "BSc theses since 2022",
+    valueFontSize: 12.5,
+    group: "teach-stats"
+  });
+
+  addStatChip(canvas, pres, theme, {
+    id: "teach-stat-msc",
+    x: 3.1,
+    y: 2.02,
+    w: 2.28,
+    value: "6",
+    label: "MSc theses advised",
+    valueFontSize: 12.5,
+    group: "teach-stats"
+  });
+
+  addStatChip(canvas, pres, theme, {
+    id: "teach-stat-peda",
+    x: 5.58,
+    y: 2.02,
+    w: 2.28,
+    value: "18",
+    label: "ECTS of pedagogy",
+    valueFontSize: 12.5,
+    group: "teach-stats"
+  });
+
+  canvas.addText("teach-left-title", "Teaching approach", {
+    x: 0.9,
+    y: 3.02,
+    w: 4.1,
+    h: 0.42,
+    fontFace,
+    fontSize: 18,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "teach-left"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "teach-bullet-models",
+    x: 0.94,
+    y: 3.78,
+    w: 3.92,
+    title: "Build working models students can adapt.",
+    body: "Research helps teach fast-moving material without chasing tools.",
+    bodyH: 0.28,
+    bodyFontSize: 8,
+    group: "teach-left"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "teach-bullet-structure",
+    x: 0.94,
+    y: 4.42,
+    w: 3.92,
+    title: "Teaching and supervision feed research back.",
+    body: "Student work in AI and web systems exposes emerging topics early.",
+    bodyH: 0.26,
+    bodyFontSize: 8.2,
+    group: "teach-left"
+  });
+
+  canvas.addText("teach-loop-title", "Research-teaching nexus [7,8]", {
+    x: 5.12,
+    y: 3.08,
+    w: 3.76,
+    h: 0.18,
+    fontFace,
+    fontSize: 9.2,
+    bold: true,
+    color: theme.muted,
+    margin: 0
+  }, {
+    group: "teach-loop"
+  });
+
+  canvas.addImage("teach-loop-image", {
+    path: path.join(__dirname, "assets/diagrams/research-teaching-loop.png"),
+    x: 5.1,
+    y: 3.28,
+    w: 3.84,
+    h: 1.6
+  }, {
+    group: "teach-loop"
+  });
+
+  addPageBadge(canvas, pres, theme, slideConfig.index);
+  return canvas.finalize();
+}
+
+module.exports = { createSlide, slideConfig };

@@ -1,23 +1,27 @@
 const {
   addAccentRule,
   addBulletItem,
-  addCompactCard,
   addPageBadge,
   addPanel,
+  addReferenceNote,
   addSectionTitle
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
+const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 12,
+  index: 23,
   title: "Future vision: agentic hypermedia"
 };
 
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const diagramWidth = 3.37;
+  const diagramHeight = 2.66;
+  const diagramX = 5.45;
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -38,7 +42,7 @@ function createSlide(pres, theme, options = {}) {
   addPanel(canvas, pres, theme, "vision-left-panel", {
     x: 0.62,
     y: 2.06,
-    w: 4.66,
+    w: 4.52,
     h: 2.94,
     lineColor: theme.primary,
     linePt: 1.1,
@@ -64,7 +68,7 @@ function createSlide(pres, theme, options = {}) {
     id: "vision-bullet-hypermedia",
     x: 0.94,
     y: 2.72,
-    w: 4.02,
+    w: 3.88,
     title: "How should hypermedia evolve for AI use?",
     body: "Hypermedia matters again when agents navigate systems.",
     bodyH: 0.3,
@@ -76,9 +80,9 @@ function createSlide(pres, theme, options = {}) {
     id: "vision-bullet-architectures",
     x: 0.94,
     y: 3.5,
-    w: 4.02,
-    title: "What balance between HTML, servers, and the edge?",
-    body: "Pursue lighter architectures without excess client-side complexity.",
+    w: 3.88,
+    title: "What semantic foundations do agents need?",
+    body: "Ground hypermedia in the semantic web and knowledge bases.",
     bodyH: 0.3,
     titleFontSize: 9.6,
     bodyFontSize: 8.4,
@@ -89,7 +93,7 @@ function createSlide(pres, theme, options = {}) {
     id: "vision-bullet-education",
     x: 0.94,
     y: 4.28,
-    w: 4.02,
+    w: 3.88,
     title: "What is the durable core of the next web?",
     body: "Architecture and judgment matter as tools keep changing.",
     bodyH: 0.24,
@@ -98,38 +102,28 @@ function createSlide(pres, theme, options = {}) {
     group: "vision-left"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "vision-card-users",
-    x: 5.7,
-    y: 2.08,
-    w: 3.1,
-    h: 0.76,
-    title: "Lighter for users",
-    body: "Lower payloads, better startup behavior, and more resilient interaction.",
+  canvas.addImage("vision-diagram-image", {
+    path: path.join(__dirname, "assets/diagrams/agentic-hypermedia.png"),
+    x: diagramX,
+    y: 2.3,
+    w: diagramWidth,
+    h: diagramHeight
+  }, {
     group: "vision-right"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "vision-card-devs",
-    x: 5.7,
-    y: 3,
-    w: 3.1,
-    h: 0.76,
-    title: "Clearer for developers",
-    body: "Smaller conceptual models and stronger alignment with the underlying platform.",
-    group: "vision-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "vision-card-agents",
-    x: 5.7,
-    y: 3.92,
-    w: 3.1,
-    h: 0.76,
-    title: "Navigable by agents",
-    body: "Interfaces and data flows that AI systems can interpret more directly.",
-    group: "vision-right"
-  });
+  addReferenceNote(
+    canvas,
+    theme,
+    "[6], [9] Fielding (2000); Berners-Lee et al. (2001).",
+    {
+      x: 5.48,
+      y: 4.92,
+      w: 3.26,
+      h: 0.16,
+      group: "vision-reference"
+    }
+  );
 
   addPageBadge(canvas, pres, theme, slideConfig.index);
   return canvas.finalize();

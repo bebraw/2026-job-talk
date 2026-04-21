@@ -1,0 +1,41 @@
+digraph AgenticHypermedia {
+  graph [
+    bgcolor="transparent",
+    ranksep=0.55,
+    nodesep=0.28,
+    pad=0.08,
+    splines=ortho
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica Neue",
+    fontsize=13,
+    penwidth=2,
+    margin="0.18,0.12",
+    color="#09b5c4",
+    fontcolor="#183b40",
+    fillcolor="#f7fcfb"
+  ];
+
+  edge [
+    color="#09b5c4",
+    penwidth=2.2,
+    arrowsize=0.8
+  ];
+
+  human [label="Human", fillcolor="#ffffff"];
+  agent [label="Agent"];
+  interface [label="Hypermedia interface\nlinks, forms, affordances", fontsize=13, width=3.0, fillcolor="#ffffff"];
+  semantic_web [label="Semantic web"];
+  knowledge_bases [label="Knowledge bases"];
+
+  { rank=same; human; agent; }
+  { rank=same; semantic_web; knowledge_bases; }
+
+  human -> interface;
+  agent -> interface;
+  interface -> semantic_web;
+  interface -> knowledge_bases;
+}

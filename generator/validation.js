@@ -1,3 +1,4 @@
+const fs = require("fs");
 const { createTextMeasurementDoc, measureTextBlock } = require("./text-metrics");
 
 const SLIDE_BOUNDS = {
@@ -196,6 +197,13 @@ function createSlideCanvas(pres, slideConfig, options = {}) {
         ...meta,
         data,
         options: { ...optionsForChart }
+      });
+    },
+    addImage(id, optionsForImage, meta = {}) {
+      slide.addImage(optionsForImage);
+      record("image", id, getBox(optionsForImage), {
+        ...meta,
+        options: { ...optionsForImage }
       });
     },
     reserveGroup(id, box, meta = {}) {
@@ -400,6 +408,88 @@ function contrastRatio(foreground, background) {
   return (lighter + 0.05) / (darker + 0.05);
 }
 
+function getPngDimensions(buffer) {
+  if (buffer.length < 24) {
+    return null;
+  }
+
+  const signature = buffer.subarray(0, 8);
+  const pngSignature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
+  if (!signature.equals(pngSignature)) {
+    return null;
+  }
+
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20)
+  };
+}
+
+function getJpegDimensions(buffer) {
+  if (buffer.length < 4 || buffer[0] !== 0xff || buffer[1] !== 0xd8) {
+    return null;
+  }
+
+  let offset = 2;
+
+  while (offset + 8 < buffer.length) {
+    if (buffer[offset] !== 0xff) {
+      offset += 1;
+      continue;
+    }
+
+    const marker = buffer[offset + 1];
+    const segmentLength = buffer.readUInt16BE(offset + 2);
+
+    if (segmentLength < 2) {
+      return null;
+    }
+
+    const isSofMarker = (
+      marker >= 0xc0 &&
+      marker <= 0xcf &&
+      ![0xc4, 0xc8, 0xcc].includes(marker)
+    );
+
+    if (isSofMarker) {
+      return {
+        height: buffer.readUInt16BE(offset + 5),
+        width: buffer.readUInt16BE(offset + 7)
+      };
+    }
+
+    offset += 2 + segmentLength;
+  }
+
+  return null;
+}
+
+function getGifDimensions(buffer) {
+  if (buffer.length < 10) {
+    return null;
+  }
+
+  const header = buffer.subarray(0, 6).toString("ascii");
+  if (header !== "GIF87a" && header !== "GIF89a") {
+    return null;
+  }
+
+  return {
+    width: buffer.readUInt16LE(6),
+    height: buffer.readUInt16LE(8)
+  };
+}
+
+function getImageDimensions(imagePath) {
+  const buffer = fs.readFileSync(imagePath);
+
+  return (
+    getPngDimensions(buffer) ||
+    getJpegDimensions(buffer) ||
+    getGifDimensions(buffer)
+  );
+}
+
 function findContainingPanel(element, shapes) {
   const containing = shapes
     .filter((shape) => {
@@ -452,12 +542,81 @@ function validateTextContrast(reports, options = {}) {
   return issues;
 }
 
+function validateImageAspectRatio(reports, options = {}) {
+  const issues = [];
+  const warnDelta = options.warnDelta ?? 0.03;
+  const maxDelta = options.maxDelta ?? 0.08;
+
+  for (const report of reports) {
+    for (const element of report.elements) {
+      if (element.type !== "image" || !element.box || !element.meta.options) {
+        continue;
+      }
+
+      if (element.meta.skipAspectValidation === true) {
+        continue;
+      }
+
+      const imagePath = element.meta.options.path;
+      if (!imagePath) {
+        continue;
+      }
+
+      let dimensions;
+      try {
+        dimensions = getImageDimensions(imagePath);
+      } catch (error) {
+        issues.push({
+          level: "error",
+          slide: report.slide.index,
+          rule: "image-metadata",
+          message: `Image "${element.id}" could not be inspected (${error.message})`
+        });
+        continue;
+      }
+
+      if (!dimensions || !dimensions.width || !dimensions.height) {
+        issues.push({
+          level: "error",
+          slide: report.slide.index,
+          rule: "image-metadata",
+          message: `Image "${element.id}" uses an unsupported format for aspect validation`
+        });
+        continue;
+      }
+
+      const intrinsicRatio = dimensions.width / dimensions.height;
+      const placedRatio = element.box.w / element.box.h;
+      const delta = Math.abs((placedRatio / intrinsicRatio) - 1);
+
+      if (delta > maxDelta) {
+        issues.push({
+          level: "error",
+          slide: report.slide.index,
+          rule: "image-aspect",
+          message: `Image "${element.id}" distorts its source ratio (${placedRatio.toFixed(2)} placed vs ${intrinsicRatio.toFixed(2)} intrinsic)`
+        });
+      } else if (delta > warnDelta) {
+        issues.push({
+          level: "warn",
+          slide: report.slide.index,
+          rule: "image-aspect-tight",
+          message: `Image "${element.id}" is close to aspect distortion (${placedRatio.toFixed(2)} placed vs ${intrinsicRatio.toFixed(2)} intrinsic)`
+        });
+      }
+    }
+  }
+
+  return issues;
+}
+
 module.exports = {
   SLIDE_BOUNDS,
   contrastRatio,
   createSlideCanvas,
   normalizeText,
   validateGeometry,
+  validateImageAspectRatio,
   validateTextContrast,
   validateTextFit,
   validateTextPadding

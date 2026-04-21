@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 7,
+  index: 13,
   title: "AI in software development"
 };
 
@@ -123,7 +123,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.24,
     h: 0.76,
     title: "My position",
-    body: "Neither hype nor denial: the educational task is to teach judgment around use.",
+    body: "In my own agenda, AI is a software-architecture and supervision question, not just a tool trend.",
     group: "ai-right"
   });
 

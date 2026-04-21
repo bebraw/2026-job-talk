@@ -1,7 +1,6 @@
 const { fontFace } = require("../generator/theme");
 const {
   addAccentRule,
-  addCompactCard,
   addPageBadge,
 } = require("../generator/helpers");
 const { createSlideCanvas } = require("../generator/validation");
@@ -26,34 +25,15 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addText(
-    "cover-eyebrow",
-    "Job talk · research, teaching, future vision",
-    {
-      x: 0.7,
-      y: 0.68,
-      w: 4.3,
-      h: 0.26,
-      fontFace,
-      fontSize: 11,
-      bold: true,
-      color: theme.muted,
-      margin: 0,
-    },
-    {
-      group: "cover-header",
-    },
-  );
-
-  canvas.addText(
     "cover-title",
     slideConfig.title,
     {
       x: 0.7,
-      y: 1.02,
-      w: 4.7,
-      h: 0.66,
+      y: 1.42,
+      w: 6.8,
+      h: 0.74,
       fontFace,
-      fontSize: 24,
+      fontSize: 28,
       bold: true,
       color: theme.accent,
       margin: 0,
@@ -68,9 +48,9 @@ function createSlide(pres, theme, options = {}) {
     "From hybrid rendering to agentic hypermedia",
     {
       x: 0.72,
-      y: 1.64,
-      w: 4.5,
-      h: 0.24,
+      y: 2.2,
+      w: 6.2,
+      h: 0.26,
       fontFace,
       fontSize: 13,
       bold: true,
@@ -82,33 +62,16 @@ function createSlide(pres, theme, options = {}) {
     },
   );
 
-  canvas.addShape(
-    "cover-separator",
-    pres.ShapeType.roundRect,
-    {
-      x: 0.72,
-      y: 2.22,
-      w: 4.5,
-      h: 0.08,
-      rectRadius: 0.03,
-      line: { color: theme.secondary, transparency: 100 },
-      fill: { color: theme.secondary },
-    },
-    {
-      group: "cover-summary",
-    },
-  );
-
   canvas.addText(
     "cover-name",
     "Juho Vepsäläinen",
     {
       x: 0.72,
-      y: 2.44,
-      w: 3.2,
+      y: 3.08,
+      w: 3.6,
       h: 0.22,
       fontFace,
-      fontSize: 11.4,
+      fontSize: 12,
       bold: true,
       color: theme.accent,
       margin: 0,
@@ -123,7 +86,7 @@ function createSlide(pres, theme, options = {}) {
     "6.5.2026",
     {
       x: 0.72,
-      y: 2.7,
+      y: 3.38,
       w: 2,
       h: 0.2,
       fontFace,
@@ -135,39 +98,6 @@ function createSlide(pres, theme, options = {}) {
       group: "cover-summary",
     },
   );
-
-  addCompactCard(canvas, pres, theme, {
-    id: "cover-card-research",
-    x: 5.9,
-    y: 0.92,
-    w: 3.02,
-    h: 0.92,
-    title: "Research",
-    body: "Hybrid rendering, edge architectures, HTML-first design, and AI-aware engineering.",
-    group: "cover-panel",
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "cover-card-teaching",
-    x: 5.9,
-    y: 2.02,
-    w: 3.02,
-    h: 0.92,
-    title: "Teaching",
-    body: "Research-led supervision, public learning resources, and course design for a changing field.",
-    group: "cover-panel",
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "cover-card-vision",
-    x: 5.9,
-    y: 3.12,
-    w: 3.02,
-    h: 0.92,
-    title: "Vision",
-    body: "A next web that is lighter for users, clearer for developers, and navigable by agents.",
-    group: "cover-panel",
-  });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);
   return canvas.finalize();

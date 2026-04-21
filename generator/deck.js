@@ -3,21 +3,39 @@ const { bodyFont, deckMeta, displayFont, theme } = require("./theme");
 
 const slideModules = [
   require("../slides/slide-01"),
-  require("../slides/slide-02-contents"),
+  require("../slides/slide-02a-why-scale"),
+  require("../slides/slide-02b-why-architectures"),
   require("../slides/slide-02"),
+  require("../slides/slide-02-contents"),
   require("../slides/slide-03-section-part1"),
   require("../slides/slide-03"),
+  require("../slides/slide-03b-hybrid-techniques"),
   require("../slides/slide-04"),
+  require("../slides/slide-04b-simplification-why"),
+  require("../slides/slide-05a-ai-dev-1"),
+  require("../slides/slide-05b-ai-dev-2"),
   require("../slides/slide-05"),
+  require("../slides/slide-06a-csed-1"),
+  require("../slides/slide-06b-csed-2"),
   require("../slides/slide-06"),
   require("../slides/slide-07"),
+  require("../slides/slide-07a-teaching-approach-2"),
+  require("../slides/slide-07b-teaching-infrastructure"),
   require("../slides/slide-08"),
+  require("../slides/slide-08b-supervision-cases"),
   require("../slides/slide-09-section-part2"),
   require("../slides/slide-09"),
+  require("../slides/slide-10a-goals-1"),
+  require("../slides/slide-10b-goals-2"),
   require("../slides/slide-10"),
   require("../slides/slide-11-section-part3"),
+  require("../slides/slide-11a-discussion-1"),
+  require("../slides/slide-11b-discussion-2"),
   require("../slides/slide-11"),
-  require("../slides/slide-12")
+  require("../slides/slide-12"),
+  require("../slides/slide-12-references"),
+  require("../slides/slide-12b-references"),
+  require("../slides/slide-12c-references")
 ];
 
 function populatePresentation(pres, theme, options = {}) {

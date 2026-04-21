@@ -1,0 +1,99 @@
+const {
+  addAccentRule,
+  addBulletItem,
+  addCompactCard,
+  addPageBadge,
+  addSectionTitle
+} = require("../generator/helpers");
+const { createSlideCanvas } = require("../generator/validation");
+
+const slideConfig = {
+  type: "content",
+  index: 25,
+  title: "Goals as a tenure-track lecturer"
+};
+
+function createSlide(pres, theme, options = {}) {
+  const canvas = createSlideCanvas(pres, slideConfig, options);
+  const { slide } = canvas;
+  slide.background = { color: theme.bg };
+
+  addSectionTitle(
+    canvas,
+    theme,
+    "Goals",
+    slideConfig.title
+  );
+
+  addAccentRule(canvas, pres, theme, {
+    id: "closing-rule",
+    x: 7.38,
+    y: 0.68,
+    w: 1.9,
+    group: "section-header"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "closing-bullet-courses",
+    x: 0.78,
+    y: 2.06,
+    w: 4.44,
+    title: "Build research-led teaching around changing architectures.",
+    body: "Teach students to reason about systems, not just tools.",
+    bodyH: 0.3,
+    titleFontSize: 9.4,
+    bodyFontSize: 8.4,
+    group: "closing-left"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "closing-bullet-supervision",
+    x: 0.78,
+    y: 2.86,
+    w: 4.44,
+    title: "Build a supervision pipeline between research and industry.",
+    body: "Use thesis work to connect research, industry, and neighboring CS areas.",
+    bodyH: 0.3,
+    titleFontSize: 9.4,
+    bodyFontSize: 8.4,
+    group: "closing-left"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "closing-card-curriculum",
+    x: 5.72,
+    y: 2.08,
+    w: 3.08,
+    h: 0.76,
+    title: "Curriculum focus",
+    body: "Architecture, AI-aware development, and reflective practice.",
+    group: "closing-right"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "closing-card-profile",
+    x: 5.72,
+    y: 3,
+    w: 3.08,
+    h: 0.76,
+    title: "Research profile",
+    body: "Agentic hypermedia as a bridge between web research, AI, and education.",
+    group: "closing-right"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "closing-card-community",
+    x: 5.72,
+    y: 3.92,
+    w: 3.08,
+    h: 0.76,
+    title: "Impact and service",
+    body: "Public teaching infrastructure and Future Frontend extend the work beyond campus.",
+    group: "closing-right"
+  });
+
+  addPageBadge(canvas, pres, theme, slideConfig.index);
+  return canvas.finalize();
+}
+
+module.exports = { createSlide, slideConfig };

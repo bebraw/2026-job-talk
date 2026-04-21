@@ -12,7 +12,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 8,
+  index: 16,
   title: "AI and computing education"
 };
 
@@ -38,9 +38,9 @@ function createSlide(pres, theme, options = {}) {
 
   addPanel(canvas, pres, theme, "csed-left-panel", {
     x: 0.62,
-    y: 2.06,
+    y: 2.02,
     w: 4.54,
-    h: 2.88,
+    h: 2.78,
     lineColor: theme.light,
     fillColor: theme.panel,
     group: "csed-left"
@@ -87,7 +87,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "csed-bullet-judgment",
     x: 0.92,
-    y: 4.28,
+    y: 4.16,
     w: 3.96,
     title: "The durable goal is judgment.",
     body: "Students should know when to trust, verify, or ignore AI.",
@@ -99,9 +99,9 @@ function createSlide(pres, theme, options = {}) {
   addCompactCard(canvas, pres, theme, {
     id: "csed-card-course",
     x: 5.54,
-    y: 2.08,
+    y: 2.04,
     w: 3.3,
-    h: 0.8,
+    h: 0.76,
     title: "Course design",
     body: "AI changes assessment and classroom design, not only policy.",
     group: "csed-right"
@@ -110,9 +110,9 @@ function createSlide(pres, theme, options = {}) {
   addCompactCard(canvas, pres, theme, {
     id: "csed-card-supervision",
     x: 5.54,
-    y: 3.02,
+    y: 2.94,
     w: 3.3,
-    h: 0.8,
+    h: 0.76,
     title: "Supervision",
     body: "Students need support in using AI critically while building understanding.",
     group: "csed-right"
@@ -121,9 +121,9 @@ function createSlide(pres, theme, options = {}) {
   addCompactCard(canvas, pres, theme, {
     id: "csed-card-curriculum",
     x: 5.54,
-    y: 3.96,
+    y: 3.84,
     w: 3.3,
-    h: 0.8,
+    h: 0.76,
     title: "Curriculum",
     body: "The curriculum should foreground architecture, verification, and reflective practice.",
     group: "csed-right"
@@ -132,11 +132,11 @@ function createSlide(pres, theme, options = {}) {
   addReferenceNote(
     canvas,
     theme,
-    "Vepsäläinen & Juntunen (2026), “Artificial intelligence for computer science education - hype or help?”",
+    "[5] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
     {
       x: 0.72,
-      y: 5.04,
-      w: 6.9,
+      y: 4.96,
+      w: 7.9,
       h: 0.18,
       group: "csed-reference"
     }

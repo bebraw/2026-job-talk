@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 10,
+  index: 20,
   title: "Supervision as frontier teaching"
 };
 
@@ -38,68 +38,47 @@ function createSlide(pres, theme, options = {}) {
   addPanel(canvas, pres, theme, "supervision-left-panel", {
     x: 0.62,
     y: 2.04,
-    w: 4.52,
-    h: 2.66,
+    w: 8.18,
+    h: 2.9,
     lineColor: theme.light,
     fillColor: theme.panel,
-    group: "supervision-left"
+    group: "supervision-main"
   });
 
   addBulletItem(canvas, pres, theme, {
     id: "supervision-bullet-volume",
     x: 0.78,
     y: 2.34,
-    w: 4.26,
+    w: 7.54,
     title: "The scale of supervision already matters.",
     body: "The volume already reveals recurring student and industry themes.",
     bodyH: 0.3,
     bodyFontSize: 8.4,
-    group: "supervision-left"
+    group: "supervision-main"
   });
 
   addBulletItem(canvas, pres, theme, {
     id: "supervision-bullet-mentoring",
     x: 0.78,
-    y: 3.14,
-    w: 4.26,
-    title: "My mentoring style is active and question-driven.",
-    body: "The goal is durable understanding, not only thesis completion.",
+    y: 3.18,
+    w: 7.54,
+    title: "Teaching and supervision feed research back.",
+    body: "Current topics include agentic AI, AIOps, and AI-supported web engineering.",
     bodyH: 0.3,
     bodyFontSize: 8.4,
-    group: "supervision-left"
+    group: "supervision-main"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "supervision-card-pyry",
-    x: 5.56,
-    y: 2.06,
-    w: 3.28,
-    h: 0.74,
-    title: "Pyry Pohjalainen (2025)",
-    body: "AI for web development: thesis published through AAAI Magazine.",
-    group: "supervision-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "supervision-card-anoop",
-    x: 5.56,
-    y: 2.98,
-    w: 3.28,
-    h: 0.74,
-    title: "Anoop Bidikar (2024)",
-    body: "Stateful serverless architectures at the edge: a strong systems-oriented MSc thesis.",
-    group: "supervision-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "supervision-card-antti",
-    x: 5.56,
-    y: 3.9,
-    w: 3.28,
-    h: 0.74,
-    title: "Antti Nousiainen (2024)",
-    body: "WebAssembly in edge computing: technically demanding supervision with good outcomes.",
-    group: "supervision-right"
+  addBulletItem(canvas, pres, theme, {
+    id: "supervision-bullet-bridge",
+    x: 0.78,
+    y: 4.02,
+    w: 7.54,
+    title: "Supervision connects research, curriculum, and industry.",
+    body: "My mentoring style is active and question-driven, with durable understanding as the goal.",
+    bodyH: 0.3,
+    bodyFontSize: 8.4,
+    group: "supervision-main"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

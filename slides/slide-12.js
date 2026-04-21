@@ -7,7 +7,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "closing",
-  index: 16,
+  index: 31,
   title: "Q&A"
 };
 
@@ -26,8 +26,8 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("qa-title", "Q&A", {
     x: 0.7,
-    y: 1.92,
-    w: 2.6,
+    y: 2.3,
+    w: 3.0,
     h: 0.56,
     fontFace,
     fontSize: 26,

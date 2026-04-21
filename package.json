@@ -4,7 +4,8 @@
   "private": true,
   "description": "Demo presentation generator built around the imported pdf-slide-generator skill.",
   "scripts": {
-    "build": "node generator/compile.js",
+    "build:diagrams": "node generator/render-diagrams.js",
+    "build": "npm run build:diagrams && node generator/compile.js",
     "build:all": "npm run build",
     "validate:geometry": "node generator/validate-geometry.js",
     "validate:text": "node generator/validate-text.js",

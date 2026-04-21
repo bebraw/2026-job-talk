@@ -1,0 +1,50 @@
+const {
+  addAccentRule,
+  addBulletItem,
+  addPageBadge,
+  addSectionTitle
+} = require("../generator/helpers");
+const { createSlideCanvas } = require("../generator/validation");
+
+const slideConfig = {
+  type: "content",
+  index: 2,
+  title: "Why this matters now"
+};
+
+function createSlide(pres, theme, options = {}) {
+  const canvas = createSlideCanvas(pres, slideConfig, options);
+  const { slide } = canvas;
+  slide.background = { color: theme.bg };
+
+  addSectionTitle(
+    canvas,
+    theme,
+    "Motivation",
+    slideConfig.title
+  );
+
+  addAccentRule(canvas, pres, theme, {
+    id: "why-rule",
+    x: 8,
+    y: 0.68,
+    w: 1.28,
+    group: "section-header"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "why-bullet-scale",
+    x: 0.84,
+    y: 2.18,
+    w: 7.66,
+    title: "Scale has changed web costs.",
+    body: "Payload, latency, and maintenance pressures keep growing.",
+    bodyH: 0.42,
+    group: "why-left"
+  });
+
+  addPageBadge(canvas, pres, theme, slideConfig.index);
+  return canvas.finalize();
+}
+
+module.exports = { createSlide, slideConfig };

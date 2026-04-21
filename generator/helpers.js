@@ -62,7 +62,7 @@ function addCompactCard(canvas, pres, theme, options = {}) {
     title,
     body,
     titleFontSize = 10.6,
-    bodyFontSize = 8.7,
+    bodyFontSize = 9,
     group = id
   } = options;
 
@@ -117,7 +117,7 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     w = 4,
     bodyH = 0.36,
     titleFontSize = 10,
-    bodyFontSize = 8.7,
+    bodyFontSize = 9,
     group = id
   } = options;
 
@@ -182,7 +182,7 @@ function addStatChip(canvas, pres, theme, options = {}) {
     value,
     label,
     valueFontSize = 14,
-    labelFontSize = 8,
+    labelFontSize = 8.3,
     group = id
   } = options;
 
@@ -263,7 +263,7 @@ function addSectionTitle(canvas, theme, eyebrow, title, body) {
     w: 3.8,
     h: 0.26,
     fontFace: bodyFont,
-    fontSize: 10.5,
+    fontSize: 10.8,
     bold: true,
     color: theme.muted,
     charSpace: 0.8,
@@ -319,7 +319,7 @@ function addReferenceNote(canvas, theme, text, options = {}) {
     w,
     h,
     fontFace: bodyFont,
-    fontSize: 9.2,
+    fontSize: 9.4,
     color: theme.muted,
     align,
     margin: 0

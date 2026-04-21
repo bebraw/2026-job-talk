@@ -1,9 +1,15 @@
 const { createPresentation } = require("./deck");
-const { validateTextContrast, validateTextFit, validateTextPadding } = require("./validation");
+const {
+  validateImageAspectRatio,
+  validateTextContrast,
+  validateTextFit,
+  validateTextPadding
+} = require("./validation");
 
 function main() {
   const { reports } = createPresentation({ trackLayout: true });
   const issues = [
+    ...validateImageAspectRatio(reports),
     ...validateTextContrast(reports),
     ...validateTextFit(reports),
     ...validateTextPadding(reports)

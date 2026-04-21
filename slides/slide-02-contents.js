@@ -1,16 +1,14 @@
 const {
   addAccentRule,
-  addBulletItem,
-  addCompactCard,
   addPageBadge,
-  addPanel,
   addSectionTitle
 } = require("../generator/helpers");
+const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 2,
+  index: 5,
   title: "Roadmap"
 };
 
@@ -34,81 +32,108 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  addPanel(canvas, pres, theme, "contents-left-panel", {
-    x: 0.62,
-    y: 2.08,
-    w: 4.72,
-    h: 2.84,
-    lineColor: theme.primary,
-    linePt: 1.1,
-    fillColor: theme.panel,
-    group: "contents-left"
+  canvas.addText("contents-part1-label", "Part 1", {
+    x: 1,
+    y: 2.5,
+    w: 1.1,
+    h: 0.22,
+    fontFace,
+    fontSize: 10.8,
+    bold: true,
+    color: theme.muted,
+    margin: 0
+  }, {
+    group: "contents-main"
   });
 
-  addBulletItem(canvas, pres, theme, {
-    id: "contents-bullet-motivation",
-    x: 0.94,
-    y: 2.46,
-    w: 4.06,
-    title: "Why this matters now",
-    body: "Complexity and AI are reshaping the web.",
-    bodyH: 0.3,
-    group: "contents-left"
+  canvas.addText("contents-part1-title", "Research and teaching highlights", {
+    x: 2.08,
+    y: 2.44,
+    w: 5.7,
+    h: 0.32,
+    fontFace,
+    fontSize: 16.8,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "contents-main"
   });
 
-  addBulletItem(canvas, pres, theme, {
-    id: "contents-bullet-highlights",
-    x: 0.94,
-    y: 3.18,
-    w: 4.06,
-    title: "Research and teaching highlights",
-    body: "Hybrid rendering, simplification, AI, and teaching.",
-    bodyH: 0.3,
-    group: "contents-left"
-  });
-
-  addBulletItem(canvas, pres, theme, {
-    id: "contents-bullet-future",
-    x: 0.94,
-    y: 4,
-    w: 4.06,
-    title: "Future vision and discussion",
-    body: "Agentic hypermedia, lecturer goals, and discussion.",
-    bodyH: 0.3,
-    group: "contents-left"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "contents-card-part1",
-    x: 5.76,
-    y: 2.1,
-    w: 3.04,
-    h: 0.82,
-    title: "Part 1",
-    body: "Highlights in research, teaching, and their interaction.",
-    group: "contents-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "contents-card-part2",
-    x: 5.76,
+  canvas.addShape("contents-divider-1", pres.ShapeType.line, {
+    x: 1,
     y: 3.06,
-    w: 3.04,
-    h: 0.82,
-    title: "Part 2",
-    body: "Future research and teaching vision around agentic hypermedia.",
-    group: "contents-right"
+    w: 7.42,
+    h: 0,
+    line: { color: theme.light, pt: 1 }
+  }, {
+    group: "contents-main"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "contents-card-part3",
-    x: 5.76,
-    y: 4.02,
-    w: 3.04,
-    h: 0.82,
-    title: "Part 3",
-    body: "Discussion on the durable core of computing in the AI era.",
-    group: "contents-right"
+  canvas.addText("contents-part2-label", "Part 2", {
+    x: 1,
+    y: 3.42,
+    w: 1.1,
+    h: 0.22,
+    fontFace,
+    fontSize: 10.8,
+    bold: true,
+    color: theme.muted,
+    margin: 0
+  }, {
+    group: "contents-main"
+  });
+
+  canvas.addText("contents-part2-title", "Future vision and goals", {
+    x: 2.08,
+    y: 3.36,
+    w: 5.4,
+    h: 0.32,
+    fontFace,
+    fontSize: 16.8,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "contents-main"
+  });
+
+  canvas.addShape("contents-divider-2", pres.ShapeType.line, {
+    x: 1,
+    y: 3.98,
+    w: 7.42,
+    h: 0,
+    line: { color: theme.light, pt: 1 }
+  }, {
+    group: "contents-main"
+  });
+
+  canvas.addText("contents-part3-label", "Part 3", {
+    x: 1,
+    y: 4.34,
+    w: 1.1,
+    h: 0.22,
+    fontFace,
+    fontSize: 10.8,
+    bold: true,
+    color: theme.muted,
+    margin: 0
+  }, {
+    group: "contents-main"
+  });
+
+  canvas.addText("contents-part3-title", "Discussion", {
+    x: 2.08,
+    y: 4.28,
+    w: 3.2,
+    h: 0.32,
+    fontFace,
+    fontSize: 16.8,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "contents-main"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

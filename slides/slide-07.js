@@ -1,18 +1,17 @@
 const {
   addAccentRule,
   addBulletItem,
-  addCompactCard,
   addPageBadge,
-  addPanel,
   addSectionTitle,
   addStatChip
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
+const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 9,
+  index: 17,
   title: "How research informs my teaching"
 };
 
@@ -40,7 +39,7 @@ function createSlide(pres, theme, options = {}) {
     id: "teach-stat-bsc",
     x: 0.62,
     y: 2.02,
-    w: 2.02,
+    w: 2.28,
     value: "20+",
     label: "BSc theses since 2022",
     valueFontSize: 12.5,
@@ -49,9 +48,9 @@ function createSlide(pres, theme, options = {}) {
 
   addStatChip(canvas, pres, theme, {
     id: "teach-stat-msc",
-    x: 2.84,
+    x: 3.1,
     y: 2.02,
-    w: 2.02,
+    w: 2.28,
     value: "6",
     label: "MSc theses advised",
     valueFontSize: 12.5,
@@ -60,44 +59,22 @@ function createSlide(pres, theme, options = {}) {
 
   addStatChip(canvas, pres, theme, {
     id: "teach-stat-peda",
-    x: 5.06,
+    x: 5.58,
     y: 2.02,
-    w: 1.92,
+    w: 2.28,
     value: "18",
     label: "ECTS of pedagogy",
     valueFontSize: 12.5,
     group: "teach-stats"
   });
 
-  addStatChip(canvas, pres, theme, {
-    id: "teach-stat-lecture",
-    x: 7.18,
-    y: 2.02,
-    w: 1.92,
-    value: "1",
-    label: "Yearly web futures lecture",
-    valueFontSize: 12.5,
-    group: "teach-stats"
-  });
-
-  addPanel(canvas, pres, theme, "teach-left-panel", {
-    x: 0.62,
-    y: 2.92,
-    w: 4.66,
-    h: 2.02,
-    lineColor: theme.primary,
-    linePt: 1.1,
-    fillColor: theme.panel,
-    group: "teach-left"
-  });
-
-  canvas.addText("teach-left-title", "Teaching infrastructure", {
-    x: 0.94,
-    y: 3.2,
-    w: 2.3,
-    h: 0.2,
+  canvas.addText("teach-left-title", "Teaching approach", {
+    x: 0.9,
+    y: 3.02,
+    w: 4.1,
+    h: 0.42,
     fontFace,
-    fontSize: 11.4,
+    fontSize: 18,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -108,61 +85,37 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "teach-bullet-models",
     x: 0.94,
-    y: 3.54,
-    w: 4.02,
+    y: 3.78,
+    w: 3.92,
     title: "Build working models students can adapt.",
-    body: "Teach fast-moving material without chasing tools.",
+    body: "Research helps teach fast-moving material without chasing tools.",
     bodyH: 0.28,
     bodyFontSize: 8,
     group: "teach-left"
   });
 
-  addBulletItem(canvas, pres, theme, {
-    id: "teach-bullet-materials",
-    x: 0.94,
-    y: 4.18,
-    w: 4.02,
-    title: "Create support around the classroom.",
-    body: "Writing guide, books, and SurviveJS.",
-    bodyH: 0.26,
-    bodyFontSize: 8.2,
-    group: "teach-left"
+  canvas.addText("teach-loop-title", "Research-teaching nexus [7,8]", {
+    x: 5.12,
+    y: 3.08,
+    w: 3.76,
+    h: 0.18,
+    fontFace,
+    fontSize: 9.2,
+    bold: true,
+    color: theme.muted,
+    margin: 0
+  }, {
+    group: "teach-loop"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "teach-card-courses",
-    x: 5.7,
-    y: 2.96,
-    w: 3.1,
-    h: 0.68,
-    title: "Courses",
-    body: "TA work in Design of WWW Services and WWW Applications.",
-    bodyFontSize: 7.8,
-    group: "teach-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "teach-card-course-dev",
-    x: 5.7,
-    y: 3.78,
-    w: 3.1,
-    h: 0.68,
-    title: "Course development",
-    body: "Assessment redesign, fairer reflection practices, and a scalable web course.",
-    bodyFontSize: 7.8,
-    group: "teach-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "teach-card-lectures",
-    x: 5.7,
-    y: 4.6,
-    w: 3.1,
-    h: 0.68,
-    title: "Invited lectures",
-    body: "Guest lectures in Turku and Jyväskylä extend the profile beyond Aalto.",
-    bodyFontSize: 7.8,
-    group: "teach-right"
+  canvas.addImage("teach-loop-image", {
+    path: path.join(__dirname, "assets/diagrams/research-teaching-loop.png"),
+    x: 5.1,
+    y: 3.28,
+    w: 3.84,
+    h: 1.6
+  }, {
+    group: "teach-loop"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

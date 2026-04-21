@@ -1,7 +1,7 @@
 const {
   addAccentRule,
   addBulletItem,
-  addCompactCard,
+  addReferenceNote,
   addPageBadge,
   addPanel,
   addSectionTitle
@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 5,
+  index: 7,
   title: "Hybrid rendering models"
 };
 
@@ -35,11 +35,24 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
+  addReferenceNote(
+    canvas,
+    theme,
+    "Dissertation: Vepsäläinen, J. (2025). Emergence of hybrid rendering models in web application development.",
+    {
+      x: 0.72,
+      y: 1.54,
+      w: 7.9,
+      h: 0.18,
+      group: "hybrid-reference"
+    }
+  );
+
   addPanel(canvas, pres, theme, "hybrid-left-panel", {
     x: 0.62,
-    y: 2.08,
+    y: 2.24,
     w: 4.55,
-    h: 2.58,
+    h: 2.42,
     lineColor: theme.light,
     fillColor: theme.panel,
     group: "hybrid-left"
@@ -47,8 +60,8 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("hybrid-left-title", "Dissertation backbone", {
     x: 0.9,
-    y: 2.34,
-    w: 2.1,
+    y: 2.46,
+    w: 2.9,
     h: 0.2,
     fontFace,
     fontSize: 11.6,
@@ -62,7 +75,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "hybrid-bullet-space",
     x: 0.9,
-    y: 2.72,
+    y: 2.82,
     w: 3.96,
     title: "Study the space between static and dynamic.",
     body: "A middle ground between performance, maintainability, and interactivity.",
@@ -73,7 +86,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "hybrid-bullet-experience",
     x: 0.9,
-    y: 3.6,
+    y: 3.68,
     w: 3.96,
     title: "Evaluate both user and developer experience.",
     body: "Compare choices by their cost for users and teams.",
@@ -81,42 +94,56 @@ function createSlide(pres, theme, options = {}) {
     group: "hybrid-left"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "hybrid-card-islands",
+  addPanel(canvas, pres, theme, "hybrid-right-panel", {
     x: 5.62,
-    y: 2.08,
+    y: 2.24,
     w: 3.18,
-    h: 0.76,
-    title: "Islands",
-    body: "Defer interactivity and isolate the dynamic parts that truly need it.",
+    h: 2.42,
+    lineColor: theme.primary,
+    linePt: 1.1,
+    fillColor: theme.panel,
     group: "hybrid-right"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "hybrid-card-resumability",
-    x: 5.62,
-    y: 2.98,
-    w: 3.18,
-    h: 0.76,
-    title: "Resumability",
-    body: "Avoid hydration costs by serializing enough structure into HTML.",
+  canvas.addText("hybrid-right-title", "Core claim", {
+    x: 5.92,
+    y: 2.46,
+    w: 1.9,
+    h: 0.2,
+    fontFace,
+    fontSize: 11.6,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
     group: "hybrid-right"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "hybrid-card-edge",
-    x: 5.62,
-    y: 3.88,
-    w: 3.18,
-    h: 0.76,
-    title: "Edge techniques",
-    body: "Move computation closer to users while keeping payload and latency under control.",
+  addBulletItem(canvas, pres, theme, {
+    id: "hybrid-bullet-claim-space",
+    x: 5.92,
+    y: 2.82,
+    w: 2.54,
+    title: "The design space is broader.",
+    body: "The web is no longer well described by a static-versus-dynamic split.",
+    bodyH: 0.5,
+    group: "hybrid-right"
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "hybrid-bullet-claim-tradeoffs",
+    x: 5.92,
+    y: 3.68,
+    w: 2.54,
+    title: "Trade-offs determine the choice.",
+    body: "Performance, maintainability, and interactivity must be weighed together.",
+    bodyH: 0.5,
     group: "hybrid-right"
   });
 
   canvas.addText("hybrid-note", "Teaching consequence: students need architectural models, not tool opinions.", {
     x: 0.72,
-    y: 4.88,
+    y: 4.8,
     w: 7.8,
     h: 0.28,
     fontFace,

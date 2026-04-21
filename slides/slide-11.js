@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "closing",
-  index: 15,
+  index: 30,
   title: "Discussion"
 };
 
@@ -36,9 +36,9 @@ function createSlide(pres, theme, options = {}) {
 
   addPanel(canvas, pres, theme, "discussion-left-panel", {
     x: 0.62,
-    y: 2.06,
+    y: 2.18,
     w: 4.72,
-    h: 2.9,
+    h: 2.72,
     lineColor: theme.primary,
     linePt: 1.1,
     fillColor: theme.panel,
@@ -50,9 +50,9 @@ function createSlide(pres, theme, options = {}) {
     "If AI changes how software is produced and used,\nwhat should we teach as the durable core of computing?",
     {
       x: 0.98,
-      y: 2.44,
+      y: 2.58,
       w: 3.96,
-      h: 1.92,
+      h: 1.7,
       fontFace,
       fontSize: 14,
       color: theme.accent,
@@ -66,7 +66,7 @@ function createSlide(pres, theme, options = {}) {
   addCompactCard(canvas, pres, theme, {
     id: "discussion-card-architecture",
     x: 5.72,
-    y: 2.1,
+    y: 2.24,
     w: 3.08,
     h: 0.76,
     title: "Architecture",
@@ -77,7 +77,7 @@ function createSlide(pres, theme, options = {}) {
   addCompactCard(canvas, pres, theme, {
     id: "discussion-card-judgment",
     x: 5.72,
-    y: 3.02,
+    y: 3.16,
     w: 3.08,
     h: 0.76,
     title: "Judgment",
@@ -88,25 +88,11 @@ function createSlide(pres, theme, options = {}) {
   addCompactCard(canvas, pres, theme, {
     id: "discussion-card-models",
     x: 5.72,
-    y: 3.94,
+    y: 4.08,
     w: 3.08,
     h: 0.76,
     title: "Model-building",
     body: "Teach durable ways of thinking that outlast each tool cycle.",
-    group: "discussion-right"
-  });
-
-  canvas.addText("discussion-thanks", "Thank you.", {
-    x: 5.74,
-    y: 4.88,
-    w: 1.1,
-    h: 0.18,
-    fontFace,
-    fontSize: 10.6,
-    bold: true,
-    color: theme.muted,
-    margin: 0
-  }, {
     group: "discussion-right"
   });
 

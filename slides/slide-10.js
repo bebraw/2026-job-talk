@@ -9,7 +9,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 13,
+  index: 26,
   title: "Goals as a tenure-track lecturer"
 };
 
@@ -101,7 +101,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Impact and service",
-    body: "Public teaching infrastructure and wider ecosystem contribution beyond campus.",
+    body: "Public teaching infrastructure and Future Frontend extend the work beyond campus.",
     group: "closing-right"
   });
 

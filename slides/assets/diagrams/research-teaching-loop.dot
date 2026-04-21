@@ -1,0 +1,46 @@
+digraph ResearchTeachingNexus {
+  graph [
+    bgcolor="transparent",
+    pad=0.04,
+    ranksep=0.28,
+    nodesep=0.14,
+    splines=true
+  ];
+
+  node [
+    shape=box,
+    style="rounded,filled",
+    fontname="Helvetica Neue",
+    fontsize=13,
+    penwidth=2,
+    margin="0.16,0.1",
+    color="#09b5c4",
+    fontcolor="#183b40",
+    fillcolor="#f7fcfb"
+  ];
+
+  edge [
+    color="#09b5c4",
+    penwidth=2.0,
+    arrowsize=0.6,
+    dir=none
+  ];
+
+  nexus [label="Research-teaching\nnexus", width=1.6, height=0.6, fillcolor="#ffffff"];
+  led [label="Research-led", width=1.3, height=0.38];
+  oriented [label="Research-\noriented", width=1.14, height=0.5];
+  tutored [label="Research-\ntutored", width=1.14, height=0.5];
+  based [label="Research-based", width=1.4, height=0.38];
+  brew [label="Scholarly community\n(Brew)", width=1.7, height=0.5, fillcolor="#ffffff"];
+
+  { rank=min; led }
+  { rank=same; oriented; nexus; tutored }
+  { rank=same; based }
+  { rank=max; brew }
+
+  led -> nexus;
+  oriented -> nexus;
+  tutored -> nexus;
+  nexus -> based;
+  brew -> nexus [style=dashed];
+}
