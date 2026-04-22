@@ -1,7 +1,6 @@
 const {
   addAccentRule,
   addBulletItem,
-  addCompactCard,
   addPageBadge,
   addSectionTitle,
   addStatChip
@@ -12,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 const slideConfig = {
   type: "content",
   index: 15,
-  title: "How research informs my teaching"
+  title: "Research with students"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -37,95 +36,70 @@ function createSlide(pres, theme, options = {}) {
 
   addStatChip(canvas, pres, theme, {
     id: "teach-stat-bsc",
-    x: 0.62,
+    x: 1.08,
     y: 2.02,
-    w: 2.28,
+    w: 3.3,
     value: "20+",
     label: "BSc theses since 2022",
-    valueFontSize: 13.5,
+    valueFontSize: 14.2,
     group: "teach-stats"
   });
 
   addStatChip(canvas, pres, theme, {
     id: "teach-stat-msc",
-    x: 3.1,
+    x: 5.02,
     y: 2.02,
-    w: 2.28,
+    w: 3.3,
     value: "6",
     label: "MSc theses advised",
-    valueFontSize: 13.5,
+    valueFontSize: 14.2,
     group: "teach-stats"
   });
 
-  addStatChip(canvas, pres, theme, {
-    id: "teach-stat-peda",
-    x: 5.58,
-    y: 2.02,
-    w: 2.28,
-    value: "18",
-    label: "ECTS of pedagogy",
-    valueFontSize: 13.5,
-    group: "teach-stats"
-  });
-
-  canvas.addText("teach-left-title", "Research with students", {
+  canvas.addText("teach-main-note", "Current advising work covers agents and MCP, hypermedia, microfrontends, cloud migration, and WebAssembly.", {
     x: 0.9,
-    y: 3.02,
-    w: 4.1,
-    h: 0.42,
+    y: 2.96,
+    w: 7.92,
+    h: 0.34,
     fontFace,
-    fontSize: 20,
-    bold: true,
-    color: theme.accent,
+    fontSize: 10.6,
+    color: theme.muted,
     margin: 0
   }, {
-    group: "teach-left"
+    group: "teach-main"
   });
 
   addBulletItem(canvas, pres, theme, {
-    id: "teach-bullet-research",
+    id: "teach-bullet-pyry",
     x: 0.94,
-    y: 3.78,
-    w: 3.92,
-    title: "Student projects can feed a wider research agenda.",
-    body: "Student projects can feed a wider research agenda.",
-    bodyH: 0.3,
-    titleFontSize: 9.8,
-    bodyFontSize: 9.6,
-    group: "teach-left"
+    y: 3.7,
+    w: 7.92,
+    title: "Pyry Pohjalainen (2025): AI for web development; AAAI Magazine.",
+    titleH: 0.24,
+    titleFontSize: 10.6,
+    group: "teach-main"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "teach-card-pyry",
-    x: 5.3,
-    y: 3.1,
-    w: 3.52,
-    h: 0.68,
-    title: "Pyry Pohjalainen (2025)",
-    body: "AI for web development; AAAI Magazine.",
-    group: "teach-right"
+  addBulletItem(canvas, pres, theme, {
+    id: "teach-bullet-anoop",
+    x: 0.94,
+    y: 4.14,
+    w: 7.92,
+    title: "Anoop Bidikar (2024): Stateful serverless architectures at the edge.",
+    titleH: 0.24,
+    titleFontSize: 10.6,
+    group: "teach-main"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "teach-card-anoop",
-    x: 5.3,
-    y: 3.92,
-    w: 3.52,
-    h: 0.68,
-    title: "Anoop Bidikar (2024)",
-    body: "Stateful serverless architectures at the edge.",
-    group: "teach-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "teach-card-antti",
-    x: 5.3,
-    y: 4.74,
-    w: 3.52,
-    h: 0.68,
-    title: "Antti Nousiainen (2024)",
-    body: "WebAssembly in edge computing.",
-    group: "teach-right"
+  addBulletItem(canvas, pres, theme, {
+    id: "teach-bullet-antti",
+    x: 0.94,
+    y: 4.58,
+    w: 7.92,
+    title: "Antti Nousiainen (2024): WebAssembly in edge computing.",
+    titleH: 0.24,
+    titleFontSize: 10.6,
+    group: "teach-main"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

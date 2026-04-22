@@ -2,8 +2,7 @@ const {
   addAccentRule,
   addBulletItem,
   addPageBadge,
-  addSectionTitle,
-  addStatChip
+  addSectionTitle
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
@@ -35,42 +34,9 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  addStatChip(canvas, pres, theme, {
-    id: "teach-stat-bsc",
-    x: 0.62,
-    y: 2.02,
-    w: 2.28,
-    value: "20+",
-    label: "BSc theses since 2022",
-    valueFontSize: 13.5,
-    group: "teach-stats"
-  });
-
-  addStatChip(canvas, pres, theme, {
-    id: "teach-stat-msc",
-    x: 3.1,
-    y: 2.02,
-    w: 2.28,
-    value: "6",
-    label: "MSc theses advised",
-    valueFontSize: 13.5,
-    group: "teach-stats"
-  });
-
-  addStatChip(canvas, pres, theme, {
-    id: "teach-stat-peda",
-    x: 5.58,
-    y: 2.02,
-    w: 2.28,
-    value: "18",
-    label: "ECTS of pedagogy",
-    valueFontSize: 13.5,
-    group: "teach-stats"
-  });
-
   canvas.addText("teach-left-title", "Teaching approach", {
     x: 0.9,
-    y: 3.02,
+    y: 2.32,
     w: 4.1,
     h: 0.42,
     fontFace,
@@ -85,7 +51,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "teach-bullet-models",
     x: 0.94,
-    y: 3.78,
+    y: 3.12,
     w: 3.92,
     title: "Build working models students can adapt.",
     body: "Research helps me teach principles, not only tools.",
@@ -96,17 +62,17 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addImage("teach-loop-image", {
     path: path.join(__dirname, "assets/diagrams/research-teaching-loop.png"),
-    x: 5.1,
-    y: 3.18,
-    w: 3.84,
-    h: 1.6
+    x: 5.06,
+    y: 2.62,
+    w: 3.88,
+    h: 1.62
   }, {
     group: "teach-loop"
   });
 
   canvas.addText("teach-loop-title", "Research-teaching nexus [3,4]", {
     x: 5.12,
-    y: 5.08,
+    y: 4.56,
     w: 3.76,
     h: 0.18,
     fontFace,

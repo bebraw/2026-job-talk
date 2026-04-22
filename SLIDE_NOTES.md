@@ -111,9 +111,11 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 ## 15. How Research Informs My Teaching
 
-- Use a third pass to show what `research with students` looks like in practice.
-- Make the main point explicit: students learn by contributing to real research, not by orbiting it from a distance.
-- Use the three cases as evidence of theme and level: AI for web development, edge/serverless systems, and WebAssembly at the edge.
+- Use this as the dedicated `research with students` evidence slide.
+- Keep only the supervision numbers that support the claim directly: BSc and MSc thesis counts.
+- Drop `ECTS of pedagogy` here; it belongs to teaching background rather than student-research evidence.
+- Make the main point explicit in one short line: students learn by contributing to real research, not by orbiting it from a distance.
+- Use the three cases as concise evidence of theme and level: AI for web development, edge/serverless systems, and WebAssembly at the edge.
 - Mention that the Pyry Pohjalainen thesis led to publication through AAAI Magazine, as that signals quality and external visibility.
 
 ## 16. Teaching Infrastructure
