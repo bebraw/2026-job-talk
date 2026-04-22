@@ -1,8 +1,6 @@
 const {
-  addAccentRule,
   addBulletItem,
   addPageBadge,
-  addPanel,
   addReferenceNote,
   addSectionTitle,
   addCompactCard
@@ -28,26 +26,8 @@ function createSlide(pres, theme, options = {}) {
     slideConfig.title
   );
 
-  addAccentRule(canvas, pres, theme, {
-    id: "teaching-rule",
-    x: 7.44,
-    y: 0.68,
-    w: 1.84,
-    group: "section-header"
-  });
-
-  addPanel(canvas, pres, theme, "csed-left-panel", {
-    x: 0.62,
-    y: 2.02,
-    w: 4.54,
-    h: 2.78,
-    lineColor: theme.light,
-    fillColor: theme.panel,
-    group: "csed-left"
-  });
-
   canvas.addText("csed-left-title", "Educational implications", {
-    x: 0.92,
+    x: 0.62,
     y: 2.34,
     w: 2.3,
     h: 0.24,
@@ -62,9 +42,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "csed-bullet-institution",
-    x: 0.92,
+    x: 0.62,
     y: 2.72,
-    w: 3.96,
+    w: 4.24,
     title: "Institutions must respond proactively.",
     body: "Universities cannot leave adaptation to students alone.",
     bodyH: 0.3,
@@ -74,9 +54,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "csed-bullet-integrity",
-    x: 0.92,
+    x: 0.62,
     y: 3.5,
-    w: 3.96,
+    w: 4.24,
     title: "Integrity is only part of the challenge.",
     body: "Assessment and skill formation need redesign.",
     bodyH: 0.3,

@@ -10,6 +10,8 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Prefer them only for one primary box on a slide when that box carries the main claim, discussion prompt, or takeaway.
 - Keep surrounding support cards light so hierarchy stays obvious and the deck does not become visually heavy.
 - Limit dark infoboxes to a small set of slides across the whole presentation rather than repeating them everywhere.
+- Use the aqua accent only when it carries structure.
+- On light content slides, avoid decorative top-edge aqua marks when the progress bar or typography already provides enough hierarchy.
 - Treat projected-slide typography as presentation content, not document content.
 - Use Microsoft’s `18 pt` minimum as the floor for normal projected text, and use the common `30 pt` readability rule as the pressure test for whether a slide is too dense.
 - If text does not fit at a comfortable size, cut the on-slide copy and move supporting detail into `SLIDE_NOTES.md` instead of shrinking type.

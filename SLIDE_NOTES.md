@@ -139,6 +139,8 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Use the follow-up slide to move the conference/community point out of the writing-support slide.
 - Keep the current conference photo here and connect it directly to Future Frontend.
 - Treat meetups and the conference as outward-facing teaching work rather than as generic community service.
+- Use one concrete developer example here so the practitioner background is legible: `webpack-merge` is a good anchor.
+- Phrase the developer example accurately: `webpack-merge` can be presented as your work, while `webpack` and `Blender` should read as earlier contributions rather than ongoing involvement.
 
 ## 21. Thesis Journey Tracker
 
@@ -195,6 +197,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Complete the sequence with the community-facing goal.
 - Your community goal is public educational infrastructure, outward-facing teaching work, and Future Frontend.
 - Make the infrastructure concrete: guides, advising tools, and open learning materials are part of the role, not side projects.
+- Make the developer background legible as teaching-relevant credibility rather than a side biography; one recognizable example such as `webpack-merge` is enough.
 - Frame the goal as durable educational infrastructure around learning and supervision, not institutional reach.
 - Say explicitly that this is a good fit for Aalto CS because the department values interdisciplinarity, collaboration, and impact beyond a single subfield.
 

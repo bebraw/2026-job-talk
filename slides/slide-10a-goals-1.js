@@ -64,7 +64,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Research profile",
-    body: "Work at the intersection of web architecture, AI, and education.",
+    body: "Teaching informed by building tools such as webpack-merge.",
     group: "closing-right"
   });
 

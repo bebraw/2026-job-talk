@@ -1,5 +1,4 @@
 const {
-  addAccentRule,
   addBulletItem,
   addPageBadge,
   addPanel,
@@ -27,29 +26,10 @@ function createSlide(pres, theme, options = {}) {
     slideConfig.title
   );
 
-  addAccentRule(canvas, pres, theme, {
-    id: "teaching-infrastructure-rule",
-    x: 7.54,
-    y: 0.68,
-    w: 1.74,
-    group: "section-header"
-  });
-
-  addPanel(canvas, pres, theme, "teaching-infrastructure-left-panel", {
-    x: 0.62,
-    y: 2.06,
-    w: 4.1,
-    h: 2.92,
-    lineColor: theme.primary,
-    linePt: 1.1,
-    fillColor: theme.panel,
-    group: "teaching-infrastructure-left"
-  });
-
   canvas.addText("teaching-infrastructure-left-title", "A reusable guide for student writing", {
-    x: 0.94,
+    x: 0.62,
     y: 2.34,
-    w: 3.22,
+    w: 3.6,
     h: 0.44,
     fontFace,
     fontSize: 12.6,
@@ -62,9 +42,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "teaching-infrastructure-bullet-materials",
-    x: 0.94,
+    x: 0.62,
     y: 3,
-    w: 3.52,
+    w: 4.18,
     title: "Writing expectations should be visible.",
     body: "\"The Process of Scientific Writing\" makes publishing expectations concrete.",
     bodyH: 0.34,
@@ -73,9 +53,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "teaching-infrastructure-bullet-durable",
-    x: 0.94,
+    x: 0.62,
     y: 3.9,
-    w: 3.52,
+    w: 4.18,
     title: "Students can use it on their own.",
     body: "They can return to it before, during, and after thesis work.",
     bodyH: 0.34,

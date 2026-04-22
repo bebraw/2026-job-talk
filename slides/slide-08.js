@@ -1,12 +1,8 @@
 const {
-  addAccentRule,
   addBulletItem,
-  addCompactCard,
   addPageBadge,
-  addPanel,
   addSectionTitle
 } = require("../generator/helpers");
-const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -27,29 +23,11 @@ function createSlide(pres, theme, options = {}) {
     slideConfig.title
   );
 
-  addAccentRule(canvas, pres, theme, {
-    id: "closing-rule",
-    x: 7.38,
-    y: 0.68,
-    w: 1.9,
-    group: "section-header"
-  });
-
-  addPanel(canvas, pres, theme, "supervision-left-panel", {
-    x: 0.62,
-    y: 2.04,
-    w: 8.18,
-    h: 2.9,
-    lineColor: theme.light,
-    fillColor: theme.panel,
-    group: "supervision-main"
-  });
-
   addBulletItem(canvas, pres, theme, {
     id: "supervision-bullet-volume",
-    x: 0.78,
+    x: 0.62,
     y: 2.34,
-    w: 7.54,
+    w: 7.84,
     title: "The scale of supervision already matters.",
     body: "The volume already reveals recurring student and industry themes.",
     bodyH: 0.3,
@@ -59,9 +37,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "supervision-bullet-mentoring",
-    x: 0.78,
+    x: 0.62,
     y: 3.18,
-    w: 7.54,
+    w: 7.84,
     title: "Teaching and supervision feed research back.",
     body: "Current topics include agentic AI, AIOps, and AI-supported web engineering.",
     bodyH: 0.3,
@@ -71,9 +49,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "supervision-bullet-bridge",
-    x: 0.78,
+    x: 0.62,
     y: 4.02,
-    w: 7.54,
+    w: 7.84,
     title: "This is where research, curriculum, and industry meet.",
     body: "I mentor actively and push students to build their own model of the topic.",
     bodyH: 0.3,

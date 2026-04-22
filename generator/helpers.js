@@ -9,8 +9,13 @@ function addAccentRule(canvas, pres, theme, options = {}) {
     y = 0.42,
     w = 2.2,
     h = 0.08,
+    force = false,
     group = id
   } = options;
+
+  if (!force) {
+    return;
+  }
 
   canvas.addShape(id, pres.ShapeType.roundRect, {
     x,

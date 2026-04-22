@@ -1,5 +1,4 @@
 const {
-  addAccentRule,
   addBulletItem,
   addPageBadge,
   addPanel,
@@ -27,29 +26,10 @@ function createSlide(pres, theme, options = {}) {
     slideConfig.title
   );
 
-  addAccentRule(canvas, pres, theme, {
-    id: "public-learning-rule",
-    x: 6.92,
-    y: 0.68,
-    w: 2.36,
-    group: "section-header"
-  });
-
-  addPanel(canvas, pres, theme, "public-learning-left-panel", {
-    x: 0.62,
-    y: 2.06,
-    w: 4.36,
-    h: 2.92,
-    lineColor: theme.primary,
-    linePt: 1.1,
-    fillColor: theme.panel,
-    group: "public-learning-left"
-  });
-
   canvas.addText("public-learning-left-title", "Teaching also happens outside courses", {
-    x: 0.94,
+    x: 0.62,
     y: 2.34,
-    w: 3.3,
+    w: 3.72,
     h: 0.24,
     fontFace,
     fontSize: 12.6,
@@ -62,9 +42,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "public-learning-bullet-community",
-    x: 0.94,
+    x: 0.62,
     y: 2.74,
-    w: 3.72,
+    w: 4.2,
     title: "I organize Future Frontend.",
     body: "Meetups and the conference bring current practice into the room.",
     bodyH: 0.38,
@@ -73,11 +53,11 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "public-learning-bullet-outward",
-    x: 0.94,
+    x: 0.62,
     y: 3.74,
-    w: 3.72,
-    title: "This keeps me close to practice.",
-    body: "That matters in web development, where the field moves fast.",
+    w: 4.2,
+    title: "I also build tools practitioners know.",
+    body: "I have built tools practitioners know, including webpack-merge, and earlier contributed to webpack and Blender.",
     bodyH: 0.38,
     group: "public-learning-left"
   });

@@ -21,6 +21,7 @@ function createSlide(pres, theme, options = {}) {
     x: 0.62,
     y: 0.42,
     w: 2.4,
+    force: true,
     group: "qa-header"
   });
 
