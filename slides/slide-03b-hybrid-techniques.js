@@ -40,7 +40,7 @@ function createSlide(pres, theme, options = {}) {
     h: 0.78,
     title: "The Potential of Serverless Edge-powered Islands for Web Development",
     titleFontSize: 10.3,
-    body: "Juho Vepsalainen, Petri Vuorimaa, Arto Hellas • Journal of Web Engineering • 2025",
+    body: "Juho Vepsäläinen, Petri Vuorimaa, Arto Hellas • Journal of Web Engineering • 2025",
     bodyFontSize: 8.8,
     group: "hybrid-techniques-main"
   });
@@ -53,7 +53,7 @@ function createSlide(pres, theme, options = {}) {
     h: 0.78,
     title: "Resumability - a New Primitive for Developing Web Applications",
     titleFontSize: 10.3,
-    body: "Juho Vepsalainen, Misko Hevery, Petri Vuorimaa • IEEE Access • 2024",
+    body: "Juho Vepsäläinen, Misko Hevery, Petri Vuorimaa • IEEE Access • 2024",
     bodyFontSize: 8.8,
     group: "hybrid-techniques-main"
   });
@@ -66,7 +66,7 @@ function createSlide(pres, theme, options = {}) {
     h: 0.78,
     title: "Implications of Edge Computing for Static Site Generation",
     titleFontSize: 10.3,
-    body: "Juho Vepsalainen, Arto Hellas, Petri Vuorimaa • WEBIST • 2023",
+    body: "Juho Vepsäläinen, Arto Hellas, Petri Vuorimaa • WEBIST • 2023",
     bodyFontSize: 8.8,
     group: "hybrid-techniques-main"
   });

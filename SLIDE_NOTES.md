@@ -2,18 +2,7 @@
 
 Keep this document in sync with the slide deck whenever slide content changes. The slides should stay concise; extended explanations belong here.
 
-## Design Rule
-
-- Use dark infoboxes sparingly as emphasis devices, not as a default panel style.
-- Prefer them only for one primary box on a slide when that box carries the main claim, discussion prompt, or takeaway.
-- Keep surrounding support cards light so hierarchy stays obvious and the deck does not become visually heavy.
-- Limit dark infoboxes to a small set of slides across the whole presentation rather than repeating them everywhere.
-- Treat projected-slide typography as presentation content, not document content.
-- Use Microsoft’s `18 pt` minimum as the floor for normal projected text, and use the common `30 pt` readability rule as the pressure test for whether a slide is too dense.
-- If text does not fit at a comfortable size, cut the on-slide copy and move supporting detail into these notes instead of shrinking type.
-- Prefer short bullets and one-sentence card bodies; the spoken explanation belongs with the presenter.
-- Numbered references must match only slide-visible citations.
-- When citations change, remove unused references and renumber the remaining set sequentially.
+Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file focused on slide-specific content and speaker-note guidance.
 
 ## 01. Teaching the Next Web
 
@@ -23,7 +12,9 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 
 ## 02. Why This Matters Now
 
-- Start with scale and cost only.
+- Start with current empirical proof of growth rather than with an abstract slogan.
+- Use HTTP Archive's `Web Almanac 2025`, `Page Weight`, `Figure 14.1` as the chart on the first motivation slide.
+- The exact source is: `https://almanac.httparchive.org/en/2025/page-weight`.
 - Frame the web as the largest application platform and therefore a legitimate CS topic, not a niche engineering concern.
 - Emphasize that scale has created real complexity costs: payload, latency, maintenance burden, and conceptual overhead.
 
@@ -70,6 +61,7 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 - Your agenda is to reduce unnecessary overhead while preserving capability.
 - Use the paper titles directly on the slide rather than generic labels or paraphrases.
 - Treat the papers themselves as the agenda markers rather than paraphrased labels.
+- The current three agenda markers are `Revisiting Hypermedia, The Forgotten Web Application Development Paradigm`, `The Rise of Disappearing Frameworks in Web Development`, and `The Case for HTML First Web Development`.
 
 ## 10. Why Simplification Matters
 

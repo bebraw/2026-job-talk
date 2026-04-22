@@ -1,0 +1,26 @@
+# Repository Instructions
+
+## Design Notes
+
+These are durable deck-level design and workflow rules. Read and follow them before editing slides or shared slide helpers.
+
+### Design Rules
+
+- Use dark infoboxes sparingly as emphasis devices, not as a default panel style.
+- Prefer them only for one primary box on a slide when that box carries the main claim, discussion prompt, or takeaway.
+- Keep surrounding support cards light so hierarchy stays obvious and the deck does not become visually heavy.
+- Limit dark infoboxes to a small set of slides across the whole presentation rather than repeating them everywhere.
+- Treat projected-slide typography as presentation content, not document content.
+- Use Microsoft’s `18 pt` minimum as the floor for normal projected text, and use the common `30 pt` readability rule as the pressure test for whether a slide is too dense.
+- If text does not fit at a comfortable size, cut the on-slide copy and move supporting detail into `SLIDE_NOTES.md` instead of shrinking type.
+- Prefer short bullets and one-sentence card bodies; the spoken explanation belongs with the presenter.
+- Use `Vepsäläinen` consistently in visible slide text, notes, and references instead of `Vepsalainen`.
+- Numbered references must match only slide-visible citations.
+- When citations change, remove unused references and renumber the remaining set sequentially.
+- When using charts or screenshots, reserve dedicated whitespace for captions and source lines; never place slide text on top of the image content area.
+
+### Workflow Rules
+
+- Rebuild the demo presentation after every deck change so the latest `slides/output/demo-presentation.pdf` is always ready for review.
+
+For any slide or theme edit in this repository, keep `SLIDE_NOTES.md` focused on slide-specific content, narrative, and speaker-note guidance.

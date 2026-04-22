@@ -37,8 +37,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.84,
     y: 2.18,
     w: 7.66,
-    title: "Scale has changed web costs.",
-    body: "Payload, latency, and maintenance pressures keep growing.",
+    title: "As the web evolved from documents to applications,",
+    body: "scale turned architecture into a question of complexity, performance, and maintenance.",
     bodyH: 0.42,
     group: "why-left"
   });

@@ -40,7 +40,7 @@ function createSlide(pres, theme, options = {}) {
     h: 0.78,
     title: "Revisiting Hypermedia, The Forgotten Web Application Development Paradigm",
     titleFontSize: 10.3,
-    body: "Juho Vepsalainen • TechRxiv preprint • 2026",
+    body: "Juho Vepsäläinen • TechRxiv preprint • 2026",
     bodyFontSize: 8.8,
     group: "simple-main"
   });
@@ -53,7 +53,7 @@ function createSlide(pres, theme, options = {}) {
     h: 0.78,
     title: "The Rise of Disappearing Frameworks in Web Development",
     titleFontSize: 10.3,
-    body: "Juho Vepsalainen, Arto Hellas, Petri Vuorimaa • ICWE • 2023",
+    body: "Juho Vepsäläinen, Arto Hellas, Petri Vuorimaa • ICWE • 2023",
     bodyFontSize: 8.8,
     group: "simple-main"
   });
@@ -64,9 +64,9 @@ function createSlide(pres, theme, options = {}) {
     y: 3.84,
     w: 8,
     h: 0.78,
-    title: "The State of Disappearing Frameworks in 2023",
+    title: "The Case for HTML First Web Development",
     titleFontSize: 10.3,
-    body: "Juho Vepsalainen, Arto Hellas, Petri Vuorimaa • WEBIST • 2023",
+    body: "Juho Vepsäläinen • Journal of Web Engineering (accepted) • 2026",
     bodyFontSize: 8.8,
     group: "simple-main"
   });
