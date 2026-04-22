@@ -4,6 +4,12 @@ const {
   addReferenceNote,
   addSectionTitle
 } = require("../generator/helpers");
+const {
+  bulletItemHeight,
+  sectionContentFrame,
+  splitColumns,
+  titleStackLayout
+} = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
@@ -16,6 +22,39 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const contentFrame = sectionContentFrame({
+    left: 0.62,
+    right: 8.72,
+    top: 2.1,
+    bottom: 4.54
+  });
+  const columns = splitColumns(contentFrame, {
+    gap: 0.68,
+    leftWidth: 4.24
+  });
+  const leftLayout = titleStackLayout(columns.left, {
+    titleHeight: 0.24,
+    titleGap: 0.1,
+    justify: "top",
+    items: [
+      { height: bulletItemHeight() }
+    ]
+  });
+  const rightLayout = titleStackLayout(columns.right, {
+    titleHeight: 0.24,
+    titleGap: 0.1,
+    justify: "top",
+    items: [
+      {
+        height: bulletItemHeight({
+          body: "Flipped learning, oral exams, dialogical assessment.",
+          titleH: 0.22,
+          bodyOffset: 0.28,
+          bodyH: 0.42
+        })
+      }
+    ]
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -26,9 +65,9 @@ function createSlide(pres, theme, options = {}) {
   );
 
   canvas.addText("csed-left-title", "Educational implications", {
-    x: 0.62,
-    y: 2.1,
-    w: 2.3,
+    x: columns.left.x,
+    y: leftLayout.titleY,
+    w: columns.left.w,
     h: 0.24,
     fontFace,
     fontSize: 12.6,
@@ -41,17 +80,17 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "csed-bullet-institution",
-    x: 0.62,
-    y: 2.44,
-    w: 4.24,
+    x: columns.left.x,
+    y: leftLayout.items[0].y,
+    w: columns.left.w,
     title: "Curriculum and pedagogy need rethinking.",
     group: "csed-left"
   });
 
   canvas.addText("csed-right-title", "What changes in practice", {
-    x: 5.54,
-    y: 2.1,
-    w: 2.8,
+    x: columns.right.x,
+    y: rightLayout.titleY,
+    w: columns.right.w,
     h: 0.24,
     fontFace,
     fontSize: 12.6,
@@ -63,9 +102,9 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addText("csed-practice-1-title", "Assessment and classroom design", {
-    x: 5.54,
-    y: 2.44,
-    w: 3.18,
+    x: columns.right.x,
+    y: rightLayout.items[0].y,
+    w: columns.right.w,
     h: 0.22,
     fontFace,
     fontSize: 11.2,
@@ -77,9 +116,9 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addText("csed-practice-1-body", "Flipped learning, oral exams, dialogical assessment.", {
-    x: 5.54,
-    y: 2.72,
-    w: 3.18,
+    x: columns.right.x,
+    y: rightLayout.items[0].y + 0.28,
+    w: columns.right.w,
     h: 0.42,
     fontFace,
     fontSize: 10.2,

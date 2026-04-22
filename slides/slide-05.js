@@ -5,6 +5,13 @@ const {
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
+const {
+  bulletItemHeight,
+  sectionContentFrame,
+  splitColumns,
+  stackInFrame,
+  titleStackLayout
+} = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
@@ -17,6 +24,50 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const contentFrame = sectionContentFrame({
+    left: 0.62,
+    right: 8.62,
+    top: 2.1,
+    bottom: 4.7
+  });
+  const columns = splitColumns(contentFrame, {
+    gap: 1.28,
+    leftWidth: 3.48
+  });
+  const leftLayout = titleStackLayout(columns.left, {
+    titleHeight: 0.24,
+    titleGap: 0.38,
+    itemGap: 0.22,
+    justify: "top",
+    items: [
+      {
+        height: bulletItemHeight({
+          body: "Useful for bounded technical work, drafting, and iteration.",
+          bodyH: 0.3
+        })
+      },
+      {
+        height: bulletItemHeight({
+          body: "AI output still has to be inspected, compared, and revised.",
+          bodyH: 0.3
+        })
+      },
+      {
+        height: bulletItemHeight({
+          body: "Prompting is not enough.",
+          bodyH: 0.24
+        })
+      }
+    ]
+  });
+  const rightLayouts = stackInFrame(columns.right, [
+    { height: 0.76 },
+    { height: 0.76 },
+    { height: 0.76 }
+  ], {
+    gap: 0.16,
+    justify: "top"
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -35,9 +86,9 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addText("ai-left-title", "For development", {
-    x: 0.62,
-    y: 2.34,
-    w: 2.2,
+    x: columns.left.x,
+    y: leftLayout.titleY,
+    w: columns.left.w,
     h: 0.24,
     fontFace,
     fontSize: 12.6,
@@ -50,9 +101,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "ai-dev-efficiency",
-    x: 0.62,
-    y: 2.72,
-    w: 3.48,
+    x: columns.left.x,
+    y: leftLayout.items[0].y,
+    w: columns.left.w,
     title: "AI is best treated as an enabler.",
     body: "Useful for bounded technical work, drafting, and iteration.",
     bodyH: 0.3,
@@ -62,9 +113,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "ai-dev-validation",
-    x: 0.62,
-    y: 3.5,
-    w: 3.48,
+    x: columns.left.x,
+    y: leftLayout.items[1].y,
+    w: columns.left.w,
     title: "Critical reading and writing matter more.",
     body: "AI output still has to be inspected, compared, and revised.",
     bodyH: 0.3,
@@ -74,9 +125,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "ai-dev-quality",
-    x: 0.62,
-    y: 4.28,
-    w: 3.48,
+    x: columns.left.x,
+    y: leftLayout.items[2].y,
+    w: columns.left.w,
     title: "The real question is how to use AI well.",
     body: "Prompting is not enough.",
     bodyH: 0.24,
@@ -85,9 +136,9 @@ function createSlide(pres, theme, options = {}) {
 
   addCompactCard(canvas, pres, theme, {
     id: "ai-card-benefit",
-    x: 5.38,
-    y: 2.1,
-    w: 3.24,
+    x: rightLayouts[0].x,
+    y: rightLayouts[0].y,
+    w: rightLayouts[0].w,
     h: 0.76,
     title: "Core point",
     body: "AI adds a third mode of work: augmented thinking.",
@@ -96,9 +147,9 @@ function createSlide(pres, theme, options = {}) {
 
   addCompactCard(canvas, pres, theme, {
     id: "ai-card-risk",
-    x: 5.38,
-    y: 3.02,
-    w: 3.24,
+    x: rightLayouts[1].x,
+    y: rightLayouts[1].y,
+    w: rightLayouts[1].w,
     h: 0.76,
     title: "Main risk",
     body: "Overreliance weakens judgment if critical habits are absent.",
@@ -107,9 +158,9 @@ function createSlide(pres, theme, options = {}) {
 
   addCompactCard(canvas, pres, theme, {
     id: "ai-card-position",
-    x: 5.38,
-    y: 3.94,
-    w: 3.24,
+    x: rightLayouts[2].x,
+    y: rightLayouts[2].y,
+    w: rightLayouts[2].w,
     h: 0.76,
     title: "My position",
     body: "AI is an integration, supervision, and architecture issue.",
