@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "closing",
-  index: 31,
+  index: 32,
   title: "Conclusion"
 };
 
@@ -47,7 +47,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText(
     "discussion-left-body",
-    "If AI changes how software is produced and used,\nwhat should we teach as the durable core of computing?",
+    "As AI reshapes both what we teach and how we teach it,\nwhat remains the durable core of computing education?",
     {
       x: 0.98,
       y: 2.58,

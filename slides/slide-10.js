@@ -9,7 +9,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 28,
+  index: 29,
   title: "Goals as a tenure-track lecturer"
 };
 
@@ -64,9 +64,9 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 3.66,
     w: 4.44,
-    title: "Extend Aalto through public educational infrastructure.",
-    body: "Guides, tools, and public resources extend Aalto's reach.",
-    bodyH: 0.3,
+    title: "Build durable educational infrastructure around learning.",
+    body: "Guides, tools, and public resources support learning outside courses.",
+    bodyH: 0.34,
     titleFontSize: 10.6,
     bodyFontSize: 9.8,
     group: "closing-left"
@@ -101,7 +101,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Impact and service",
-    body: "Guides, tools, and public materials extend Aalto's reach.",
+    body: "Guides, tools, and public materials support learning outside courses.",
     group: "closing-right"
   });
 

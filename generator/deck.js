@@ -21,6 +21,7 @@ const slideModules = [
   require("../slides/slide-07"),
   require("../slides/slide-07a-teaching-approach-2"),
   require("../slides/slide-07b-teaching-infrastructure"),
+  require("../slides/slide-07c-public-learning"),
   require("../slides/slide-07c-support-tools"),
   require("../slides/slide-07d-support-tools-2"),
   require("../slides/slide-08"),

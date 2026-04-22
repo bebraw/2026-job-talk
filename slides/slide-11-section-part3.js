@@ -4,7 +4,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "section",
-  index: 29,
+  index: 30,
   title: "Part 3"
 };
 

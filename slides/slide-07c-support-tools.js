@@ -10,7 +10,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 20,
+  index: 21,
   title: "Thesis Journey Tracker"
 };
 
@@ -35,10 +35,10 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addPanel(canvas, pres, theme, "support-tools-tracker-frame", {
-    x: 1.1,
-    y: 1.2,
-    w: 7.8,
-    h: 4.44,
+    x: 1.28,
+    y: 1.72,
+    w: 7.44,
+    h: 3.62,
     lineColor: theme.light,
     fillColor: "FFFFFF",
     group: "support-tools-main"
@@ -46,10 +46,10 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addImage("support-tools-tracker-image", {
     path: path.join(__dirname, "assets/screenshots/thesis-journey-tracker-dashboard-large.png"),
-    x: 1.2,
-    y: 1.3,
-    w: 7.6,
-    h: 4.275
+    x: 1.96,
+    y: 1.92,
+    w: 6.08,
+    h: 3.42
   }, {
     group: "support-tools-main"
   });

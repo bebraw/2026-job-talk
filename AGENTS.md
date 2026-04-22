@@ -17,7 +17,13 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Use `Vepsäläinen` consistently in visible slide text, notes, and references instead of `Vepsalainen`.
 - Numbered references must match only slide-visible citations.
 - When citations change, remove unused references and renumber the remaining set sequentially.
+- When references change, validate the references slide layout explicitly: keep all entries fully above the bottom progress bar and review the rebuilt demo PDF to confirm nothing overflows or collides.
+- Non-full-bleed images must keep visible distance from surrounding content: leave whitespace to nearby headers, captions, neighboring panels, and the bottom progress bar instead of letting the image or its frame crowd them.
+- For framed images, keep both outer clearance and inner inset padding visible so the image reads as intentionally placed rather than edge-to-edge.
+- Labels for diagrams and figures should read as captions attached to the visual, preferably below it, instead of floating above it where they compete with slide headings and body content.
 - When using charts or screenshots, reserve dedicated whitespace for captions and source lines; never place slide text on top of the image content area.
+- Framed photos and artifact images must keep visible inset padding on all sides so they do not look cramped inside their frame.
+- Apply that padding rule to photos, book covers, and similar visual artifacts; charts, diagrams, and screenshots may use tighter framing when legibility is the priority.
 
 ### Workflow Rules
 

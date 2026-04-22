@@ -10,7 +10,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 21,
+  index: 22,
   title: "Supervisor Search"
 };
 
@@ -35,10 +35,10 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addPanel(canvas, pres, theme, "support-tools-search-frame", {
-    x: 1.12,
-    y: 1.2,
-    w: 7.76,
-    h: 4.44,
+    x: 1.28,
+    y: 1.72,
+    w: 7.44,
+    h: 3.62,
     lineColor: theme.light,
     fillColor: "FFFFFF",
     group: "support-tools-main"
@@ -46,10 +46,10 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addImage("support-tools-search-image", {
     path: path.join(__dirname, "assets/screenshots/supervisor-search-home-top.png"),
-    x: 1.58,
-    y: 1.3,
-    w: 6.84,
-    h: 4.275
+    x: 2.02,
+    y: 1.92,
+    w: 5.47,
+    h: 3.42
   }, {
     group: "support-tools-main"
   });

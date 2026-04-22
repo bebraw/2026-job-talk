@@ -11,8 +11,8 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 22,
-  title: "Supervision as frontier teaching"
+  index: 23,
+  title: "Supervision"
 };
 
 function createSlide(pres, theme, options = {}) {

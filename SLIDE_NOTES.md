@@ -20,12 +20,21 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 ## 03. Why This Matters Now
 
-- Add the architecture point on the second pass.
-- Explain that architecture has moved beyond a simple static versus dynamic split, so the right framing is systems and tradeoffs rather than framework preference.
+- Keep the second motivation slide visual.
+- Use a simple progression of interaction modes rather than a benchmark-count graphic.
+- Build the visual as `search and click` -> `agentic search` -> `browser use`.
+- Use `Mind2Web 2` to justify the claim that the old search model is query -> URL list -> manual synthesis.
+- Use `OpenAI deep research` for the shift toward systems that browse many sources and return citation-backed reports.
+- Use `Anthropic computer use`, `OpenAI Operator`, and `Google Project Mariner` as evidence that agents now operate websites built for humans.
+- Cite this slide with numbered references `[6]-[10]` rather than long source lines.
+- The point is not only that research exists, but that the interface model of the web is changing.
 
 ## 04. Why This Matters Now
 
-- Add the AI angle on the final pass: software is increasingly built, tested, and navigated by agents as well as humans.
+- Keep the third motivation slide sparse and declarative.
+- Land the consequence rather than repeating the timeline.
+- Make explicit that the web now serves two kinds of clients: humans and agents.
+- Tie that directly to the scope of the talk: software architecture, AI, and computing education.
 - Make the bridge to Aalto CS explicit: this sits naturally at the intersection of software architecture, AI, and computing education.
 
 ## 05. Roadmap
@@ -121,96 +130,103 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 ## 19. Teaching Infrastructure
 
 - Refer to the writing guide by title: `The Process of Scientific Writing`.
-- Use the slide to show that you build teaching infrastructure both through materials and through public learning communities.
-- Connect the photo directly to your work organizing meetups and conferences such as Future Frontend and React Finland.
-- Note that you will lead `Designing and Building Scalable Web Applications` from January 2027.
-- Briefly mention the special career course in early June as a teaching initiative connecting study and professional trajectories.
+- Use this slide to make the writing guide visible as a concrete teaching artifact rather than only a bullet point.
+- Show the cover large enough that the title is readable at slide scale.
 - Use this slide to show that you do not only teach courses; you build scaffolding around learning.
 
-## 20. Thesis Journey Tracker
+## 20. Public Learning Communities
+
+- Use the follow-up slide to move the conference/community point out of the writing-support slide.
+- Keep the current conference photo here and connect it directly to Future Frontend.
+- Treat meetups and the conference as outward-facing teaching work rather than as generic community service.
+
+## 21. Thesis Journey Tracker
 
 - Use this slide to make the developer background legible as lecturer-relevant infrastructure rather than as side-project work.
 - Thesis Journey Tracker should read as supervision infrastructure: phases, meetings, and notes in one place.
 - Keep the slide visual. The screenshot should do most of the work.
 
-## 21. Supervisor Search
+## 22. Supervisor Search
 
 - Present this as student-facing infrastructure rather than internal admin tooling.
 - The key point is lighter access to supervision: students can find a suitable MSc thesis supervisor with less friction.
 - Keep the slide visual. The screenshot should do most of the work.
 
-## 22. Supervision As Frontier Teaching
+## 23. Supervision
 
 - Present supervision as a place where research, teaching, and industry signals meet.
 - The number of supervised theses matters because it gives you early visibility into emerging themes.
 - Mention that current supervision topics include agentic AI, AIOps, and AI-supported web engineering.
 - Stress your mentoring style: help students build a durable model of the topic, not just finish a document.
 
-## 23. Selected Supervision Cases
+## 24. Selected Supervision Cases
 
 - Use the three examples to show a coherent profile: AI for web development, edge/serverless systems, and WebAssembly at the edge.
 - Mention that Pyry Pohjalainen's thesis led to publication through AAAI Magazine, as that signals supervision quality and external visibility.
 
-## 24. Part 2
+## 25. Part 2
 
 - Use this divider slide to mark the shift from highlights to future direction.
 - Signal that the next slides focus on future research and the lecturer role.
 
-## 25. Future Vision: Agentic Hypermedia
+## 26. Future Vision: Agentic Hypermedia
 
 - This is the signature future slide.
 - Explain the core claim: as AI agents become participants in software use, hypermedia becomes relevant again.
+- Frame the first research question around keeping web applications usable by agents, not around reinventing hypermedia principles.
 - Use the architecture sketch to make the idea concrete: both humans and agents interact through a hypermedia layer grounded in the semantic web and knowledge bases.
 - Anchor the idea in both the older hypermedia literature and the semantic web literature, so the slide reads as a continuation of established web architecture thinking rather than a new slogan.
 - The opportunity is to design systems that are lighter for users, clearer for developers, and easier for agents to navigate.
 - Emphasize that this is both a research direction and a teaching direction.
 
-## 26. Goals As a Tenure-Track Lecturer
+## 27. Goals As a Tenure-Track Lecturer
 
 - Make the case that the role matches work you are already doing.
 - Start with the teaching goal only.
 - Your teaching goal is research-led education around changing architectures and AI-aware software development.
 
-## 27. Goals As a Tenure-Track Lecturer
+## 28. Goals As a Tenure-Track Lecturer
 
 - Add the supervision goal while keeping the right-hand framing cards stable.
 - Your supervision goal is to build a pipeline between publishable research, industry relevance, and student growth.
 
-## 28. Goals As a Tenure-Track Lecturer
+## 29. Goals As a Tenure-Track Lecturer
 
 - Complete the sequence with the community-facing goal.
-- Your community goal is to extend Aalto through public educational infrastructure, outward-facing teaching work, and Future Frontend.
+- Your community goal is public educational infrastructure, outward-facing teaching work, and Future Frontend.
 - Make the infrastructure concrete: guides, advising tools, and open learning materials are part of the role, not side projects.
+- Frame the goal as durable educational infrastructure around learning and supervision, not institutional reach.
 - Say explicitly that this is a good fit for Aalto CS because the department values interdisciplinarity, collaboration, and impact beyond a single subfield.
 
-## 29. Part 3
+## 30. Part 3
 
 - Use this divider slide to slow the pace before the final conclusion section.
 - It should make the Q&A phase feel intentional rather than abrupt.
 
-## 30. Conclusion
+## 31. Conclusion
 
-- Use the closing question to pivot from presentation to the conclusion: if AI changes how software is produced and used, what remains durable in computing education?
+- Use the closing question to pivot from presentation to the conclusion: AI is already reshaping both what we teach and how we teach it, so the point is to ask what remains durable in computing education.
 - Start with the first priority only.
 - Architecture: students need to see the whole system and compare designs.
 
-## 31. Conclusion
+## 32. Conclusion
 
 - Add the second priority while keeping the framing question unchanged.
 - Judgment: students need to work responsibly with AI instead of relying on it blindly.
 
-## 32. Conclusion
+## 33. Conclusion
 
 - Complete the sequence with the third priority.
 - Model-building: students need durable ways of thinking that survive rapid tool turnover.
 
-## 33. Q&A
+## 34. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
 - Use it only after the conclusion slide has already framed the closing question.
 
-## 34. References
+## 35. References
 
 - Keep this slide compact and purely bibliographic.
 - It should resolve only the live citation set used on the slides.
-- The current active set is `[1]` to `[5]`: AI in CSEd, Fielding, Healey, Brew, and Berners-Lee et al.
+- The current active set is `[1]` to `[10]`: AI in CSEd, Fielding, Healey, Brew, Berners-Lee et al., Mind2Web 2, OpenAI deep research, OpenAI Operator, Anthropic computer use, and Google Gemini 2.0 / Project Mariner.
+- Keep reference layout stable when this set changes: all entries must remain visible on one slide, with working links where reliable URLs are available.

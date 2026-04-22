@@ -35,10 +35,10 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addPanel(canvas, pres, theme, "why-chart-frame", {
-    x: 1.33,
-    y: 1.2,
-    w: 7.34,
-    h: 4.1,
+    x: 1.64,
+    y: 1.76,
+    w: 6.72,
+    h: 3.2,
     lineColor: theme.light,
     fillColor: "FFFFFF",
     group: "why-main"
@@ -46,18 +46,18 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addImage("why-chart-image", {
     path: path.join(__dirname, "assets/charts/web-almanac-2025-figure-14-1-page-weight.png"),
-    x: 2.09,
-    y: 1.34,
-    w: 5.82,
-    h: 3.6
+    x: 2.44,
+    y: 1.9,
+    w: 5.12,
+    h: 3.17
   }, {
     group: "why-main"
   });
 
   canvas.addText("why-chart-source", "Source: HTTP Archive Web Almanac 2025, Page Weight, Fig. 14.1", {
-    x: 1.62,
-    y: 5.04,
-    w: 6.76,
+    x: 1.72,
+    y: 5.18,
+    w: 6.56,
     h: 0.14,
     fontFace,
     fontSize: 7.8,

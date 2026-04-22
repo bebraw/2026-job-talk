@@ -12,7 +12,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 25,
+  index: 26,
   title: "Future vision: agentic hypermedia"
 };
 
@@ -69,8 +69,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 2.72,
     w: 3.88,
-    title: "How should hypermedia evolve for AI use?",
-    body: "Hypermedia matters again when agents navigate systems.",
+    title: "How do we keep the web usable by agents?",
+    body: "Recover hypermedia so capabilities stay explicit and navigable.",
     bodyH: 0.3,
     bodyFontSize: 8.4,
     group: "vision-left"

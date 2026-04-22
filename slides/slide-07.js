@@ -94,26 +94,26 @@ function createSlide(pres, theme, options = {}) {
     group: "teach-left"
   });
 
-  canvas.addText("teach-loop-title", "Research-teaching nexus [3,4]", {
-    x: 5.12,
-    y: 3.08,
-    w: 3.76,
-    h: 0.18,
-    fontFace,
-    fontSize: 10.4,
-    bold: true,
-    color: theme.muted,
-    margin: 0
+  canvas.addImage("teach-loop-image", {
+    path: path.join(__dirname, "assets/diagrams/research-teaching-loop.png"),
+    x: 5.1,
+    y: 3.18,
+    w: 3.84,
+    h: 1.6
   }, {
     group: "teach-loop"
   });
 
-  canvas.addImage("teach-loop-image", {
-    path: path.join(__dirname, "assets/diagrams/research-teaching-loop.png"),
-    x: 5.1,
-    y: 3.28,
-    w: 3.84,
-    h: 1.6
+  canvas.addText("teach-loop-title", "Research-teaching nexus [3,4]", {
+    x: 5.12,
+    y: 4.92,
+    w: 3.76,
+    h: 0.18,
+    fontFace,
+    fontSize: 9.8,
+    color: theme.muted,
+    margin: 0,
+    align: "center"
   }, {
     group: "teach-loop"
   });
