@@ -4,6 +4,12 @@ const {
   addSectionTitle
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
+const {
+  createTextMeasurementDoc,
+  mapFont,
+  measureTextBlock,
+  toPoints
+} = require("../generator/text-metrics");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -15,7 +21,8 @@ const slideConfig = {
 const references = [
   {
     id: 1,
-    citation: "Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help? Preprint."
+    citation: "Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help? Preprint.",
+    url: "https://www.researchgate.net/publication/400580916_Artificial_intelligence_for_web_development_Perspectives_from_the_industry"
   },
   {
     id: 2,
@@ -64,45 +71,155 @@ const references = [
   }
 ];
 
-function addReferenceEntry(canvas, theme, ref, { x, y, w }) {
-  const lines = [
-    {
-      text: `[${ref.id}] ${ref.citation}`,
-      options: {
-        breakLine: Boolean(ref.url)
-      }
-    }
-  ];
+function tokenizeUrlForWrap(value) {
+  const chunks = [];
+  let current = "";
 
-  if (ref.url) {
-    lines.push({
-      text: ref.url,
-      options: {
-        hyperlink: { url: ref.url, tooltip: ref.url },
-        color: theme.primary
-      }
-    });
+  for (const char of value) {
+    current += char;
+    if ("/_?&=-".includes(char)) {
+      chunks.push(current);
+      current = "";
+    }
   }
 
-  canvas.addText(`reference-${ref.id}`, lines, {
+  if (current) {
+    chunks.push(current);
+  }
+
+  return chunks;
+}
+
+function splitTokenToWidth(doc, token, maxWidth) {
+  const parts = [];
+  let current = "";
+
+  for (const char of token) {
+    const next = current + char;
+    if (!current || doc.widthOfString(next) <= maxWidth) {
+      current = next;
+      continue;
+    }
+
+    parts.push(current);
+    current = char;
+  }
+
+  if (current) {
+    parts.push(current);
+  }
+
+  return parts;
+}
+
+function wrapUrlLabel(doc, url, width, fontSize) {
+  const visibleUrl = url.replace(/^https?:\/\//, "");
+  const maxWidth = toPoints(width);
+  const lines = [];
+  let line = "";
+
+  doc.save();
+  doc.font(mapFont(fontFace, false));
+  doc.fontSize(fontSize);
+
+  for (let chunk of tokenizeUrlForWrap(visibleUrl)) {
+    if (!line) {
+      if (doc.widthOfString(chunk) <= maxWidth) {
+        line = chunk;
+        continue;
+      }
+
+      for (const piece of splitTokenToWidth(doc, chunk, maxWidth)) {
+        if (doc.widthOfString(piece) < maxWidth) {
+          line = piece;
+          continue;
+        }
+        lines.push(piece);
+      }
+      continue;
+    }
+
+    if (doc.widthOfString(line + chunk) <= maxWidth) {
+      line += chunk;
+      continue;
+    }
+
+    lines.push(line);
+
+    if (doc.widthOfString(chunk) <= maxWidth) {
+      line = chunk;
+      continue;
+    }
+
+    line = "";
+    for (const piece of splitTokenToWidth(doc, chunk, maxWidth)) {
+      if (doc.widthOfString(piece) < maxWidth) {
+        line = piece;
+        continue;
+      }
+      lines.push(piece);
+    }
+  }
+
+  if (line) {
+    lines.push(line);
+  }
+
+  doc.restore();
+  return lines.join("\n");
+}
+
+function addReferenceEntry(canvas, theme, ref, { x, y, w, measurementDoc }) {
+  const pointsPerInch = toPoints(1);
+  const citationOptions = {
     x,
     y,
     w,
-    h: 0.62,
     fontFace,
-    fontSize: 7.15,
+    fontSize: 6.8,
     color: theme.accent,
     margin: 0,
     breakLine: false,
     valign: "top",
     fit: "shrink"
+  };
+  const citationMeasurement = measureTextBlock(
+    measurementDoc,
+    `[${ref.id}] ${ref.citation}`,
+    citationOptions
+  );
+  const citationHeight = Math.max(citationMeasurement.measuredHeight / pointsPerInch, 0.12);
+
+  canvas.addText(`reference-${ref.id}`, `[${ref.id}] ${ref.citation}`, {
+    ...citationOptions,
+    h: citationHeight + 0.01
   }, {
     group: "references-main"
   });
+
+  if (ref.url) {
+    const linkGap = 0.03;
+    canvas.addText(`reference-${ref.id}-link`, wrapUrlLabel(measurementDoc, ref.url, w, 5.1), {
+      x,
+      y: y + citationHeight + linkGap,
+      w,
+      h: 0.32,
+      fontFace,
+      fontSize: 5.1,
+      color: theme.muted,
+      hyperlink: { url: ref.url, tooltip: ref.url },
+      margin: 0,
+      valign: "top",
+      fit: "shrink"
+    }, {
+      group: "references-main"
+    });
+  }
 }
 
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
+  const measurement = createTextMeasurementDoc();
   const { slide } = canvas;
   slide.background = { color: theme.bg };
 
@@ -124,13 +241,14 @@ function createSlide(pres, theme, options = {}) {
   const leftColumn = references.slice(0, 5);
   const rightColumn = references.slice(5);
   const startY = 1.74;
-  const rowGap = 0.72;
+  const rowGap = 0.7;
 
   leftColumn.forEach((ref, index) => {
     addReferenceEntry(canvas, theme, ref, {
       x: 0.82,
       y: startY + index * rowGap,
-      w: 3.96
+      w: 3.96,
+      measurementDoc: measurement.doc
     });
   });
 
@@ -138,12 +256,15 @@ function createSlide(pres, theme, options = {}) {
     addReferenceEntry(canvas, theme, ref, {
       x: 5.12,
       y: startY + index * rowGap,
-      w: 3.98
+      w: 3.98,
+      measurementDoc: measurement.doc
     });
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);
-  return canvas.finalize();
+  const result = canvas.finalize();
+  measurement.dispose();
+  return result;
 }
 
 module.exports = { createSlide, slideConfig };

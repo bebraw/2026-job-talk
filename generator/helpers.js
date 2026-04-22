@@ -278,26 +278,10 @@ function addPageBadge(canvas, pres, theme, number, options = {}) {
   });
 }
 
-function addSectionTitle(canvas, theme, eyebrow, title, body) {
-  canvas.addText("section-eyebrow", eyebrow, {
-    x: 0.62,
-    y: 0.56,
-    w: 3.8,
-    h: 0.26,
-    fontFace: bodyFont,
-    fontSize: 11.8,
-    bold: true,
-    color: theme.muted,
-    charSpace: 0.8,
-    allCaps: true,
-    margin: 0
-  }, {
-    group: "section-header"
-  });
-
+function addSectionTitle(canvas, theme, _eyebrow, title, body) {
   canvas.addText("section-title", title, {
     x: 0.62,
-    y: 0.84,
+    y: 0.62,
     w: 7.8,
     h: 0.7,
     fontFace: displayFont,
@@ -312,7 +296,7 @@ function addSectionTitle(canvas, theme, eyebrow, title, body) {
   if (body) {
     canvas.addText("section-body", body, {
       x: 0.64,
-      y: 1.34,
+      y: 1.12,
       w: 7.9,
       h: 0.5,
       fontFace: bodyFont,

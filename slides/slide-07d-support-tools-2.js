@@ -17,25 +17,9 @@ function createSlide(pres, theme, options = {}) {
   const { slide } = canvas;
   slide.background = { color: theme.bg };
 
-  canvas.addText("support-tools-search-eyebrow", "Teaching", {
-    x: 0.62,
-    y: 0.5,
-    w: 3.2,
-    h: 0.22,
-    fontFace,
-    fontSize: 11.2,
-    bold: true,
-    color: theme.muted,
-    charSpace: 0.8,
-    allCaps: true,
-    margin: 0
-  }, {
-    group: "section-header"
-  });
-
   canvas.addText("support-tools-search-title", slideConfig.title, {
     x: 0.62,
-    y: 0.74,
+    y: 0.62,
     w: 7.8,
     h: 0.48,
     fontFace,
