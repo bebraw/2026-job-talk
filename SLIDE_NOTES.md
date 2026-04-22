@@ -163,26 +163,24 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - The opportunity is to design systems that are lighter for users, clearer for developers, and easier for agents to navigate.
 - Emphasize that this is both a research direction and a teaching direction.
 
-## 23. Goals As a Tenure-Track Lecturer
+## 23. My Contribution To Aalto
 
-- Make the case that the role matches work you are already doing.
-- Start with the teaching goal only.
-- Your teaching goal is research-led education around changing architectures and AI-aware software development.
-- Keep the supporting card bodies extremely short; they should scan like labels, not summaries.
+- Reframe the section away from generic goals and toward your concrete value-add to Aalto.
+- Start with the umbrella claim: you connect research, teaching, supervision, and practice in the web and agentic space.
+- Keep the right-hand cards stable and short: agentic/web space, technical depth, and external ties.
 
-## 24. Goals As a Tenure-Track Lecturer
+## 24. My Contribution To Aalto
 
-- Add the supervision goal while keeping the right-hand framing cards stable.
-- Your supervision goal is to build a pipeline between publishable research, industry relevance, and student growth.
+- Add the student-facing research point: students learn by contributing to real research.
+- Make the supervision logic explicit here: supervision is part of research, not separate from it.
+- Keep the cards unchanged so the sequence reads as one sustained argument.
 
-## 25. Goals As a Tenure-Track Lecturer
+## 25. My Contribution To Aalto
 
-- Complete the sequence with the community-facing goal.
-- Your community goal is public educational infrastructure, outward-facing teaching work, and Future Frontend.
-- Make the infrastructure concrete: guides, advising tools, and open learning materials are part of the role, not side projects.
-- Make the developer background legible as teaching-relevant credibility rather than a side biography; one recognizable example such as `webpack-merge` is enough.
-- Frame the goal as durable educational infrastructure around learning and supervision, not institutional reach.
-- Say explicitly that this is a good fit for Aalto CS because the department values interdisciplinarity, collaboration, and impact beyond a single subfield.
+- Complete the sequence with educational infrastructure and community-building.
+- State that you build educational infrastructure around learning and supervision.
+- State that you bring practitioners, students, and researchers into the same conversation.
+- Use this final slide to make the Aalto fit explicit: this is a complementary value-add in the web and agentic space, with technical depth and active external ties.
 
 ## 26. Part 3
 

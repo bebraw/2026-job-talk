@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 const slideConfig = {
   type: "content",
   index: 23,
-  title: "Goals as a tenure-track lecturer"
+  title: "My contribution to Aalto"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -21,7 +21,7 @@ function createSlide(pres, theme, options = {}) {
   addSectionTitle(
     canvas,
     theme,
-    "Goals",
+    "Contribution",
     slideConfig.title
   );
 
@@ -34,12 +34,12 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addBulletItem(canvas, pres, theme, {
-    id: "closing-bullet-courses",
+    id: "closing-bullet-claim",
     x: 0.78,
     y: 2.06,
     w: 4.44,
-    title: "Build research-led teaching around changing architectures.",
-    body: "Teach students to reason about systems.",
+    title: "I connect research, teaching, supervision, and practice.",
+    body: "That is the value I would add to Aalto.",
     bodyH: 0.3,
     titleFontSize: 10.6,
     bodyFontSize: 9.8,
@@ -47,13 +47,13 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addCompactCard(canvas, pres, theme, {
-    id: "closing-card-curriculum",
+    id: "closing-card-space",
     x: 5.72,
     y: 2.08,
     w: 3.08,
     h: 0.76,
-    title: "Curriculum focus",
-    body: "Architecture, AI-aware development, reflection.",
+    title: "Agentic/web space",
+    body: "Complementary strength in web and agentic systems.",
     group: "closing-right"
   });
 
@@ -63,8 +63,8 @@ function createSlide(pres, theme, options = {}) {
     y: 3,
     w: 3.08,
     h: 0.76,
-    title: "Research profile",
-    body: "Teaching shaped by building tools like webpack-merge.",
+    title: "Technical depth",
+    body: "Developer background and infrastructure building.",
     group: "closing-right"
   });
 
@@ -74,8 +74,8 @@ function createSlide(pres, theme, options = {}) {
     y: 3.92,
     w: 3.08,
     h: 0.76,
-    title: "Impact and service",
-    body: "Guides and tools students use outside courses.",
+    title: "External ties",
+    body: "Future Frontend, meetups, and practitioner networks.",
     group: "closing-right"
   });
 
