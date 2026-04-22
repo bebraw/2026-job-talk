@@ -124,6 +124,8 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     title,
     body,
     w = 4,
+    titleH = 0.28,
+    bodyOffset = 0.26,
     bodyH = 0.38,
     titleFontSize = 11.2,
     bodyFontSize = 10.2,
@@ -161,7 +163,7 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     x: x + 0.26,
     y,
     w: w - 0.26,
-    h: 0.28,
+    h: titleH,
     fontFace: bodyFont,
     fontSize: titleFontSize,
     bold: true,
@@ -174,7 +176,7 @@ function addBulletItem(canvas, pres, theme, options = {}) {
   if (body) {
     canvas.addText(`${id}-body`, body, {
       x: x + 0.26,
-      y: y + 0.26,
+      y: y + bodyOffset,
       w: w - 0.26,
       h: bodyH,
       fontFace: bodyFont,

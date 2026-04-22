@@ -30,6 +30,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Figure captions and citation labels should keep a visible gap from the image itself; they should read as attached to the visual, not pressed against it.
 - When a slide includes an image plus a caption, source line, or reference note, validate the gap explicitly across all such slides after edits instead of checking only the slide you just touched.
 - When using charts or screenshots, reserve dedicated whitespace for captions and source lines; never place slide text on top of the image content area.
+- In stacked claim or bullet panels, keep visible vertical breathing room between the panel heading and the first item, and between adjacent items; bodies should not visually crowd the next claim.
 - On screenshot-led slides, prioritize screenshot scale over decorative framing; remove border panels when they reduce legibility.
 - Framed photos and artifact images must keep visible inset padding on all sides so they do not look cramped inside their frame.
 - Apply that padding rule to photos, book covers, and similar visual artifacts; charts, diagrams, and screenshots may use tighter framing when legibility is the priority.
@@ -41,5 +42,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - When adding, removing, or renaming a part or subsection divider, update the roadmap slide in the same change so visible deck structure does not drift.
 - After changing roadmap structure, validate the outline slide visually against the current rendered page, not just text-fit checks, so spacing and rhythm stay balanced.
 - Keep the outline slide visually simple: prioritize clean vertical rhythm and structural clarity over decorative accents.
+- Validate vertical rhythm on rendered slides, not only in source coordinates: headings, content blocks, media, and captions should feel intentionally spaced rather than top-heavy, bottom-heavy, or unevenly compressed.
+- In stacked claim or bullet lists, keep title-to-body spacing consistent across sibling items; if one title wraps longer, adjust offsets or shorten copy instead of letting its body sit tighter than the others.
 
 For any slide or theme edit in this repository, keep `SLIDE_NOTES.md` focused on slide-specific content, narrative, and speaker-note guidance.
