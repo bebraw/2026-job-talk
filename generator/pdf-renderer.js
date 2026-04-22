@@ -6,10 +6,11 @@ const {
   createTextMeasurementDoc,
   mapFont,
   measureTextBlock,
+  normalizeTextRuns,
   registerEmbeddedFonts,
   toPoints
 } = require("./text-metrics");
-const { deckMeta, theme } = require("./theme");
+const { bodyFont, deckMeta, theme } = require("./theme");
 
 const POINTS_PER_INCH = 72;
 const SLIDE_WIDTH = 10 * POINTS_PER_INCH;
@@ -243,12 +244,10 @@ function renderText(doc, text, options) {
   const x = toPoints(options.x);
   let y = toPoints(options.y);
   const height = toPoints(options.h);
-  const { content, fontName, textOptions, measuredHeight, fontSize } = measureTextBlock(doc, text, options);
+  const { content, textOptions, measuredHeight, fontSize } = measureTextBlock(doc, text, options);
+  const runs = normalizeTextRuns(text, options);
 
   doc.save();
-  doc.font(fontName);
-  doc.fontSize(fontSize);
-  doc.fillColor(asHex(options.color, "000000"));
   doc.fillOpacity(1);
 
   if (options.valign === "middle" && height > measuredHeight) {
@@ -257,7 +256,43 @@ function renderText(doc, text, options) {
     y += height - measuredHeight;
   }
 
-  doc.text(content, x, y, textOptions);
+  if (runs.length === 1) {
+    const runOptions = runs[0].options || {};
+    const link = runOptions.hyperlink && runOptions.hyperlink.url
+      ? runOptions.hyperlink.url
+      : options.hyperlink && options.hyperlink.url
+        ? options.hyperlink.url
+        : null;
+
+    doc.font(mapFont(options.fontFace || bodyFont, Boolean(options.bold || runOptions.bold)));
+    doc.fontSize(fontSize);
+    doc.fillColor(asHex(runOptions.color || options.color, "000000"));
+    doc.text(content, x, y, {
+      ...textOptions,
+      link: link || undefined
+    });
+    doc.restore();
+    return;
+  }
+
+  runs.forEach((run, index) => {
+    const runOptions = run.options || {};
+    const runLink = runOptions.hyperlink && runOptions.hyperlink.url
+      ? runOptions.hyperlink.url
+      : options.hyperlink && options.hyperlink.url
+        ? options.hyperlink.url
+        : null;
+
+    doc.font(mapFont(options.fontFace || bodyFont, Boolean(options.bold || runOptions.bold)));
+    doc.fontSize(fontSize);
+    doc.fillColor(asHex(runOptions.color || options.color, "000000"));
+    doc.text(run.text, index === 0 ? x : undefined, index === 0 ? y : undefined, {
+      ...textOptions,
+      continued: index < runs.length - 1 && runOptions.breakLine !== true,
+      link: runLink || undefined
+    });
+  });
+
   doc.restore();
 }
 

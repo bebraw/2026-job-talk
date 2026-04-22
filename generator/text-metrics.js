@@ -29,22 +29,46 @@ function toPoints(value) {
   return Number(value || 0) * POINTS_PER_INCH;
 }
 
-function normalizeText(text) {
+function normalizeTextRuns(text, options = {}) {
+  const transform = options.allCaps
+    ? (value) => String(value).toUpperCase()
+    : (value) => String(value);
+
   if (Array.isArray(text)) {
-    return text
-      .map((item) => {
-        if (typeof item === "string") {
-          return item;
-        }
-        if (item && typeof item === "object" && "text" in item) {
-          return String(item.text);
-        }
-        return "";
-      })
-      .join("");
+    return text.map((item) => {
+      if (typeof item === "string") {
+        return {
+          options: {},
+          text: transform(item)
+        };
+      }
+
+      if (item && typeof item === "object" && "text" in item) {
+        return {
+          options: { ...(item.options || {}) },
+          text: transform(item.text)
+        };
+      }
+
+      return {
+        options: {},
+        text: ""
+      };
+    });
   }
 
-  return String(text);
+  return [
+    {
+      options: {},
+      text: transform(text)
+    }
+  ];
+}
+
+function normalizeText(text, options = {}) {
+  return normalizeTextRuns(text, options)
+    .map((item) => item.text)
+    .join("");
 }
 
 function mapFont(fontFace, bold) {
@@ -90,7 +114,7 @@ function createTextMeasurementDoc() {
 function measureTextBlock(doc, text, options) {
   const width = toPoints(options.w);
   const fontSize = Number(options.fontSize || 12);
-  const content = options.allCaps ? normalizeText(text).toUpperCase() : normalizeText(text);
+  const content = normalizeText(text, options);
   const fontName = mapFont(options.fontFace || bodyFont, options.bold);
 
   doc.save();
@@ -126,6 +150,7 @@ module.exports = {
   mapFont,
   measureTextBlock,
   normalizeText,
+  normalizeTextRuns,
   registerEmbeddedFonts,
   toPoints
 };
