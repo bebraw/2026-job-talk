@@ -45,7 +45,7 @@ function createSlide(pres, theme, options = {}) {
     x: 0.62,
     y: 3,
     w: 4.18,
-    title: "Writing expectations should be visible.",
+    title: "Shared writing process improves supervision.",
     body: "\"The Process of Scientific Writing\" makes publishing expectations concrete.",
     bodyH: 0.34,
     group: "teaching-infrastructure-left"

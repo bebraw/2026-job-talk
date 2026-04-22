@@ -90,7 +90,7 @@ function createSlide(pres, theme, options = {}) {
     x: 0.9,
     y: 3.68,
     w: 3.96,
-    title: "Explore the space between static and dynamic.",
+    title: "Choose rendering strategies case by case.",
     body: "Application size tripled in a decade while mobile constraints remained.",
     bodyH: 0.42,
     titleFontSize: 9.8,
@@ -159,7 +159,7 @@ function createSlide(pres, theme, options = {}) {
     group: "hybrid-right"
   });
 
-  canvas.addText("hybrid-note", "Teaching consequence: students need historical and architectural models, not tool opinions.", {
+  canvas.addText("hybrid-note", "Teaching consequence: students need principles, not framework fashions.", {
     x: 0.72,
     y: 4.8,
     w: 7.8,

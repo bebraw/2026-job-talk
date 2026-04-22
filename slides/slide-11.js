@@ -34,7 +34,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText(
     "discussion-left-body",
-    "AI already changes what we teach and how we teach it.\nWhat should stay at the center of computing education?\n\nHow should we teach architecture in an agentic world?\n\nHow do we help students build judgment rather than overreliance on AI?",
+    "AI already changes what we teach and how we teach it.\nWhat stays central in computing as tools change?\n\nHow should we teach architecture in an agentic world?\n\nHow do we help students build judgment rather than overreliance on AI?",
     {
       x: 0.9,
       y: 2.28,
