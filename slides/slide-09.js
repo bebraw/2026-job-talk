@@ -12,7 +12,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 22,
+  index: 21,
   title: "Future vision: agentic hypermedia"
 };
 
@@ -94,10 +94,10 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 4.28,
     w: 3.88,
-    title: "What is the durable core of the next web?",
+    title: "What should remain stable in web architecture as agents become users?",
     body: "Architecture and judgment matter as tools keep changing.",
     bodyH: 0.24,
-    titleFontSize: 9.6,
+    titleFontSize: 8.2,
     bodyFontSize: 8.4,
     group: "vision-left"
   });

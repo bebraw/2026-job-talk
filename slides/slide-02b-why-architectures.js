@@ -19,19 +19,19 @@ const stages = [
     id: "why-mode-search",
     x: 0.82,
     label: "Search and click",
-    body: "Users issue queries, open URLs, and synthesize answers themselves. [6]"
+    body: "Users query, open pages, and synthesize answers. [6]"
   },
   {
     id: "why-mode-agentic",
     x: 3.38,
     label: "Agentic search",
-    body: "Systems now browse many pages and return citation-backed reports. [7], [8]"
+    body: "Systems browse sources and return cited reports. [7], [8]"
   },
   {
     id: "why-mode-browser",
     x: 5.94,
     label: "Browser use",
-    body: "Agents now click, type, scroll, and navigate websites built for humans. [9], [10]"
+    body: "Agents act directly on websites built for humans. [9], [10]"
   }
 ];
 
@@ -69,23 +69,10 @@ function createSlide(pres, theme, options = {}) {
     group: "why-shift"
   });
 
-  canvas.addText("why-shift-subtitle", "The change is not only in websites. It is also in who, or what, uses them.", {
-    x: 0.86,
-    y: 2.02,
-    w: 6.9,
-    h: 0.2,
-    fontFace,
-    fontSize: 10.6,
-    color: theme.muted,
-    margin: 0
-  }, {
-    group: "why-shift"
-  });
-
   stages.forEach(({ id, x, label, body }, index) => {
     addPanel(canvas, pres, theme, `${id}-panel`, {
       x,
-      y: 2.36,
+      y: 2.16,
       w: 2.08,
       h: 2.1,
       lineColor: theme.light,
@@ -95,7 +82,7 @@ function createSlide(pres, theme, options = {}) {
 
     canvas.addText(`${id}-label`, label, {
       x: x + 0.18,
-      y: 2.62,
+      y: 2.42,
       w: 1.72,
       h: 0.24,
       fontFace,
@@ -110,7 +97,7 @@ function createSlide(pres, theme, options = {}) {
 
     canvas.addText(`${id}-body`, body, {
       x: x + 0.18,
-      y: 3,
+      y: 2.8,
       w: 1.72,
       h: 0.74,
       fontFace,
@@ -125,7 +112,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addShape("why-shift-arrow-1", pres.ShapeType.chevron, {
     x: 2.94,
-    y: 3.22,
+    y: 3.02,
     w: 0.22,
     h: 0.34,
     line: { color: theme.light, transparency: 100 },
@@ -136,7 +123,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addShape("why-shift-arrow-2", pres.ShapeType.chevron, {
     x: 5.5,
-    y: 3.22,
+    y: 3.02,
     w: 0.22,
     h: 0.34,
     line: { color: theme.light, transparency: 100 },

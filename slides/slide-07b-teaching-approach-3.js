@@ -1,17 +1,17 @@
 const {
   addAccentRule,
   addBulletItem,
+  addCompactCard,
   addPageBadge,
   addSectionTitle,
   addStatChip
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
-const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 13,
+  index: 15,
   title: "How research informs my teaching"
 };
 
@@ -68,7 +68,7 @@ function createSlide(pres, theme, options = {}) {
     group: "teach-stats"
   });
 
-  canvas.addText("teach-left-title", "Teaching approach", {
+  canvas.addText("teach-left-title", "Research with students", {
     x: 0.9,
     y: 3.02,
     w: 4.1,
@@ -83,39 +83,48 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addBulletItem(canvas, pres, theme, {
-    id: "teach-bullet-models",
+    id: "teach-bullet-research",
     x: 0.94,
     y: 3.78,
     w: 3.92,
-    title: "Build working models students can adapt.",
-    body: "Research helps me teach change without chasing tools.",
-    bodyH: 0.28,
+    title: "Students learn by contributing to real research.",
+    body: "The point is not only completion but research participation.",
+    bodyH: 0.3,
     bodyFontSize: 9.6,
     group: "teach-left"
   });
 
-  canvas.addImage("teach-loop-image", {
-    path: path.join(__dirname, "assets/diagrams/research-teaching-loop.png"),
-    x: 5.1,
-    y: 3.18,
-    w: 3.84,
-    h: 1.6
-  }, {
-    group: "teach-loop"
+  addCompactCard(canvas, pres, theme, {
+    id: "teach-card-pyry",
+    x: 5.3,
+    y: 3.1,
+    w: 3.52,
+    h: 0.68,
+    title: "Pyry Pohjalainen (2025)",
+    body: "AI for web development; AAAI Magazine.",
+    group: "teach-right"
   });
 
-  canvas.addText("teach-loop-title", "Research-teaching nexus [3,4]", {
-    x: 5.12,
-    y: 5.08,
-    w: 3.76,
-    h: 0.18,
-    fontFace,
-    fontSize: 9.8,
-    color: theme.muted,
-    margin: 0,
-    align: "center"
-  }, {
-    group: "teach-loop"
+  addCompactCard(canvas, pres, theme, {
+    id: "teach-card-anoop",
+    x: 5.3,
+    y: 3.92,
+    w: 3.52,
+    h: 0.68,
+    title: "Anoop Bidikar (2024)",
+    body: "Stateful serverless architectures at the edge.",
+    group: "teach-right"
+  });
+
+  addCompactCard(canvas, pres, theme, {
+    id: "teach-card-antti",
+    x: 5.3,
+    y: 4.74,
+    w: 3.52,
+    h: 0.68,
+    title: "Antti Nousiainen (2024)",
+    body: "WebAssembly in edge computing.",
+    group: "teach-right"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

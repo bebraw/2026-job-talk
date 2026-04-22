@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 12,
+  index: 11,
   title: "AI in software development"
 };
 

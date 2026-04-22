@@ -4,7 +4,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "section",
-  index: 6,
+  index: 5,
   title: "Part 1"
 };
 
@@ -36,7 +36,7 @@ function createSlide(pres, theme, options = {}) {
     group: "part1-main"
   });
 
-  canvas.addText("part1-title", "Research and\nteaching highlights", {
+  canvas.addText("part1-title", "Research\nhighlights", {
     x: 0.7,
     y: 2.04,
     w: 5.4,

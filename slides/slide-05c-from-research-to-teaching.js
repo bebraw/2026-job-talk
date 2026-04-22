@@ -4,8 +4,8 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "section",
-  index: 10,
-  title: "From research to teaching"
+  index: 9,
+  title: "Part 2"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -22,7 +22,7 @@ function createSlide(pres, theme, options = {}) {
     group: "teaching-shift-header"
   });
 
-  canvas.addText("teaching-shift-label", "Teaching", {
+  canvas.addText("teaching-shift-label", "Part 2", {
     x: 0.7,
     y: 1.82,
     w: 1.8,

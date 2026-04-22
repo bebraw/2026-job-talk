@@ -37,13 +37,14 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 - Explain that the talk follows the requested structure.
 - First motivate why this topic matters to a broader CS audience.
-- Then move through research highlights, teaching highlights, and their interaction.
+- Then move through research highlights, the research-to-teaching transition, future vision and goals, and conclusion.
 - Close with future vision, lecturer goals, and conclusion.
+- Keep the roadmap wording aligned with active part and subsection divider slides.
 
 ## 05. Part 1
 
-- Use this divider slide to signal the transition from motivation to the main body of the talk.
-- Make clear that the next set of slides covers both research and teaching, not research alone.
+- Use this divider slide to signal the transition from motivation to the research block.
+- Make clear that the next set of slides focuses on research highlights first.
 
 ## 06. Hybrid Rendering Models
 
@@ -68,30 +69,25 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Treat the papers themselves as the agenda markers rather than paraphrased labels.
 - The current three agenda markers are `Revisiting Hypermedia, The Forgotten Web Application Development Paradigm`, `The Rise of Disappearing Frameworks in Web Development`, and `The Case for HTML First Web Development`.
 
-## 09. Why Simplification Matters
-
-- Tie the point back to both maintainability and AI/agent use: simpler, more structured systems are easier for both humans and machines.
-- Use this slide to explain the consequences of the agenda rather than introduce the agenda itself.
-
-## 10. From Research To Teaching
+## 09. Part 2
 
 - Use this local divider to mark the shift from research highlights to educational consequences and teaching practice.
 - Make the transition explicit: the same pressures changing web architecture also change what and how we teach.
 - Treat it as a pacing slide, not as a new argumentative claim.
 
-## 11. AI And Computing Education
+## 10. AI And Computing Education
 
 - Start from the institutional claim in the paper: universities have to adapt, not just students.
 - Use the first pass to frame AI in CSEd as a curricular and institutional issue.
 - Make the right side concrete immediately through assessment and classroom design: flipped learning, oral examinations, and dialogical assessment.
 
-## 12. AI And Computing Education
+## 11. AI And Computing Education
 
 - Add the second point as `Integrity is not the only issue.`
 - Use the second pass to broaden the challenge set: trust, over-reliance, bias, and unequal access.
 - The point here is that academic misconduct is only one symptom of a broader pedagogical shift.
 
-## 13. AI And Computing Education
+## 12. AI And Computing Education
 
 - Complete the sequence with the durable goal of judgment.
 - Refer explicitly to the joint paper with Petri Juntunen on AI in CSEd through citation `[1]`.
@@ -99,7 +95,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Make the right side concrete here as well: critical reading, writing, debugging, and reflection.
 - This sequence should now read as a progression from institutional adaptation to broader risks to durable skills.
 
-## 14. How Research Informs My Teaching
+## 13. How Research Informs My Teaching
 
 - Describe your teaching style as dialogue-based and constructivist.
 - Explain that research helps you organize a fast-moving field into durable models that students can adapt later.
@@ -107,11 +103,18 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Healey provides the recognizable nexus vocabulary; Brew supports the more reciprocal, community-oriented interpretation.
 - Use the first pass to establish the heading and the first core point only.
 
-## 15. How Research Informs My Teaching
+## 14. How Research Informs My Teaching
 
 - Add the second point on the next slide so the teaching approach unfolds step by step.
 - State the reverse direction explicitly here: teaching and supervision also feed research back.
 - Keep the large `Teaching approach` heading visually prominent and treat the diagram as a compact scholarly anchor, not as the main content.
+
+## 15. How Research Informs My Teaching
+
+- Use a third pass to show what `research with students` looks like in practice.
+- Make the main point explicit: students learn by contributing to real research, not by orbiting it from a distance.
+- Use the three cases as evidence of theme and level: AI for web development, edge/serverless systems, and WebAssembly at the edge.
+- Mention that the Pyry Pohjalainen thesis led to publication through AAAI Magazine, as that signals quality and external visibility.
 
 ## 16. Teaching Infrastructure
 
@@ -143,17 +146,12 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Keep the slide visual. The screenshot should do most of the work.
 - Prioritize screenshot scale over decorative framing.
 
-## 20. Selected Supervision Cases
-
-- Use the three examples to show a coherent profile: AI for web development, edge/serverless systems, and WebAssembly at the edge.
-- Mention that Pyry Pohjalainen's thesis led to publication through AAAI Magazine, as that signals supervision quality and external visibility.
-
-## 21. Part 2
+## 20. Part 3
 
 - Use this divider slide to mark the shift from highlights to future direction.
 - Signal that the next slides focus on future research and the lecturer role.
 
-## 22. Future Vision: Agentic Hypermedia
+## 21. Future Vision: Agentic Hypermedia
 
 - This is the signature future slide.
 - Explain the core claim: as AI agents become participants in software use, hypermedia becomes relevant again.
@@ -163,52 +161,51 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - The opportunity is to design systems that are lighter for users, clearer for developers, and easier for agents to navigate.
 - Emphasize that this is both a research direction and a teaching direction.
 
-## 23. My Contribution To Aalto
+## 22. My Contribution To Aalto
 
 - Reframe the section away from generic goals and toward your concrete value-add to Aalto.
 - Start with the umbrella claim: you connect research, teaching, supervision, and practice in the web and agentic space.
 - Keep the right-hand cards stable and short: agentic/web space, technical depth, and external ties.
 
-## 24. My Contribution To Aalto
+## 23. My Contribution To Aalto
 
 - Add the student-facing research point: students learn by contributing to real research.
 - Make the supervision logic explicit here: supervision is part of research, not separate from it.
 - Keep the cards unchanged so the sequence reads as one sustained argument.
 
-## 25. My Contribution To Aalto
+## 24. My Contribution To Aalto
 
 - Complete the sequence with educational infrastructure and community-building.
 - State that you build educational infrastructure around learning and supervision.
 - State that you bring practitioners, students, and researchers into the same conversation.
 - Use this final slide to make the Aalto fit explicit: this is a complementary value-add in the web and agentic space, with technical depth and active external ties.
 
-## 26. Part 3
+## 25. Part 4
 
 - Use this divider slide to slow the pace before the final conclusion section.
 - It should make the Q&A phase feel intentional rather than abrupt.
 
+## 26. Conclusion
+
+- Use the closing sequence as a build of questions rather than answers.
+- Start with the broadest question only: AI already changes both content and pedagogy, so ask what should stay at the center of computing education.
+
 ## 27. Conclusion
 
-- Use the closing question to pivot from presentation to the conclusion: AI already changes both content and pedagogy, so the point is to ask what should stay at the center of computing education.
-- Start with the first priority only.
-- Architecture: students need to see the whole system and compare designs.
+- Add the second question while keeping the first visible.
+- Use this slide to ask how architecture should be taught in an agentic world.
 
 ## 28. Conclusion
 
-- Add the second priority while keeping the framing question unchanged.
-- Judgment: students need to work responsibly with AI instead of relying on it blindly.
+- Complete the sequence with a third question rather than an answer card.
+- Use the final build to ask how students can develop judgment rather than dependency.
 
-## 29. Conclusion
-
-- Complete the sequence with the third priority.
-- Model-building: students need durable ways of thinking that survive rapid tool turnover.
-
-## 30. Q&A
+## 29. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
 - Use it only after the conclusion slide has already framed the closing question.
 
-## 31. References
+## 30. References
 
 - Keep this slide compact and purely bibliographic.
 - It should resolve only the live citation set used on the slides.

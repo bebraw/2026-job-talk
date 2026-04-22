@@ -14,6 +14,9 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - On light content slides, avoid decorative top-edge aqua marks when the progress bar or typography already provides enough hierarchy.
 - Treat projected-slide typography as presentation content, not document content.
 - Use Microsoft’s `18 pt` minimum as the floor for normal projected text, and use the common `30 pt` readability rule as the pressure test for whether a slide is too dense.
+- Keep slide text simple and minimal.
+- Prefer bullets or short sentences, and try to keep each item to one line where possible.
+- As a practical heuristic, keep most non-reference slides to about `7` visible lines of text or fewer; if a slide needs more, split it or move detail to `SLIDE_NOTES.md`.
 - If text does not fit at a comfortable size, cut the on-slide copy and move supporting detail into `SLIDE_NOTES.md` instead of shrinking type.
 - Prefer short bullets and one-sentence card bodies; the spoken explanation belongs with the presenter.
 - Use `Vepsäläinen` consistently in visible slide text, notes, and references instead of `Vepsalainen`.
@@ -26,11 +29,16 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Figure captions and citation labels should keep a visible gap from the image itself; they should read as attached to the visual, not pressed against it.
 - When a slide includes an image plus a caption, source line, or reference note, validate the gap explicitly across all such slides after edits instead of checking only the slide you just touched.
 - When using charts or screenshots, reserve dedicated whitespace for captions and source lines; never place slide text on top of the image content area.
+- On screenshot-led slides, prioritize screenshot scale over decorative framing; remove border panels when they reduce legibility.
 - Framed photos and artifact images must keep visible inset padding on all sides so they do not look cramped inside their frame.
 - Apply that padding rule to photos, book covers, and similar visual artifacts; charts, diagrams, and screenshots may use tighter framing when legibility is the priority.
 
 ### Workflow Rules
 
 - Rebuild the demo presentation after every deck change so the latest `slides/output/demo-presentation.pdf` is always ready for review.
+- Keep roadmap and section-summary slides in sync with the active deck structure.
+- When adding, removing, or renaming a part or subsection divider, update the roadmap slide in the same change so visible deck structure does not drift.
+- After changing roadmap structure, validate the outline slide visually against the current rendered page, not just text-fit checks, so spacing and rhythm stay balanced.
+- Keep the outline slide visually simple: prioritize clean vertical rhythm and structural clarity over decorative accents.
 
 For any slide or theme edit in this repository, keep `SLIDE_NOTES.md` focused on slide-specific content, narrative, and speaker-note guidance.

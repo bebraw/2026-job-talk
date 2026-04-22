@@ -9,7 +9,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 24,
+  index: 23,
   title: "My contribution to Aalto"
 };
 
@@ -38,11 +38,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 2.06,
     w: 4.44,
-    title: "I connect research, teaching, supervision, and practice.",
-    body: "That is the value I would add to Aalto.",
-    bodyH: 0.3,
-    titleFontSize: 10.6,
-    bodyFontSize: 9.8,
+    title: "I combine research with students, infrastructure, and practice.",
+    titleFontSize: 9.4,
     group: "closing-left"
   });
 
@@ -66,7 +63,8 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Agentic/web space",
-    body: "Complementary strength in web and agentic systems.",
+    body: "I bring strong web and agentic specialization to a broad department.",
+    bodyFontSize: 8.8,
     group: "closing-right"
   });
 
@@ -77,7 +75,6 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Technical depth",
-    body: "Developer background and infrastructure building.",
     group: "closing-right"
   });
 
