@@ -87,9 +87,10 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 3.78,
     w: 3.92,
-    title: "Students learn by contributing to real research.",
+    title: "Student projects can feed a wider research agenda.",
     body: "Student projects can feed a wider research agenda.",
     bodyH: 0.3,
+    titleFontSize: 9.8,
     bodyFontSize: 9.6,
     group: "teach-left"
   });

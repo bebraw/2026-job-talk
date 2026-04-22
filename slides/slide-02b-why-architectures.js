@@ -19,19 +19,19 @@ const stages = [
     id: "why-mode-search",
     x: 0.82,
     label: "Search and click",
-    body: "Users query, open pages, and synthesize answers. [6]"
+    body: "The old interaction model is link-following and interpretation. [6]"
   },
   {
     id: "why-mode-agentic",
     x: 3.38,
     label: "Agentic search",
-    body: "Systems browse sources and return cited reports. [7], [8]"
+    body: "Systems now do part of the browsing and synthesis work. [7], [8]"
   },
   {
     id: "why-mode-browser",
     x: 5.94,
     label: "Browser use",
-    body: "Agents act directly on websites built for humans. [9], [10]"
+    body: "Websites are becoming indirect machine interfaces. [9], [10]"
   }
 ];
 

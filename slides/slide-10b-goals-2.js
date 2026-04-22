@@ -48,10 +48,10 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 2.86,
     w: 4.44,
-    title: "Students learn by contributing to real research.",
+    title: "Student projects can contribute to a wider research agenda.",
     body: "Supervision is part of research, not separate from it.",
     bodyH: 0.3,
-    titleFontSize: 10.6,
+    titleFontSize: 9.8,
     bodyFontSize: 9.8,
     group: "closing-left"
   });

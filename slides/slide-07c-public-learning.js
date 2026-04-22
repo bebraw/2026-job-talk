@@ -56,9 +56,10 @@ function createSlide(pres, theme, options = {}) {
     x: 0.62,
     y: 3.74,
     w: 4.2,
-    title: "I also build tools practitioners know.",
+    title: "My developer background supports my teaching.",
     body: "webpack-merge is one example; earlier work includes webpack and Blender.",
     bodyH: 0.38,
+    titleFontSize: 9.8,
     group: "public-learning-left"
   });
 
