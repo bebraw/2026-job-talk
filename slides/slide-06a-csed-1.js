@@ -27,7 +27,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("csed-left-title", "Educational implications", {
     x: 0.62,
-    y: 2.34,
+    y: 2.1,
     w: 2.3,
     h: 0.24,
     fontFace,
@@ -42,7 +42,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "csed-bullet-institution",
     x: 0.62,
-    y: 2.68,
+    y: 2.44,
     w: 4.24,
     title: "Curriculum and pedagogy need rethinking.",
     group: "csed-left"
@@ -50,7 +50,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("csed-right-title", "What changes in practice", {
     x: 5.54,
-    y: 2.34,
+    y: 2.1,
     w: 2.8,
     h: 0.24,
     fontFace,
@@ -64,7 +64,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("csed-practice-1-title", "Assessment and classroom design", {
     x: 5.54,
-    y: 2.68,
+    y: 2.44,
     w: 3.18,
     h: 0.22,
     fontFace,
@@ -78,7 +78,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("csed-practice-1-body", "Flipped learning, oral exams, dialogical assessment.", {
     x: 5.54,
-    y: 2.96,
+    y: 2.72,
     w: 3.18,
     h: 0.42,
     fontFace,
@@ -96,7 +96,7 @@ function createSlide(pres, theme, options = {}) {
     "[1] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
     {
       x: 0.72,
-      y: 4.96,
+      y: 4.8,
       w: 7.9,
       h: 0.18,
       group: "csed-reference"
