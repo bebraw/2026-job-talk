@@ -166,22 +166,21 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 ## 22. My Contribution To Aalto
 
 - Reframe the section away from generic goals and toward your concrete value-add to Aalto.
-- Present this as current contribution, not hypothetical fit: you already connect research, students, and practice at Aalto.
+- Use this first slide for the first strong claim only: you connect research, students, and practice in the agentic/web space.
 - Treat the section as evidence that the role would deepen work already visible in teaching, supervision, and community-building.
-- Keep the right-hand cards stable and short: agentic/web space, technical depth, and external ties.
+- Start the sequence with one claim only, centered and balanced so the later build has a clear starting point.
 
 ## 23. My Contribution To Aalto
 
-- Add the student-facing research point: students learn by contributing to real research.
-- Make the supervision logic explicit here: supervision is part of research, not separate from it.
-- Keep the cards unchanged so the sequence reads as one sustained argument.
+- Turn this into a build slide: keep the first claim visible and add the student-research claim beneath it.
+- Make the supervision logic explicit here: students contribute to real research through supervision.
+- Keep the spacing between the two claims deliberate so the sequence reads as accumulation rather than repetition.
 
 ## 24. My Contribution To Aalto
 
-- Complete the sequence with educational infrastructure and community-building.
-- State that you build educational infrastructure around learning and supervision.
-- State that you are connected to both academic and industry communities.
-- Use this final slide to make the Aalto fit explicit: this complements current Aalto CS strengths in the web and agentic space, with technical depth and active external ties.
+- Complete the build by showing all three claims together.
+- State that you build educational infrastructure around learning and supervision while maintaining active external ties.
+- Use the final slide to make the Aalto fit explicit while keeping the full three-point stack balanced from top to bottom.
 
 ## 25. Part 4
 

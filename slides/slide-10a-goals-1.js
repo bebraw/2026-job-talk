@@ -1,7 +1,6 @@
 const {
   addAccentRule,
   addBulletItem,
-  addCompactCard,
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
@@ -35,46 +34,15 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "closing-bullet-claim",
-    x: 0.78,
-    y: 2.06,
-    w: 4.44,
-    title: "I already connect research, students, and practice at Aalto.",
-    titleFontSize: 10.6,
-    group: "closing-left"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "closing-card-space",
-    x: 5.72,
-    y: 2.08,
-    w: 3.08,
-    h: 0.76,
-    title: "Agentic/web space",
-    body: "This deepens one technical area within a broad department.",
-    bodyFontSize: 8.8,
-    group: "closing-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "closing-card-profile",
-    x: 5.72,
-    y: 3,
-    w: 3.08,
-    h: 0.76,
-    title: "Real systems experience",
-    group: "closing-right"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "closing-card-community",
-    x: 5.72,
-    y: 3.92,
-    w: 3.08,
-    h: 0.76,
-    title: "External ties",
-    body: "I am an active part of the developer community in Finland.",
-    bodyFontSize: 8.8,
-    group: "closing-right"
+    x: 0.96,
+    y: 3.08,
+    w: 7.34,
+    title: "I connect research, students, and practice in the agentic/web space.",
+    body: "This is already visible in my teaching, supervision, and research direction.",
+    bodyH: 0.34,
+    titleFontSize: 10.0,
+    bodyFontSize: 9.4,
+    group: "closing-main"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);
