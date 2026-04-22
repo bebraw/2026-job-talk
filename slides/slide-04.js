@@ -72,12 +72,12 @@ function createSlide(pres, theme, options = {}) {
     h: 0.92,
     titleY: 0.1,
     titleH: 0.54,
-    bodyY: 0.68,
-    bodyH: 0.16,
+    bodyY: 0.66,
+    bodyH: 0.18,
     title: "The Rise of Disappearing Frameworks in Web Development",
     titleFontSize: 10.3,
-    body: "Vepsäläinen et al. • ICWE 2023",
-    bodyFontSize: 8.8,
+    body: "Juho Vepsäläinen, Arto Hellas, Petri Vuorimaa • ICWE 2023",
+    bodyFontSize: 8.1,
     group: "simple-main"
   });
 
