@@ -118,6 +118,8 @@ There are three validation layers, each checking a different kind of failure.
 
 - groups extending beyond slide bounds
 - overlapping layout groups
+- vertically imbalanced content blocks on standard content slides
+- captions or reference notes that sit too tight to, or too detached from, the visual they annotate
 
 ### Text-Fit Validation
 

@@ -32,6 +32,8 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - When a slide includes an image plus a caption, source line, or reference note, validate the gap explicitly across all such slides after edits instead of checking only the slide you just touched.
 - When using charts or screenshots, reserve dedicated whitespace for captions and source lines; never place slide text on top of the image content area.
 - In stacked claim or bullet panels, keep visible vertical breathing room between the panel heading and the first item, and between adjacent items; bodies should not visually crowd the next claim.
+- Treat spacing as hierarchy: gaps within a group should stay visibly smaller than gaps between groups, and inter-group gaps should usually be at least about `1.5x` the intra-group gap.
+- Keep reading content left-aligned by default; reserve centered multiline text for short standalone prompts, discussion questions, or other intentionally isolated statements.
 - On screenshot-led slides, prioritize screenshot scale over decorative framing; remove border panels when they reduce legibility.
 - Framed photos and artifact images must keep visible inset padding on all sides so they do not look cramped inside their frame.
 - Apply that padding rule to photos, book covers, and similar visual artifacts; charts, diagrams, and screenshots may use tighter framing when legibility is the priority.
@@ -45,6 +47,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Keep the outline slide visually simple: prioritize clean vertical rhythm and structural clarity over decorative accents.
 - Validate vertical rhythm on rendered slides, not only in source coordinates: headings, content blocks, media, and captions should feel intentionally spaced rather than top-heavy, bottom-heavy, or unevenly compressed.
 - Use vertical balance as a default heuristic on content slides: the main content block should usually sit so the gap from the title area to the top of the content feels close to the gap from the bottom of the content to the bottom progress bar; if one side reads visibly heavier, rebalance the slide instead of accepting the drift.
+- Keep caption, source, and reference-note spacing tight enough to read as attached metadata: the gap below a visual should usually stay smaller than the gap between major content groups, and large detached caption gaps should be treated as a layout issue.
 - In stacked claim or bullet lists, keep title-to-body spacing consistent across sibling items; if one title wraps longer, adjust offsets or shorten copy instead of letting its body sit tighter than the others.
 - Secondary consequence, implication, or teaching-takeaway lines must read as subordinate to the slide’s main claims: phrase them as follow-on consequences, and keep their styling lighter than the primary claim area so they do not compete for hierarchy.
 - Consequence or takeaway lines placed below panels must keep explicit vertical clearance from the panels above them; never let a bottom note visually touch or overlap a card or panel edge.
