@@ -74,8 +74,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 4.02,
     w: 7.54,
-    title: "Supervision connects research, curriculum, and industry.",
-    body: "My mentoring style is active and question-driven, with durable understanding as the goal.",
+    title: "This is where research, curriculum, and industry meet.",
+    body: "I mentor actively and push students to build their own model of the topic.",
     bodyH: 0.3,
     bodyFontSize: 8.4,
     group: "supervision-main"

@@ -66,7 +66,7 @@ function createSlide(pres, theme, options = {}) {
     y: 2.74,
     w: 3.72,
     title: "I organize Future Frontend.",
-    body: "Meetups and the conference create a public forum for current practice and shared learning.",
+    body: "Meetups and the conference bring current practice into the room.",
     bodyH: 0.38,
     group: "public-learning-left"
   });
@@ -76,8 +76,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 3.74,
     w: 3.72,
-    title: "This complements university teaching.",
-    body: "It keeps teaching connected to practitioners, employers, and current technical questions.",
+    title: "This keeps me close to practice.",
+    body: "That matters in web development, where the field moves fast.",
     bodyH: 0.38,
     group: "public-learning-left"
   });
@@ -102,9 +102,9 @@ function createSlide(pres, theme, options = {}) {
     group: "public-learning-right"
   });
 
-  canvas.addText("public-learning-photo-title", "Conferences and meetups extend teaching", {
+  canvas.addText("public-learning-photo-title", "Teaching outside the classroom", {
     x: 5.36,
-    y: 4.5,
+    y: 4.56,
     w: 3.28,
     h: 0.2,
     fontFace,
@@ -116,9 +116,9 @@ function createSlide(pres, theme, options = {}) {
     group: "public-learning-right"
   });
 
-  canvas.addText("public-learning-photo-credit", "Future Frontend as outward-facing teaching work.", {
+  canvas.addText("public-learning-photo-credit", "Future Frontend is one way I do it.", {
     x: 5.36,
-    y: 4.74,
+    y: 4.84,
     w: 3.36,
     h: 0.18,
     fontFace,

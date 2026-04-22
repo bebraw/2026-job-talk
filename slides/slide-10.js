@@ -64,8 +64,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 3.66,
     w: 4.44,
-    title: "Build durable educational infrastructure around learning.",
-    body: "Guides, tools, and public resources support learning outside courses.",
+    title: "Build educational infrastructure around learning.",
+    body: "Build guides and tools students can use outside courses.",
     bodyH: 0.34,
     titleFontSize: 10.6,
     bodyFontSize: 9.8,
@@ -90,7 +90,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Research profile",
-    body: "Agentic hypermedia bridging web research, AI, and education.",
+    body: "Work at the intersection of web architecture, AI, and education.",
     group: "closing-right"
   });
 
@@ -101,7 +101,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Impact and service",
-    body: "Guides, tools, and public materials support learning outside courses.",
+    body: "I build guides and tools students can use outside courses.",
     group: "closing-right"
   });
 

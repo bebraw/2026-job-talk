@@ -3,7 +3,6 @@ const {
   addBulletItem,
   addCompactCard,
   addPageBadge,
-  addPanel,
   addSectionTitle
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
@@ -35,18 +34,8 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  addPanel(canvas, pres, theme, "ai-left-panel", {
-    x: 0.62,
-    y: 2.06,
-    w: 4.08,
-    h: 2.88,
-    lineColor: theme.light,
-    fillColor: theme.panel,
-    group: "ai-left"
-  });
-
   canvas.addText("ai-left-title", "For development", {
-    x: 0.92,
+    x: 0.62,
     y: 2.34,
     w: 2.2,
     h: 0.24,
@@ -61,7 +50,7 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "ai-dev-efficiency",
-    x: 0.92,
+    x: 0.62,
     y: 2.72,
     w: 3.48,
     title: "AI is best treated as an enabler.",
@@ -73,7 +62,7 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "ai-dev-validation",
-    x: 0.92,
+    x: 0.62,
     y: 3.5,
     w: 3.48,
     title: "Critical reading and writing matter more.",
@@ -85,11 +74,11 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "ai-dev-quality",
-    x: 0.92,
+    x: 0.62,
     y: 4.28,
     w: 3.48,
-    title: "The challenge is responsible integration.",
-    body: "Teach durable skills beyond prompting.",
+    title: "The real question is how to use AI well.",
+    body: "Prompting is not enough.",
     bodyH: 0.24,
     group: "ai-left"
   });
@@ -101,7 +90,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.24,
     h: 0.76,
     title: "Core point",
-    body: "Beyond fast and slow thinking, AI enables augmented work.",
+    body: "AI adds a third mode of work: augmented thinking.",
     group: "ai-right"
   });
 

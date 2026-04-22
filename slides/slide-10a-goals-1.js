@@ -64,7 +64,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Research profile",
-    body: "Agentic hypermedia bridging web research, AI, and education.",
+    body: "Work at the intersection of web architecture, AI, and education.",
     group: "closing-right"
   });
 
@@ -75,7 +75,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Impact and service",
-    body: "Guides, tools, and public materials support learning outside courses.",
+    body: "I build guides and tools students can use outside courses.",
     group: "closing-right"
   });
 

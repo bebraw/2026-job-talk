@@ -21,6 +21,8 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Non-full-bleed images must keep visible distance from surrounding content: leave whitespace to nearby headers, captions, neighboring panels, and the bottom progress bar instead of letting the image or its frame crowd them.
 - For framed images, keep both outer clearance and inner inset padding visible so the image reads as intentionally placed rather than edge-to-edge.
 - Labels for diagrams and figures should read as captions attached to the visual, preferably below it, instead of floating above it where they compete with slide headings and body content.
+- Figure captions and citation labels should keep a visible gap from the image itself; they should read as attached to the visual, not pressed against it.
+- When a slide includes an image plus a caption, source line, or reference note, validate the gap explicitly across all such slides after edits instead of checking only the slide you just touched.
 - When using charts or screenshots, reserve dedicated whitespace for captions and source lines; never place slide text on top of the image content area.
 - Framed photos and artifact images must keep visible inset padding on all sides so they do not look cramped inside their frame.
 - Apply that padding rule to photos, book covers, and similar visual artifacts; charts, diagrams, and screenshots may use tighter framing when legibility is the priority.

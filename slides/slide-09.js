@@ -118,7 +118,7 @@ function createSlide(pres, theme, options = {}) {
     "[2], [5] Fielding; Berners-Lee et al.",
     {
       x: 5.48,
-      y: 4.9,
+      y: 5.12,
       w: 3.26,
       h: 0.18,
       group: "vision-reference"

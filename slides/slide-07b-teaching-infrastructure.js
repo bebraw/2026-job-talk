@@ -65,8 +65,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 3,
     w: 3.52,
-    title: "Writing support is explicit.",
-    body: "\"The Process of Scientific Writing\" turns publishing expectations into reusable guidance.",
+    title: "Writing expectations should be visible.",
+    body: "\"The Process of Scientific Writing\" makes publishing expectations concrete.",
     bodyH: 0.34,
     group: "teaching-infrastructure-left"
   });
@@ -76,8 +76,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 3.9,
     w: 3.52,
-    title: "It scales beyond one supervision meeting.",
-    body: "Students can return to the guide before, during, and after thesis work.",
+    title: "Students can use it on their own.",
+    body: "They can return to it before, during, and after thesis work.",
     bodyH: 0.34,
     group: "teaching-infrastructure-left"
   });

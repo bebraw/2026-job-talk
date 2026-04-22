@@ -205,7 +205,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 ## 31. Conclusion
 
-- Use the closing question to pivot from presentation to the conclusion: AI is already reshaping both what we teach and how we teach it, so the point is to ask what remains durable in computing education.
+- Use the closing question to pivot from presentation to the conclusion: AI already changes both content and pedagogy, so the point is to ask what should stay at the center of computing education.
 - Start with the first priority only.
 - Architecture: students need to see the whole system and compare designs.
 

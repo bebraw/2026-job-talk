@@ -56,7 +56,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("why-chart-source", "Source: HTTP Archive Web Almanac 2025, Page Weight, Fig. 14.1", {
     x: 1.72,
-    y: 5.18,
+    y: 5.24,
     w: 6.56,
     h: 0.14,
     fontFace,

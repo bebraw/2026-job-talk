@@ -47,7 +47,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText(
     "discussion-left-body",
-    "As AI reshapes both what we teach and how we teach it,\nwhat remains the durable core of computing education?",
+    "AI already changes what we teach and how we teach it.\nWhat should stay at the center of computing education?",
     {
       x: 0.98,
       y: 2.58,
@@ -70,7 +70,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Architecture",
-    body: "Teach students to compare designs, not only tools.",
+    body: "Teach students to compare architectures, not only tools.",
     group: "discussion-right"
   });
 
