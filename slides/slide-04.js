@@ -4,6 +4,7 @@ const {
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
+const { sectionContentFrame, stackInFrame } = require("../generator/layout");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -15,6 +16,20 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const contentFrame = sectionContentFrame({
+    left: 0.78,
+    right: 8.78,
+    top: 1.98,
+    bottom: 4.9
+  });
+  const cardLayouts = stackInFrame(contentFrame, [
+    { height: 0.92 },
+    { height: 0.92 },
+    { height: 0.92 }
+  ], {
+    gap: 0.08,
+    justify: "top"
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -34,39 +49,51 @@ function createSlide(pres, theme, options = {}) {
 
   addCompactCard(canvas, pres, theme, {
     id: "simple-card-html",
-    x: 0.78,
-    y: 2.12,
-    w: 8,
-    h: 0.78,
+    x: cardLayouts[0].x,
+    y: cardLayouts[0].y,
+    w: cardLayouts[0].w,
+    h: 0.92,
+    titleY: 0.1,
+    titleH: 0.54,
+    bodyY: 0.68,
+    bodyH: 0.16,
     title: "Revisiting Hypermedia, The Forgotten Web Application Development Paradigm",
     titleFontSize: 10.3,
-    body: "Juho Vepsäläinen • TechRxiv preprint • 2026",
+    body: "Vepsäläinen • TechRxiv • 2026",
     bodyFontSize: 8.8,
     group: "simple-main"
   });
 
   addCompactCard(canvas, pres, theme, {
     id: "simple-card-hypermedia",
-    x: 0.78,
-    y: 2.98,
-    w: 8,
-    h: 0.78,
+    x: cardLayouts[1].x,
+    y: cardLayouts[1].y,
+    w: cardLayouts[1].w,
+    h: 0.92,
+    titleY: 0.1,
+    titleH: 0.54,
+    bodyY: 0.68,
+    bodyH: 0.16,
     title: "The Rise of Disappearing Frameworks in Web Development",
     titleFontSize: 10.3,
-    body: "Juho Vepsäläinen, Arto Hellas, Petri Vuorimaa • ICWE • 2023",
+    body: "Vepsäläinen et al. • ICWE 2023",
     bodyFontSize: 8.8,
     group: "simple-main"
   });
 
   addCompactCard(canvas, pres, theme, {
     id: "simple-card-frameworks",
-    x: 0.78,
-    y: 3.84,
-    w: 8,
-    h: 0.78,
+    x: cardLayouts[2].x,
+    y: cardLayouts[2].y,
+    w: cardLayouts[2].w,
+    h: 0.92,
+    titleY: 0.12,
+    titleH: 0.38,
+    bodyY: 0.6,
+    bodyH: 0.16,
     title: "The Case for HTML First Web Development",
     titleFontSize: 10.3,
-    body: "Juho Vepsäläinen • Journal of Web Engineering (accepted) • 2026",
+    body: "Vepsäläinen • JWE (accepted) • 2026",
     bodyFontSize: 8.8,
     group: "simple-main"
   });

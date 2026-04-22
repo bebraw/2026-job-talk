@@ -66,6 +66,10 @@ function addCompactCard(canvas, pres, theme, options = {}) {
     h = 0.82,
     title,
     body,
+    titleY = 0.12,
+    titleH = 0.2,
+    bodyY,
+    bodyH,
     titleFontSize = 11.6,
     bodyFontSize = 10.2,
     lineColor = theme.light,
@@ -88,9 +92,9 @@ function addCompactCard(canvas, pres, theme, options = {}) {
 
   canvas.addText(`${id}-title`, title, {
     x: x + 0.18,
-    y: y + 0.12,
+    y: y + titleY,
     w: w - 0.34,
-    h: 0.2,
+    h: titleH,
     fontFace: bodyFont,
     fontSize: titleFontSize,
     bold: true,
@@ -101,11 +105,13 @@ function addCompactCard(canvas, pres, theme, options = {}) {
   });
 
   if (body) {
+    const resolvedBodyY = typeof bodyY === "number" ? bodyY : titleY + titleH;
+    const resolvedBodyH = typeof bodyH === "number" ? bodyH : h - resolvedBodyY - 0.1;
     canvas.addText(`${id}-body`, body, {
       x: x + 0.18,
-      y: y + 0.32,
+      y: y + resolvedBodyY,
       w: w - 0.34,
-      h: h - 0.42,
+      h: resolvedBodyH,
       fontFace: bodyFont,
       fontSize: bodyFontSize,
       color: bodyColor,

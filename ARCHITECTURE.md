@@ -123,7 +123,7 @@ There are three validation layers, each checking a different kind of failure.
 
 ### Text-Fit Validation
 
-[`generator/validate-text.js`](/generator/validate-text.js) uses the same reports from `generator/validation.js`, but checks estimated line usage against each text box size.
+[`generator/validate-text.js`](/generator/validate-text.js) uses the same reports from `generator/validation.js`, but checks estimated line usage against each text box size. In practice this is the guard against clipped card titles, body text spilling out of panels, and other rendered text overflow.
 
 ### Render Validation
 

@@ -135,6 +135,9 @@ function stackInFrame(frame, items, options = {}) {
   return items.map((item) => {
     const laidOut = {
       ...item,
+      x: typeof item.x === "number" ? item.x : frame.x,
+      w: typeof item.w === "number" ? item.w : frame.w,
+      h: typeof item.h === "number" ? item.h : item.height,
       y: cursor
     };
     cursor += item.height + gap;

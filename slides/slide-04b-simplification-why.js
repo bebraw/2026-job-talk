@@ -5,6 +5,13 @@ const {
   addPanel,
   addSectionTitle
 } = require("../generator/helpers");
+const {
+  bulletItemHeight,
+  createFrame,
+  insetFrame,
+  sectionContentFrame,
+  titleStackLayout
+} = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
@@ -17,6 +24,49 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const panelFrame = sectionContentFrame({
+    left: 0.78,
+    right: 8.78,
+    top: 2.12,
+    bottom: 5.04
+  });
+  const panelInset = insetFrame(panelFrame, {
+    top: 0.26,
+    right: 0.4,
+    bottom: 0.34,
+    left: 0.32
+  });
+  const contentLayout = titleStackLayout(createFrame({
+    x: panelInset.x,
+    y: panelInset.y,
+    w: panelInset.w,
+    h: panelInset.h
+  }), {
+    titleHeight: 0.2,
+    titleGap: 0.22,
+    itemGap: 0.24,
+    justify: "top",
+    items: [
+      {
+        height: bulletItemHeight({
+          body: "Smaller system models are easier to learn, teach, and maintain.",
+          bodyH: 0.34
+        })
+      },
+      {
+        height: bulletItemHeight({
+          body: "Less machinery can improve payload, startup, and energy use.",
+          bodyH: 0.34
+        })
+      },
+      {
+        height: bulletItemHeight({
+          body: "Structured, linkable systems are easier for humans and agents.",
+          bodyH: 0.24
+        })
+      }
+    ]
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -35,10 +85,10 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addPanel(canvas, pres, theme, "simple-why-panel", {
-    x: 0.78,
-    y: 2.12,
-    w: 8,
-    h: 2.92,
+    x: panelFrame.x,
+    y: panelFrame.y,
+    w: panelFrame.w,
+    h: panelFrame.h,
     lineColor: theme.primary,
     linePt: 1.1,
     fillColor: theme.panel,
@@ -46,9 +96,9 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addText("simple-why-title", "Design consequences", {
-    x: 1.1,
-    y: 2.38,
-    w: 2.4,
+    x: panelInset.x,
+    y: contentLayout.titleY,
+    w: panelInset.w,
     h: 0.2,
     fontFace,
     fontSize: 11.6,
@@ -61,9 +111,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "simple-why-bullet-maintain",
-    x: 1.1,
-    y: 2.8,
-    w: 7.28,
+    x: panelInset.x,
+    y: contentLayout.items[0].y,
+    w: panelInset.w,
     title: "Conceptual simplicity helps maintainability.",
     body: "Smaller system models are easier to learn, teach, and maintain.",
     bodyH: 0.34,
@@ -72,9 +122,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "simple-why-bullet-performance",
-    x: 1.1,
-    y: 3.64,
-    w: 7.28,
+    x: panelInset.x,
+    y: contentLayout.items[1].y,
+    w: panelInset.w,
     title: "Lighter architectures often improve performance.",
     body: "Less machinery can improve payload, startup, and energy use.",
     bodyH: 0.34,
@@ -83,9 +133,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "simple-why-bullet-agents",
-    x: 1.1,
-    y: 4.4,
-    w: 7.28,
+    x: panelInset.x,
+    y: contentLayout.items[2].y,
+    w: panelInset.w,
     title: "This also aligns with agentic use.",
     body: "Structured, linkable systems are easier for humans and agents.",
     bodyH: 0.24,
