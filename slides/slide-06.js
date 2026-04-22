@@ -62,7 +62,7 @@ function createSlide(pres, theme, options = {}) {
     x: 0.62,
     y: 4.2,
     w: 4.24,
-    title: "The durable goal is judgment.",
+    title: "The goal is responsible technical judgment.",
     group: "csed-left"
   });
 

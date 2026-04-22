@@ -164,7 +164,8 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 ## 22. My Contribution To Aalto
 
 - Reframe the section away from generic goals and toward your concrete value-add to Aalto.
-- Start with the umbrella claim: you connect research, teaching, supervision, and practice in the web and agentic space.
+- Present this as current contribution, not hypothetical fit: you already connect research, students, and practice at Aalto.
+- Treat the section as evidence that the role would deepen work already visible in teaching, supervision, and community-building.
 - Keep the right-hand cards stable and short: agentic/web space, technical depth, and external ties.
 
 ## 23. My Contribution To Aalto
@@ -177,8 +178,8 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 - Complete the sequence with educational infrastructure and community-building.
 - State that you build educational infrastructure around learning and supervision.
-- State that you bring practitioners, students, and researchers into the same conversation.
-- Use this final slide to make the Aalto fit explicit: this is a complementary value-add in the web and agentic space, with technical depth and active external ties.
+- State that you are connected to both academic and industry communities.
+- Use this final slide to make the Aalto fit explicit: this complements current Aalto CS strengths in the web and agentic space, with technical depth and active external ties.
 
 ## 25. Part 4
 

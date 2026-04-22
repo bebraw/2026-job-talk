@@ -88,7 +88,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3.78,
     w: 3.92,
     title: "Build working models students can adapt.",
-    body: "Research helps me teach change without chasing tools.",
+    body: "Research helps me teach principles, not only tools.",
     bodyH: 0.28,
     bodyFontSize: 9.6,
     group: "teach-left"
@@ -99,8 +99,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 4.42,
     w: 3.92,
-    title: "Teaching and supervision feed research back.",
-    body: "Student work surfaces emerging topics early.",
+    title: "Teaching and supervision shape my questions.",
+    body: "Student work reveals topics that deserve more attention.",
     bodyH: 0.26,
     bodyFontSize: 9.6,
     group: "teach-left"

@@ -38,8 +38,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 2.06,
     w: 4.44,
-    title: "I combine research with students, infrastructure, and practice.",
-    titleFontSize: 9.4,
+    title: "I already connect research, students, and practice at Aalto.",
+    titleFontSize: 10.6,
     group: "closing-left"
   });
 
@@ -76,7 +76,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Agentic/web space",
-    body: "I bring strong web and agentic specialization to a broad department.",
+    body: "This adds a useful specialization within a broad department.",
     bodyFontSize: 8.8,
     group: "closing-right"
   });
@@ -98,7 +98,8 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "External ties",
-    body: "Future Frontend, meetups, and practitioner networks.",
+    body: "I am an active part of the developer community in Finland.",
+    bodyFontSize: 8.8,
     group: "closing-right"
   });
 

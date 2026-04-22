@@ -57,7 +57,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3.9,
     w: 4.18,
     title: "Students can use it on their own.",
-    body: "They can return to it before, during, and after thesis work.",
+    body: "It supports supervision through a shared writing process.",
     bodyH: 0.34,
     group: "teaching-infrastructure-left"
   });

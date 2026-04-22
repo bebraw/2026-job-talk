@@ -16,6 +16,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Use Microsoft’s `18 pt` minimum as the floor for normal projected text, and use the common `30 pt` readability rule as the pressure test for whether a slide is too dense.
 - Keep slide text simple and minimal.
 - Prefer bullets or short sentences, and try to keep each item to one line where possible.
+- Do not solve wording changes by quietly shrinking text until hierarchy weakens; if a key line needs noticeably smaller type than its peers, rewrite or split the copy instead.
 - As a practical heuristic, keep most non-reference slides to about `7` visible lines of text or fewer; if a slide needs more, split it or move detail to `SLIDE_NOTES.md`.
 - If text does not fit at a comfortable size, cut the on-slide copy and move supporting detail into `SLIDE_NOTES.md` instead of shrinking type.
 - Prefer short bullets and one-sentence card bodies; the spoken explanation belongs with the presenter.

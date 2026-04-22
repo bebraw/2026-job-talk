@@ -46,7 +46,7 @@ function createSlide(pres, theme, options = {}) {
     y: 2.74,
     w: 4.2,
     title: "I organize Future Frontend.",
-    body: "Meetups and the conference bring current practice in.",
+    body: "Meetups and the conference keep me grounded in current practice.",
     bodyH: 0.38,
     group: "public-learning-left"
   });

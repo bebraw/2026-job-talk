@@ -88,7 +88,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3.78,
     w: 3.92,
     title: "Build working models students can adapt.",
-    body: "Research helps me teach change without chasing tools.",
+    body: "Research helps me teach principles, not only tools.",
     bodyH: 0.28,
     bodyFontSize: 9.6,
     group: "teach-left"

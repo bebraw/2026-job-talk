@@ -88,7 +88,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3.78,
     w: 3.92,
     title: "Students learn by contributing to real research.",
-    body: "The point is not only completion but research participation.",
+    body: "Student projects can feed a wider research agenda.",
     bodyH: 0.3,
     bodyFontSize: 9.6,
     group: "teach-left"

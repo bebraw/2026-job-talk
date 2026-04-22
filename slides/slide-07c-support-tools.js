@@ -9,7 +9,7 @@ const path = require("path");
 const slideConfig = {
   type: "content",
   index: 18,
-  title: "Thesis Journey Tracker"
+  title: "Tools that support my work with students"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -39,7 +39,7 @@ function createSlide(pres, theme, options = {}) {
     w: 7.8,
     h: 0.48,
     fontFace,
-    fontSize: 20.5,
+    fontSize: 19.2,
     bold: true,
     color: theme.accent,
     margin: 0

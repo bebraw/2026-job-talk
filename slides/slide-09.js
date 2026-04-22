@@ -81,10 +81,10 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 3.5,
     w: 3.88,
-    title: "What semantic foundations do agents need?",
+    title: "How do the semantic web and knowledge bases matter again?",
     body: "Ground hypermedia in the semantic web and knowledge bases.",
     bodyH: 0.3,
-    titleFontSize: 9.6,
+    titleFontSize: 8.6,
     bodyFontSize: 8.4,
     group: "vision-left"
   });
