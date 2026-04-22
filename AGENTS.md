@@ -44,5 +44,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Keep the outline slide visually simple: prioritize clean vertical rhythm and structural clarity over decorative accents.
 - Validate vertical rhythm on rendered slides, not only in source coordinates: headings, content blocks, media, and captions should feel intentionally spaced rather than top-heavy, bottom-heavy, or unevenly compressed.
 - In stacked claim or bullet lists, keep title-to-body spacing consistent across sibling items; if one title wraps longer, adjust offsets or shorten copy instead of letting its body sit tighter than the others.
+- Secondary consequence, implication, or teaching-takeaway lines must read as subordinate to the slide’s main claims: phrase them as follow-on consequences, and keep their styling lighter than the primary claim area so they do not compete for hierarchy.
+- Consequence or takeaway lines placed below panels must keep explicit vertical clearance from the panels above them; never let a bottom note visually touch or overlap a card or panel edge.
 
 For any slide or theme edit in this repository, keep `SLIDE_NOTES.md` focused on slide-specific content, narrative, and speaker-note guidance.

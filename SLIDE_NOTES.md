@@ -53,7 +53,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Start from the background exactly: the web moved from static content to application development, application size has grown sharply, and mobile constraints still matter.
 - State the primary purpose directly: explore the space between static and dynamic web development.
 - Use the two main claims from the conclusion: the mainstream SPA model is not ideal for all use cases, and hybrid rendering techniques help control SPA-related costs.
-- Connect this to teaching: students need historical and architectural models for comparing tradeoffs, not just opinions about frameworks.
+- Connect this to teaching through rendering tradeoffs: students should learn how to compare strategies case by case, not just absorb framework preferences.
 
 ## 07. Hybrid Rendering Techniques
 

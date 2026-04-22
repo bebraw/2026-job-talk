@@ -162,14 +162,13 @@ function createSlide(pres, theme, options = {}) {
     group: "hybrid-right"
   });
 
-  canvas.addText("hybrid-note", "Teaching consequence: students need architectural principles more than framework preferences.", {
+  canvas.addText("hybrid-note", "Teaching consequence: students need to understand rendering tradeoffs, not framework preferences.", {
     x: 0.72,
-    y: 4.8,
-    w: 7.8,
+    y: 5.02,
+    w: 7.5,
     h: 0.28,
     fontFace,
-    fontSize: 10.8,
-    bold: true,
+    fontSize: 10.2,
     color: theme.muted,
     margin: 0
   }, {
