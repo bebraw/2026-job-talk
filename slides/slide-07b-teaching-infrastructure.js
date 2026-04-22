@@ -26,7 +26,7 @@ function createSlide(pres, theme, options = {}) {
     slideConfig.title
   );
 
-  canvas.addText("teaching-infrastructure-left-title", "A reusable guide for student writing", {
+  canvas.addText("teaching-infrastructure-left-title", "A writing process students can use", {
     x: 0.62,
     y: 2.34,
     w: 3.6,

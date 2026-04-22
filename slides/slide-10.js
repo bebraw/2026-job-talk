@@ -62,7 +62,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3.66,
     w: 4.44,
     title: "I turn recurring teaching problems into concrete support.",
-    body: "I am connected to both academic and industry communities.",
+    body: "I maintain active ties to both academic and industry communities.",
     bodyH: 0.34,
     titleFontSize: 9.8,
     bodyFontSize: 9.8,
@@ -87,7 +87,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3,
     w: 3.08,
     h: 0.76,
-    title: "Technical depth",
+    title: "Real systems experience",
     group: "closing-right"
   });
 

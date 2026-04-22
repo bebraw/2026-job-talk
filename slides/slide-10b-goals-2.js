@@ -74,7 +74,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3,
     w: 3.08,
     h: 0.76,
-    title: "Technical depth",
+    title: "Real systems experience",
     group: "closing-right"
   });
 

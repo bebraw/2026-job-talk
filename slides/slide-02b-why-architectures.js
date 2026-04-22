@@ -55,7 +55,7 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  canvas.addText("why-shift-title", "How interaction with the web is changing", {
+  canvas.addText("why-shift-title", "From human browsing to delegated interaction", {
     x: 0.86,
     y: 1.66,
     w: 6.6,

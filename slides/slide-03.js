@@ -146,7 +146,7 @@ function createSlide(pres, theme, options = {}) {
     x: 5.92,
     y: 3.68,
     w: 2.54,
-    title: "Hybrid rendering reduces client-side complexity.",
+    title: "Hybrid rendering narrows dynamic behavior to where it is needed.",
     body: "Islands constrain dynamic scope. Resumability avoids hydration and enables code-splitting.",
     bodyH: 0.62,
     titleFontSize: 8.4,
@@ -159,7 +159,7 @@ function createSlide(pres, theme, options = {}) {
     group: "hybrid-right"
   });
 
-  canvas.addText("hybrid-note", "Teaching consequence: students need principles, not framework fashions.", {
+  canvas.addText("hybrid-note", "Teaching consequence: students need architectural principles more than framework preferences.", {
     x: 0.72,
     y: 4.8,
     w: 7.8,
