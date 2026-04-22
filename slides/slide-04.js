@@ -37,9 +37,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 2.12,
     w: 8,
-    h: 0.7,
-    title: "HTML-first",
-    body: "Use the platform more directly and keep HTML at the center where possible [2].",
+    h: 0.78,
+    title: "Revisiting Hypermedia, The Forgotten Web Application Development Paradigm",
+    titleFontSize: 10.3,
+    body: "Juho Vepsalainen • TechRxiv preprint • 2026",
+    bodyFontSize: 8.8,
     group: "simple-main"
   });
 
@@ -48,9 +50,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 2.98,
     w: 8,
-    h: 0.7,
-    title: "Hypermedia",
-    body: "Revisit a forgotten web paradigm that is again relevant under modern complexity pressures [2].",
+    h: 0.78,
+    title: "The Rise of Disappearing Frameworks in Web Development",
+    titleFontSize: 10.3,
+    body: "Juho Vepsalainen, Arto Hellas, Petri Vuorimaa • ICWE • 2023",
+    bodyFontSize: 8.8,
     group: "simple-main"
   });
 
@@ -59,9 +63,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 3.84,
     w: 8,
-    h: 0.7,
-    title: "Disappearing frameworks",
-    body: "Less client-side machinery can be a feature, not a limitation [3,4].",
+    h: 0.78,
+    title: "The State of Disappearing Frameworks in 2023",
+    titleFontSize: 10.3,
+    body: "Juho Vepsalainen, Arto Hellas, Petri Vuorimaa • WEBIST • 2023",
+    bodyFontSize: 8.8,
     group: "simple-main"
   });
 

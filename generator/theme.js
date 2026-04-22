@@ -5,7 +5,21 @@ const theme = {
   muted: "346065",
   light: "dcefed",
   bg: "ffffff",
-  panel: "f7fcfb"
+  panel: "f7fcfb",
+  slideCount: 34,
+  progressTrack: "dcefed",
+  progressFill: "09b5c4",
+  darkSlide: {
+    bg: "000000",
+    title: "f7fcfb",
+    body: "dcefed",
+    muted: "b6fff8",
+    progressTrack: "183b40",
+    progressFill: "b6fff8",
+    badgeFill: "183b40",
+    badgeLine: "b6fff8",
+    badgeText: "f7fcfb"
+  }
 };
 
 const deckMeta = {

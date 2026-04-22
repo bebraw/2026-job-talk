@@ -11,7 +11,7 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  slide.background = { color: theme.bg };
+  slide.background = { color: theme.darkSlide.bg };
 
   addAccentRule(canvas, pres, theme, {
     id: "part1-rule",
@@ -27,29 +27,33 @@ function createSlide(pres, theme, options = {}) {
     w: 1.8,
     h: 0.28,
     fontFace,
-    fontSize: 12,
+    fontSize: 13,
     bold: true,
-    color: theme.muted,
+    color: theme.darkSlide.muted,
     margin: 0
   }, {
     group: "part1-main"
   });
 
-  canvas.addText("part1-title", "Research and teaching highlights", {
+  canvas.addText("part1-title", "Research and\nteaching highlights", {
     x: 0.7,
-    y: 2.16,
+    y: 2.04,
     w: 5.4,
-    h: 0.56,
+    h: 0.92,
     fontFace,
-    fontSize: 24,
+    fontSize: 26,
     bold: true,
-    color: theme.accent,
+    color: theme.darkSlide.title,
     margin: 0
   }, {
     group: "part1-main"
   });
 
-  addPageBadge(canvas, pres, theme, slideConfig.index);
+  addPageBadge(canvas, pres, theme, slideConfig.index, {
+    trackColor: theme.darkSlide.progressTrack,
+    fillColor: theme.darkSlide.progressFill
+  });
+
   return canvas.finalize();
 }
 

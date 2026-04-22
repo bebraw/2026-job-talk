@@ -42,7 +42,7 @@ function createSlide(pres, theme, options = {}) {
     w: 2.28,
     value: "20+",
     label: "BSc theses since 2022",
-    valueFontSize: 12.5,
+    valueFontSize: 13.5,
     group: "teach-stats"
   });
 
@@ -53,7 +53,7 @@ function createSlide(pres, theme, options = {}) {
     w: 2.28,
     value: "6",
     label: "MSc theses advised",
-    valueFontSize: 12.5,
+    valueFontSize: 13.5,
     group: "teach-stats"
   });
 
@@ -64,7 +64,7 @@ function createSlide(pres, theme, options = {}) {
     w: 2.28,
     value: "18",
     label: "ECTS of pedagogy",
-    valueFontSize: 12.5,
+    valueFontSize: 13.5,
     group: "teach-stats"
   });
 
@@ -74,7 +74,7 @@ function createSlide(pres, theme, options = {}) {
     w: 4.1,
     h: 0.42,
     fontFace,
-    fontSize: 18,
+    fontSize: 20,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -88,19 +88,19 @@ function createSlide(pres, theme, options = {}) {
     y: 3.78,
     w: 3.92,
     title: "Build working models students can adapt.",
-    body: "Research helps teach fast-moving material without chasing tools.",
+    body: "Research helps teach change without chasing tools.",
     bodyH: 0.28,
-    bodyFontSize: 8,
+    bodyFontSize: 9.6,
     group: "teach-left"
   });
 
-  canvas.addText("teach-loop-title", "Research-teaching nexus [7,8]", {
+  canvas.addText("teach-loop-title", "Research-teaching nexus [3,4]", {
     x: 5.12,
     y: 3.08,
     w: 3.76,
     h: 0.18,
     fontFace,
-    fontSize: 9.2,
+    fontSize: 10.4,
     bold: true,
     color: theme.muted,
     margin: 0

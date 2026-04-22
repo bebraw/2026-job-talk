@@ -8,7 +8,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 21,
+  index: 23,
   title: "Selected supervision cases"
 };
 

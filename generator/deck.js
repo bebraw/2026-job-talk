@@ -21,6 +21,8 @@ const slideModules = [
   require("../slides/slide-07"),
   require("../slides/slide-07a-teaching-approach-2"),
   require("../slides/slide-07b-teaching-infrastructure"),
+  require("../slides/slide-07c-support-tools"),
+  require("../slides/slide-07d-support-tools-2"),
   require("../slides/slide-08"),
   require("../slides/slide-08b-supervision-cases"),
   require("../slides/slide-09-section-part2"),
@@ -33,9 +35,7 @@ const slideModules = [
   require("../slides/slide-11b-discussion-2"),
   require("../slides/slide-11"),
   require("../slides/slide-12"),
-  require("../slides/slide-12-references"),
-  require("../slides/slide-12b-references"),
-  require("../slides/slide-12c-references")
+  require("../slides/slide-12-references")
 ];
 
 function populatePresentation(pres, theme, options = {}) {

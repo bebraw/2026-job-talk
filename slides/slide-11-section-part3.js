@@ -4,14 +4,14 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "section",
-  index: 27,
+  index: 29,
   title: "Part 3"
 };
 
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  slide.background = { color: theme.bg };
+  slide.background = { color: theme.darkSlide.bg };
 
   addAccentRule(canvas, pres, theme, {
     id: "part3-rule",
@@ -27,29 +27,33 @@ function createSlide(pres, theme, options = {}) {
     w: 1.8,
     h: 0.28,
     fontFace,
-    fontSize: 12,
+    fontSize: 13,
     bold: true,
-    color: theme.muted,
+    color: theme.darkSlide.muted,
     margin: 0
   }, {
     group: "part3-main"
   });
 
-  canvas.addText("part3-title", "Discussion", {
+  canvas.addText("part3-title", "Conclusion", {
     x: 0.7,
     y: 2.16,
     w: 3.4,
     h: 0.56,
     fontFace,
-    fontSize: 24,
+    fontSize: 26,
     bold: true,
-    color: theme.accent,
+    color: theme.darkSlide.title,
     margin: 0
   }, {
     group: "part3-main"
   });
 
-  addPageBadge(canvas, pres, theme, slideConfig.index);
+  addPageBadge(canvas, pres, theme, slideConfig.index, {
+    trackColor: theme.darkSlide.progressTrack,
+    fillColor: theme.darkSlide.progressFill
+  });
+
   return canvas.finalize();
 }
 

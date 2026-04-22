@@ -38,7 +38,7 @@ function createSlide(pres, theme, options = {}) {
     w: 1.1,
     h: 0.22,
     fontFace,
-    fontSize: 10.8,
+    fontSize: 12.2,
     bold: true,
     color: theme.muted,
     margin: 0
@@ -52,7 +52,7 @@ function createSlide(pres, theme, options = {}) {
     w: 5.7,
     h: 0.32,
     fontFace,
-    fontSize: 16.8,
+    fontSize: 18.8,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -76,7 +76,7 @@ function createSlide(pres, theme, options = {}) {
     w: 1.1,
     h: 0.22,
     fontFace,
-    fontSize: 10.8,
+    fontSize: 12.2,
     bold: true,
     color: theme.muted,
     margin: 0
@@ -90,7 +90,7 @@ function createSlide(pres, theme, options = {}) {
     w: 5.4,
     h: 0.32,
     fontFace,
-    fontSize: 16.8,
+    fontSize: 18.8,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -114,7 +114,7 @@ function createSlide(pres, theme, options = {}) {
     w: 1.1,
     h: 0.22,
     fontFace,
-    fontSize: 10.8,
+    fontSize: 12.2,
     bold: true,
     color: theme.muted,
     margin: 0
@@ -122,13 +122,13 @@ function createSlide(pres, theme, options = {}) {
     group: "contents-main"
   });
 
-  canvas.addText("contents-part3-title", "Discussion", {
+  canvas.addText("contents-part3-title", "Conclusion", {
     x: 2.08,
     y: 4.28,
     w: 3.2,
     h: 0.32,
     fontFace,
-    fontSize: 16.8,
+    fontSize: 18.8,
     bold: true,
     color: theme.accent,
     margin: 0

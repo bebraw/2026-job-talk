@@ -50,9 +50,9 @@ function createSlide(pres, theme, options = {}) {
     x: 0.92,
     y: 2.34,
     w: 2.3,
-    h: 0.2,
+    h: 0.24,
     fontFace,
-    fontSize: 11.6,
+    fontSize: 12.6,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -79,14 +79,14 @@ function createSlide(pres, theme, options = {}) {
     w: 3.3,
     h: 0.76,
     title: "Course design",
-    body: "AI changes assessment and classroom design, not only policy.",
+    body: "AI changes assessment and classroom design.",
     group: "csed-right"
   });
 
   addReferenceNote(
     canvas,
     theme,
-    "[5] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
+    "[1] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
     {
       x: 0.72,
       y: 4.96,

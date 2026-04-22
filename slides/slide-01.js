@@ -14,7 +14,7 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  slide.background = { color: theme.bg };
+  slide.background = { color: theme.darkSlide.bg };
 
   addAccentRule(canvas, pres, theme, {
     id: "cover-rule",
@@ -33,9 +33,9 @@ function createSlide(pres, theme, options = {}) {
       w: 6.8,
       h: 0.74,
       fontFace,
-      fontSize: 28,
+      fontSize: 30,
       bold: true,
-      color: theme.accent,
+      color: theme.darkSlide.title,
       margin: 0,
     },
     {
@@ -52,9 +52,9 @@ function createSlide(pres, theme, options = {}) {
       w: 6.2,
       h: 0.26,
       fontFace,
-      fontSize: 13,
+      fontSize: 15,
       bold: true,
-      color: theme.muted,
+      color: theme.darkSlide.muted,
       margin: 0,
     },
     {
@@ -69,11 +69,11 @@ function createSlide(pres, theme, options = {}) {
       x: 0.72,
       y: 3.08,
       w: 3.6,
-      h: 0.22,
+      h: 0.24,
       fontFace,
-      fontSize: 12,
+      fontSize: 13.5,
       bold: true,
-      color: theme.accent,
+      color: theme.darkSlide.title,
       margin: 0,
     },
     {
@@ -88,10 +88,10 @@ function createSlide(pres, theme, options = {}) {
       x: 0.72,
       y: 3.38,
       w: 2,
-      h: 0.2,
+      h: 0.22,
       fontFace,
-      fontSize: 10,
-      color: theme.muted,
+      fontSize: 11.5,
+      color: theme.darkSlide.muted,
       margin: 0,
     },
     {
@@ -99,7 +99,11 @@ function createSlide(pres, theme, options = {}) {
     },
   );
 
-  addPageBadge(canvas, pres, theme, slideConfig.index);
+  addPageBadge(canvas, pres, theme, slideConfig.index, {
+    trackColor: theme.darkSlide.progressTrack,
+    fillColor: theme.darkSlide.progressFill,
+  });
+
   return canvas.finalize();
 }
 

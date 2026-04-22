@@ -8,7 +8,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 32,
+  index: 34,
   title: "References"
 };
 
@@ -32,52 +32,65 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  canvas.addText("reference-1", "[1] Vepsäläinen, J. (2025). Emergence of hybrid rendering models in web application development. Aalto University. urn.fi/URN:ISBN:978-952-64-2486-6", {
+  canvas.addText("reference-1", "[1] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help? ResearchGate preprint.", {
     x: 0.9,
-    y: 2.06,
+    y: 1.92,
     w: 7.56,
-    h: 0.34,
+    h: 0.4,
     fontFace,
-    fontSize: 9.2,
+    fontSize: 8.8,
     color: theme.accent,
     margin: 0
   }, {
     group: "references-main"
   });
 
-  canvas.addText("reference-2", "[2] Vepsäläinen, J. (2026). Revisiting Hypermedia, The Forgotten Web Application Development Paradigm. TechRxiv preprint. doi.org/10.36227/techrxiv.177078147.70240970/v1", {
+  canvas.addText("reference-2", "[2] Fielding, R. T. (2000). Architectural Styles and the Design of Network-based Software Architectures. University of California, Irvine. ics.uci.edu/~fielding/pubs/dissertation/", {
     x: 0.9,
-    y: 2.88,
+    y: 2.62,
     w: 7.56,
-    h: 0.34,
+    h: 0.4,
     fontFace,
-    fontSize: 9.2,
+    fontSize: 8.7,
     color: theme.accent,
     margin: 0
   }, {
     group: "references-main"
   });
 
-  canvas.addText("reference-3", "[3] Vepsäläinen, J., Hellas, A., & Vuorimaa, P. (2023). The Rise of Disappearing Frameworks in Web Development. ICWE 2023. doi.org/10.1007/978-3-031-34444-2_23", {
+  canvas.addText("reference-3", "[3] Healey, M. (2005). Linking research and teaching to benefit student learning. Journal of Geography in Higher Education, 29(2), 183-201. doi.org/10.1080/03098260500130387", {
     x: 0.9,
-    y: 3.7,
+    y: 3.32,
     w: 7.56,
-    h: 0.34,
+    h: 0.4,
     fontFace,
-    fontSize: 9.2,
+    fontSize: 8.7,
     color: theme.accent,
     margin: 0
   }, {
     group: "references-main"
   });
 
-  canvas.addText("reference-4", "[4] Vepsäläinen, J., Hellas, A., & Vuorimaa, P. (2023). The State of Disappearing Frameworks in 2023. WEBIST 2023. doi.org/10.5220/0012174000003584", {
+  canvas.addText("reference-4", "[4] Brew, A. (2012). Teaching and research: new relationships and inquiry-based higher education. Higher Education Research & Development, 31(1), 101-114. doi.org/10.1080/07294360.2012.642844", {
     x: 0.9,
-    y: 4.52,
+    y: 4.02,
     w: 7.56,
-    h: 0.34,
+    h: 0.4,
     fontFace,
-    fontSize: 9.2,
+    fontSize: 8.6,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "references-main"
+  });
+
+  canvas.addText("reference-5", "[5] Berners-Lee, T., Hendler, J., & Lassila, O. (2001). The Semantic Web. Scientific American, 284(5), 34-43. lassila.org/publications/2001/SciAm.html", {
+    x: 0.9,
+    y: 4.72,
+    w: 7.56,
+    h: 0.4,
+    fontFace,
+    fontSize: 8.7,
     color: theme.accent,
     margin: 0
   }, {

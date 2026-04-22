@@ -9,7 +9,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 25,
+  index: 27,
   title: "Goals as a tenure-track lecturer"
 };
 
@@ -41,8 +41,8 @@ function createSlide(pres, theme, options = {}) {
     title: "Build research-led teaching around changing architectures.",
     body: "Teach students to reason about systems, not just tools.",
     bodyH: 0.3,
-    titleFontSize: 9.4,
-    bodyFontSize: 8.4,
+    titleFontSize: 10.6,
+    bodyFontSize: 9.8,
     group: "closing-left"
   });
 
@@ -52,10 +52,10 @@ function createSlide(pres, theme, options = {}) {
     y: 2.86,
     w: 4.44,
     title: "Build a supervision pipeline between research and industry.",
-    body: "Use thesis work to connect research, industry, and neighboring CS areas.",
+    body: "Use thesis work to connect research and industry.",
     bodyH: 0.3,
-    titleFontSize: 9.4,
-    bodyFontSize: 8.4,
+    titleFontSize: 10.6,
+    bodyFontSize: 9.8,
     group: "closing-left"
   });
 
@@ -77,7 +77,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Research profile",
-    body: "Agentic hypermedia as a bridge between web research, AI, and education.",
+    body: "Agentic hypermedia bridging web research, AI, and education.",
     group: "closing-right"
   });
 
@@ -88,7 +88,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Impact and service",
-    body: "Public teaching infrastructure and Future Frontend extend the work beyond campus.",
+    body: "Guides, tools, and public materials extend Aalto's reach.",
     group: "closing-right"
   });
 

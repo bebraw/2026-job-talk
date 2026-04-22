@@ -1,13 +1,13 @@
 const {
   addAccentRule,
   addBulletItem,
-  addCompactCard,
   addPageBadge,
   addPanel,
   addSectionTitle
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
+const path = require("path");
 
 const slideConfig = {
   type: "content",
@@ -50,9 +50,9 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 2.34,
     w: 2.9,
-    h: 0.2,
+    h: 0.24,
     fontFace,
-    fontSize: 11.4,
+    fontSize: 12.6,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -61,60 +61,71 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addBulletItem(canvas, pres, theme, {
-    id: "teaching-infrastructure-bullet-lecture",
+    id: "teaching-infrastructure-bullet-materials",
     x: 0.94,
     y: 2.72,
     w: 3.72,
-    title: "A yearly lecture synthesizes the field.",
-    body: "Web application development: the past, the present, the future.",
+    title: "Writing support is explicit.",
+    body: "\"The Process of Scientific Writing\" turns publishing expectations into reusable guidance.",
     bodyH: 0.34,
     group: "teaching-infrastructure-left"
   });
 
   addBulletItem(canvas, pres, theme, {
-    id: "teaching-infrastructure-bullet-materials",
+    id: "teaching-infrastructure-bullet-community",
     x: 0.94,
     y: 3.6,
     w: 3.72,
-    title: "Materials extend support beyond the classroom.",
-    body: "Writing guide, books, and SurviveJS make the teaching reusable.",
+    title: "I organize public learning communities.",
+    body: "Meetups and conferences such as Future Frontend and React Finland extend teaching beyond campus.",
     bodyH: 0.34,
     group: "teaching-infrastructure-left"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "teaching-infrastructure-card-courses",
+  addPanel(canvas, pres, theme, "teaching-infrastructure-photo-frame", {
     x: 5.36,
     y: 2.08,
     w: 3.44,
-    h: 0.74,
-    title: "Courses",
-    body: "TA work in Design of WWW Services and WWW Applications, plus course lead in January 2027.",
-    bodyFontSize: 8.2,
+    h: 2.28,
+    lineColor: theme.light,
+    fillColor: theme.panel,
     group: "teaching-infrastructure-right"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "teaching-infrastructure-card-course-dev",
-    x: 5.36,
-    y: 3,
-    w: 3.44,
-    h: 0.74,
-    title: "Course development",
-    body: "Assessment redesign, fairer reflection practices, and a special career course in early June.",
-    bodyFontSize: 8.2,
+  canvas.addImage("teaching-infrastructure-photo", {
+    path: path.join(__dirname, "assets/photos/future-frontend-2024.jpg"),
+    x: 5.54,
+    y: 2.22,
+    w: 3.08,
+    h: 2.05
+  }, {
     group: "teaching-infrastructure-right"
   });
 
-  addCompactCard(canvas, pres, theme, {
-    id: "teaching-infrastructure-card-lectures",
+  canvas.addText("teaching-infrastructure-photo-title", "Conferences and meetups extend teaching", {
     x: 5.36,
-    y: 3.92,
-    w: 3.44,
-    h: 0.74,
-    title: "Invited lectures",
-    body: "Guest lectures in Turku, Jyväskylä, and Tampere extend the profile beyond Aalto.",
-    bodyFontSize: 8.2,
+    y: 4.5,
+    w: 3.28,
+    h: 0.2,
+    fontFace,
+    fontSize: 11.2,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "teaching-infrastructure-right"
+  });
+
+  canvas.addText("teaching-infrastructure-photo-credit", "React Finland 2019, one community I organize.", {
+    x: 5.36,
+    y: 4.74,
+    w: 3.36,
+    h: 0.18,
+    fontFace,
+    fontSize: 8.6,
+    color: theme.muted,
+    margin: 0
+  }, {
     group: "teaching-infrastructure-right"
   });
 

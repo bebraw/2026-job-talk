@@ -37,9 +37,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 2.12,
     w: 8,
-    h: 0.68,
-    title: "Islands",
-    body: "Defer interactivity and isolate the dynamic parts that truly need it.",
+    h: 0.78,
+    title: "The Potential of Serverless Edge-powered Islands for Web Development",
+    titleFontSize: 10.3,
+    body: "Juho Vepsalainen, Petri Vuorimaa, Arto Hellas • Journal of Web Engineering • 2025",
+    bodyFontSize: 8.8,
     group: "hybrid-techniques-main"
   });
 
@@ -48,9 +50,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 2.96,
     w: 8,
-    h: 0.68,
-    title: "Resumability",
-    body: "Avoid hydration costs by serializing enough structure into HTML.",
+    h: 0.78,
+    title: "Resumability - a New Primitive for Developing Web Applications",
+    titleFontSize: 10.3,
+    body: "Juho Vepsalainen, Misko Hevery, Petri Vuorimaa • IEEE Access • 2024",
+    bodyFontSize: 8.8,
     group: "hybrid-techniques-main"
   });
 
@@ -59,9 +63,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.78,
     y: 3.8,
     w: 8,
-    h: 0.68,
-    title: "Edge techniques",
-    body: "Move computation closer to users while keeping payload and latency under control.",
+    h: 0.78,
+    title: "Implications of Edge Computing for Static Site Generation",
+    titleFontSize: 10.3,
+    body: "Juho Vepsalainen, Arto Hellas, Petri Vuorimaa • WEBIST • 2023",
+    bodyFontSize: 8.8,
     group: "hybrid-techniques-main"
   });
 

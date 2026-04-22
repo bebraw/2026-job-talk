@@ -50,9 +50,9 @@ function createSlide(pres, theme, options = {}) {
     x: 0.92,
     y: 2.34,
     w: 2.3,
-    h: 0.2,
+    h: 0.24,
     fontFace,
-    fontSize: 11.6,
+    fontSize: 12.6,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -78,7 +78,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3.5,
     w: 3.96,
     title: "Integrity is only part of the challenge.",
-    body: "Assessment, workload, and skill formation all need redesign.",
+    body: "Assessment and skill formation need redesign.",
     bodyH: 0.3,
     bodyFontSize: 8.4,
     group: "csed-left"
@@ -103,7 +103,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.3,
     h: 0.76,
     title: "Course design",
-    body: "AI changes assessment and classroom design, not only policy.",
+    body: "AI changes assessment and classroom design.",
     group: "csed-right"
   });
 
@@ -114,7 +114,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.3,
     h: 0.76,
     title: "Supervision",
-    body: "Students need support in using AI critically while building understanding.",
+    body: "Students need help using AI critically.",
     group: "csed-right"
   });
 
@@ -125,14 +125,14 @@ function createSlide(pres, theme, options = {}) {
     w: 3.3,
     h: 0.76,
     title: "Curriculum",
-    body: "The curriculum should foreground architecture, verification, and reflective practice.",
+    body: "Foreground architecture, verification, and reflection.",
     group: "csed-right"
   });
 
   addReferenceNote(
     canvas,
     theme,
-    "[5] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
+    "[1] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
     {
       x: 0.72,
       y: 4.96,

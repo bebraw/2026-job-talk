@@ -61,8 +61,12 @@ function addCompactCard(canvas, pres, theme, options = {}) {
     h = 0.82,
     title,
     body,
-    titleFontSize = 10.6,
-    bodyFontSize = 9,
+    titleFontSize = 11.6,
+    bodyFontSize = 10.2,
+    lineColor = theme.light,
+    fillColor = "FFFFFF",
+    titleColor = theme.accent,
+    bodyColor = theme.muted,
     group = id
   } = options;
 
@@ -72,8 +76,8 @@ function addCompactCard(canvas, pres, theme, options = {}) {
     w,
     h,
     rectRadius: 0.06,
-    lineColor: theme.light,
-    fillColor: "FFFFFF",
+    lineColor,
+    fillColor,
     group
   });
 
@@ -85,7 +89,7 @@ function addCompactCard(canvas, pres, theme, options = {}) {
     fontFace: bodyFont,
     fontSize: titleFontSize,
     bold: true,
-    color: theme.accent,
+    color: titleColor,
     margin: 0
   }, {
     group
@@ -99,7 +103,7 @@ function addCompactCard(canvas, pres, theme, options = {}) {
       h: h - 0.42,
       fontFace: bodyFont,
       fontSize: bodyFontSize,
-      color: theme.muted,
+      color: bodyColor,
       margin: 0
     }, {
       group
@@ -115,9 +119,14 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     title,
     body,
     w = 4,
-    bodyH = 0.36,
-    titleFontSize = 10,
-    bodyFontSize = 9,
+    bodyH = 0.38,
+    titleFontSize = 11.2,
+    bodyFontSize = 10.2,
+    bulletLineColor = theme.primary,
+    bulletFillColor = "FFFFFF",
+    bulletCenterColor = theme.primary,
+    titleColor = theme.accent,
+    bodyColor = theme.muted,
     group = id
   } = options;
 
@@ -126,8 +135,8 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     y: y + 0.04,
     w: 0.16,
     h: 0.16,
-    line: { color: theme.primary, pt: 1 },
-    fill: { color: "FFFFFF" }
+    line: { color: bulletLineColor, pt: 1 },
+    fill: { color: bulletFillColor }
   }, {
     group
   });
@@ -137,8 +146,8 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     y: y + 0.09,
     w: 0.06,
     h: 0.06,
-    line: { color: theme.primary, transparency: 100 },
-    fill: { color: theme.primary }
+    line: { color: bulletCenterColor, transparency: 100 },
+    fill: { color: bulletCenterColor }
   }, {
     group
   });
@@ -151,7 +160,7 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     fontFace: bodyFont,
     fontSize: titleFontSize,
     bold: true,
-    color: theme.accent,
+    color: titleColor,
     margin: 0
   }, {
     group
@@ -165,7 +174,7 @@ function addBulletItem(canvas, pres, theme, options = {}) {
       h: bodyH,
       fontFace: bodyFont,
       fontSize: bodyFontSize,
-      color: theme.muted,
+      color: bodyColor,
       margin: 0
     }, {
       group
@@ -181,8 +190,8 @@ function addStatChip(canvas, pres, theme, options = {}) {
     w = 1.8,
     value,
     label,
-    valueFontSize = 14,
-    labelFontSize = 8.3,
+    valueFontSize = 14.5,
+    labelFontSize = 9.2,
     group = id
   } = options;
 
@@ -202,7 +211,7 @@ function addStatChip(canvas, pres, theme, options = {}) {
     x: x + 0.14,
     y: y + 0.1,
     w: w - 0.28,
-    h: 0.22,
+    h: 0.24,
     fontFace: displayFont,
     fontSize: valueFontSize,
     bold: true,
@@ -216,7 +225,7 @@ function addStatChip(canvas, pres, theme, options = {}) {
     x: x + 0.14,
     y: y + 0.34,
     w: w - 0.28,
-    h: 0.16,
+    h: 0.18,
     fontFace: bodyFont,
     fontSize: labelFontSize,
     color: theme.muted,
@@ -226,33 +235,39 @@ function addStatChip(canvas, pres, theme, options = {}) {
   });
 }
 
-function addPageBadge(canvas, pres, theme, number) {
-  canvas.addShape("page-badge-pill", pres.ShapeType.roundRect, {
-    x: 9.05,
-    y: 5.21,
-    w: 0.55,
-    h: 0.22,
-    rectRadius: 0.08,
-    line: { color: theme.primary, pt: 1 },
-    fill: { color: "FFFFFF" }
+function addPageBadge(canvas, pres, theme, number, options = {}) {
+  const {
+    x = 0,
+    y = 5.56,
+    w = 10,
+    h = 0.065,
+    trackColor = theme.progressTrack,
+    fillColor = theme.progressFill,
+    total = theme.slideCount || number
+  } = options;
+  const safeTotal = Math.max(total, number, 1);
+  const progressWidth = Math.max((number / safeTotal) * w, h);
+
+  canvas.addShape("slide-progress-track", pres.ShapeType.rect, {
+    x,
+    y,
+    w,
+    h,
+    line: { color: trackColor, transparency: 100 },
+    fill: { color: trackColor }
   }, {
-    group: "page-badge"
+    group: "slide-progress"
   });
 
-  canvas.addText("page-badge-label", String(number).padStart(2, "0"), {
-    x: 9.05,
-    y: 5.21,
-    w: 0.55,
-    h: 0.22,
-    fontFace: bodyFont,
-    fontSize: 10,
-    bold: true,
-    color: theme.accent,
-    align: "center",
-    valign: "middle",
-    margin: 0
+  canvas.addShape("slide-progress-fill", pres.ShapeType.rect, {
+    x,
+    y,
+    w: progressWidth,
+    h,
+    line: { color: fillColor, transparency: 100 },
+    fill: { color: fillColor }
   }, {
-    group: "page-badge"
+    group: "slide-progress"
   });
 }
 
@@ -263,7 +278,7 @@ function addSectionTitle(canvas, theme, eyebrow, title, body) {
     w: 3.8,
     h: 0.26,
     fontFace: bodyFont,
-    fontSize: 10.8,
+    fontSize: 11.8,
     bold: true,
     color: theme.muted,
     charSpace: 0.8,
@@ -277,9 +292,9 @@ function addSectionTitle(canvas, theme, eyebrow, title, body) {
     x: 0.62,
     y: 0.84,
     w: 7.8,
-    h: 0.64,
+    h: 0.7,
     fontFace: displayFont,
-    fontSize: 20,
+    fontSize: 23,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -294,7 +309,7 @@ function addSectionTitle(canvas, theme, eyebrow, title, body) {
       w: 7.9,
       h: 0.5,
       fontFace: bodyFont,
-      fontSize: 10.2,
+      fontSize: 11.2,
       color: theme.muted,
       margin: 0
     }, {
@@ -319,7 +334,7 @@ function addReferenceNote(canvas, theme, text, options = {}) {
     w,
     h,
     fontFace: bodyFont,
-    fontSize: 9.4,
+    fontSize: 10.2,
     color: theme.muted,
     align,
     margin: 0

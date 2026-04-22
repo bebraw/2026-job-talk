@@ -58,13 +58,13 @@ function createSlide(pres, theme, options = {}) {
     group: "hybrid-left"
   });
 
-  canvas.addText("hybrid-left-title", "Dissertation backbone", {
+  canvas.addText("hybrid-left-title", "Dissertation background", {
     x: 0.9,
     y: 2.46,
     w: 2.9,
-    h: 0.2,
+    h: 0.24,
     fontFace,
-    fontSize: 11.6,
+    fontSize: 12.6,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -77,9 +77,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.9,
     y: 2.82,
     w: 3.96,
-    title: "Study the space between static and dynamic.",
-    body: "A middle ground between performance, maintainability, and interactivity.",
+    title: "From static content to web applications.",
+    body: "The platform was designed for static content, then evolved into an application platform.",
     bodyH: 0.42,
+    titleFontSize: 9.8,
+    bodyFontSize: 9.2,
     group: "hybrid-left"
   });
 
@@ -88,9 +90,11 @@ function createSlide(pres, theme, options = {}) {
     x: 0.9,
     y: 3.68,
     w: 3.96,
-    title: "Evaluate both user and developer experience.",
-    body: "Compare choices by their cost for users and teams.",
+    title: "Explore the space between static and dynamic.",
+    body: "Application size tripled in a decade while mobile constraints remained.",
     bodyH: 0.42,
+    titleFontSize: 9.8,
+    bodyFontSize: 9.2,
     group: "hybrid-left"
   });
 
@@ -99,21 +103,21 @@ function createSlide(pres, theme, options = {}) {
     y: 2.24,
     w: 3.18,
     h: 2.42,
-    lineColor: theme.primary,
+    lineColor: theme.secondary,
     linePt: 1.1,
-    fillColor: theme.panel,
+    fillColor: theme.darkSlide.bg,
     group: "hybrid-right"
   });
 
-  canvas.addText("hybrid-right-title", "Core claim", {
+  canvas.addText("hybrid-right-title", "Main claims", {
     x: 5.92,
     y: 2.46,
     w: 1.9,
-    h: 0.2,
+    h: 0.24,
     fontFace,
-    fontSize: 11.6,
+    fontSize: 12.6,
     bold: true,
-    color: theme.accent,
+    color: theme.darkSlide.title,
     margin: 0
   }, {
     group: "hybrid-right"
@@ -124,9 +128,16 @@ function createSlide(pres, theme, options = {}) {
     x: 5.92,
     y: 2.82,
     w: 2.54,
-    title: "The design space is broader.",
-    body: "The web is no longer well described by a static-versus-dynamic split.",
-    bodyH: 0.5,
+    title: "SPAs do not fit every use case.",
+    body: "The mainstream SPA model should be used more sparingly.",
+    bodyH: 0.62,
+    titleFontSize: 9.8,
+    bodyFontSize: 9.1,
+    bulletLineColor: theme.secondary,
+    bulletFillColor: theme.darkSlide.bg,
+    bulletCenterColor: theme.secondary,
+    titleColor: theme.darkSlide.title,
+    bodyColor: theme.darkSlide.body,
     group: "hybrid-right"
   });
 
@@ -135,19 +146,26 @@ function createSlide(pres, theme, options = {}) {
     x: 5.92,
     y: 3.68,
     w: 2.54,
-    title: "Trade-offs determine the choice.",
-    body: "Performance, maintainability, and interactivity must be weighed together.",
-    bodyH: 0.5,
+    title: "Hybrid rendering cuts SPA cost.",
+    body: "Islands constrain dynamic scope. Resumability avoids hydration and enables code-splitting.",
+    bodyH: 0.62,
+    titleFontSize: 9.8,
+    bodyFontSize: 9.1,
+    bulletLineColor: theme.secondary,
+    bulletFillColor: theme.darkSlide.bg,
+    bulletCenterColor: theme.secondary,
+    titleColor: theme.darkSlide.title,
+    bodyColor: theme.darkSlide.body,
     group: "hybrid-right"
   });
 
-  canvas.addText("hybrid-note", "Teaching consequence: students need architectural models, not tool opinions.", {
+  canvas.addText("hybrid-note", "Teaching consequence: students need historical and architectural models, not tool opinions.", {
     x: 0.72,
     y: 4.8,
     w: 7.8,
     h: 0.28,
     fontFace,
-    fontSize: 9.6,
+    fontSize: 10.8,
     bold: true,
     color: theme.muted,
     margin: 0

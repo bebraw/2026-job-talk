@@ -49,9 +49,9 @@ function createSlide(pres, theme, options = {}) {
     x: 0.92,
     y: 2.34,
     w: 2.2,
-    h: 0.2,
+    h: 0.24,
     fontFace,
-    fontSize: 11.6,
+    fontSize: 12.6,
     bold: true,
     color: theme.accent,
     margin: 0
@@ -64,8 +64,8 @@ function createSlide(pres, theme, options = {}) {
     x: 0.92,
     y: 2.72,
     w: 3.48,
-    title: "AI already improves efficiency.",
-    body: "Developers use these tools for routine technical work.",
+    title: "AI is best treated as an enabler.",
+    body: "Useful for bounded technical work, drafting, and iteration.",
     bodyH: 0.3,
     bodyFontSize: 8.4,
     group: "ai-left"
@@ -77,8 +77,8 @@ function createSlide(pres, theme, options = {}) {
     y: 2.1,
     w: 3.24,
     h: 0.76,
-    title: "What seems clear",
-    body: "AI increases developer productivity and is now part of the professional toolkit.",
+    title: "Core point",
+    body: "Beyond fast and slow thinking, AI enables augmented work.",
     group: "ai-right"
   });
 

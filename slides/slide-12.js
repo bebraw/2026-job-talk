@@ -1,20 +1,20 @@
 const {
   addAccentRule,
-  addPageBadge
+  addPageBadge,
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "closing",
-  index: 31,
+  index: 33,
   title: "Q&A"
 };
 
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  slide.background = { color: theme.bg };
+  slide.background = { color: theme.darkSlide.bg };
 
   addAccentRule(canvas, pres, theme, {
     id: "qa-rule",
@@ -30,15 +30,19 @@ function createSlide(pres, theme, options = {}) {
     w: 3.0,
     h: 0.56,
     fontFace,
-    fontSize: 26,
+    fontSize: 28,
     bold: true,
-    color: theme.accent,
+    color: theme.darkSlide.title,
     margin: 0
   }, {
     group: "qa-main"
   });
 
-  addPageBadge(canvas, pres, theme, slideConfig.index);
+  addPageBadge(canvas, pres, theme, slideConfig.index, {
+    trackColor: theme.darkSlide.progressTrack,
+    fillColor: theme.darkSlide.progressFill
+  });
+
   return canvas.finalize();
 }
 

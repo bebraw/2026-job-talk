@@ -12,7 +12,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 23,
+  index: 25,
   title: "Future vision: agentic hypermedia"
 };
 
@@ -54,7 +54,7 @@ function createSlide(pres, theme, options = {}) {
     x: 0.94,
     y: 2.34,
     w: 2.7,
-    h: 0.2,
+    h: 0.24,
     fontFace,
     fontSize: 11.6,
     bold: true,
@@ -115,12 +115,12 @@ function createSlide(pres, theme, options = {}) {
   addReferenceNote(
     canvas,
     theme,
-    "[6], [9] Fielding (2000); Berners-Lee et al. (2001).",
+    "[2], [5] Fielding; Berners-Lee et al.",
     {
       x: 5.48,
-      y: 4.92,
+      y: 4.9,
       w: 3.26,
-      h: 0.16,
+      h: 0.18,
       group: "vision-reference"
     }
   );

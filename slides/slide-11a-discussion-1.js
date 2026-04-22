@@ -10,8 +10,8 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "closing",
-  index: 28,
-  title: "Discussion"
+  index: 30,
+  title: "Conclusion"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -39,9 +39,9 @@ function createSlide(pres, theme, options = {}) {
     y: 2.18,
     w: 4.72,
     h: 2.72,
-    lineColor: theme.primary,
+    lineColor: theme.secondary,
     linePt: 1.1,
-    fillColor: theme.panel,
+    fillColor: theme.darkSlide.bg,
     group: "discussion-left"
   });
 
@@ -54,8 +54,8 @@ function createSlide(pres, theme, options = {}) {
       w: 3.96,
       h: 1.7,
       fontFace,
-      fontSize: 14,
-      color: theme.accent,
+      fontSize: 16,
+      color: theme.darkSlide.title,
       margin: 0
     },
     {

@@ -1,15 +1,17 @@
 const {
   addAccentRule,
   addPageBadge,
+  addPanel,
   addSectionTitle
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
+const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 34,
-  title: "References"
+  index: 20,
+  title: "Thesis Journey Tracker"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -20,29 +22,36 @@ function createSlide(pres, theme, options = {}) {
   addSectionTitle(
     canvas,
     theme,
-    "Sources",
+    "Teaching",
     slideConfig.title
   );
 
   addAccentRule(canvas, pres, theme, {
-    id: "references-rule-third",
-    x: 7.72,
+    id: "support-tools-tracker-rule",
+    x: 6.98,
     y: 0.68,
-    w: 1.56,
+    w: 2.3,
     group: "section-header"
   });
 
-  canvas.addText("reference-9", "[9] Berners-Lee, T., Hendler, J., & Lassila, O. (2001). The Semantic Web. Scientific American, 284(5), 34-43. lassila.org/publications/2001/SciAm.html", {
-    x: 0.9,
-    y: 2.06,
-    w: 7.56,
-    h: 0.34,
-    fontFace,
-    fontSize: 9.2,
-    color: theme.accent,
-    margin: 0
+  addPanel(canvas, pres, theme, "support-tools-tracker-frame", {
+    x: 1.1,
+    y: 1.2,
+    w: 7.8,
+    h: 4.44,
+    lineColor: theme.light,
+    fillColor: "FFFFFF",
+    group: "support-tools-main"
+  });
+
+  canvas.addImage("support-tools-tracker-image", {
+    path: path.join(__dirname, "assets/screenshots/thesis-journey-tracker-dashboard-large.png"),
+    x: 1.2,
+    y: 1.3,
+    w: 7.6,
+    h: 4.275
   }, {
-    group: "references-main"
+    group: "support-tools-main"
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);

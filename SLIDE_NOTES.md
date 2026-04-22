@@ -2,6 +2,19 @@
 
 Keep this document in sync with the slide deck whenever slide content changes. The slides should stay concise; extended explanations belong here.
 
+## Design Rule
+
+- Use dark infoboxes sparingly as emphasis devices, not as a default panel style.
+- Prefer them only for one primary box on a slide when that box carries the main claim, discussion prompt, or takeaway.
+- Keep surrounding support cards light so hierarchy stays obvious and the deck does not become visually heavy.
+- Limit dark infoboxes to a small set of slides across the whole presentation rather than repeating them everywhere.
+- Treat projected-slide typography as presentation content, not document content.
+- Use Microsoft’s `18 pt` minimum as the floor for normal projected text, and use the common `30 pt` readability rule as the pressure test for whether a slide is too dense.
+- If text does not fit at a comfortable size, cut the on-slide copy and move supporting detail into these notes instead of shrinking type.
+- Prefer short bullets and one-sentence card bodies; the spoken explanation belongs with the presenter.
+- Numbered references must match only slide-visible citations.
+- When citations change, remove unused references and renumber the remaining set sequentially.
+
 ## 01. Teaching the Next Web
 
 - Open with the thesis of the talk: the web is going through another architectural transition, and that transition matters for both research and teaching.
@@ -29,7 +42,7 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 - Explain that the talk follows the requested structure.
 - First motivate why this topic matters to a broader CS audience.
 - Then move through research highlights, teaching highlights, and their interaction.
-- Close with future vision, lecturer goals, and discussion.
+- Close with future vision, lecturer goals, and conclusion.
 
 ## 06. Part 1
 
@@ -38,23 +51,25 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 
 ## 07. Hybrid Rendering Models
 
-- Explain that your dissertation questions the old static-versus-dynamic distinction.
-- Point to the dissertation explicitly through citation `[1]` so the audience can follow up later.
-- Hybrid rendering is useful because it lets us reason about performance, maintainability, and interactivity together.
-- Use this slide for the conceptual argument rather than the implementation examples.
-- Connect this to teaching: students need architectural models for comparing tradeoffs, not just opinions about frameworks.
+- Ground the slide in the dissertation abstract and conclusion rather than in a generic static-versus-dynamic slogan.
+- Point to the dissertation explicitly so the audience can follow up later.
+- Start from the background exactly: the web moved from static content to application development, application size has grown sharply, and mobile constraints still matter.
+- State the primary purpose directly: explore the space between static and dynamic web development.
+- Use the two main claims from the conclusion: the mainstream SPA model is not ideal for all use cases, and hybrid rendering techniques help control SPA-related costs.
+- Connect this to teaching: students need historical and architectural models for comparing tradeoffs, not just opinions about frameworks.
 
 ## 08. Hybrid Rendering Techniques
 
-- Use islands, resumability, and edge execution as concrete examples of the design space.
+- Use direct references to your papers here rather than generic technique labels alone.
+- Use edge-powered islands, resumability, and edge computing for SSG as concrete examples of the design space.
 - Treat this as the follow-up slide that makes the abstract framing more concrete.
 
 ## 09. Simplification Agenda
 
 - Make the point that simplification is not nostalgia or anti-technology.
 - Your agenda is to reduce unnecessary overhead while preserving capability.
-- HTML-first, hypermedia, and disappearing frameworks are examples of this simplification move.
-- Point to the simplification papers directly on the slide through citations `[2]`, `[3]`, and `[4]`.
+- Use the paper titles directly on the slide rather than generic labels or paraphrases.
+- Treat the papers themselves as the agenda markers rather than paraphrased labels.
 
 ## 10. Why Simplification Matters
 
@@ -64,19 +79,22 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 ## 11. AI In Software Development
 
 - Start with the productivity point only.
-- Developers adopt AI quickly because it is convenient and productive for routine work.
+- Frame AI first as an enabler rather than as an autonomous replacement for developers.
+- Borrow the contrast with Kahneman loosely: beyond fast and slow thinking, AI creates an augmented mode of work.
+- Keep the first slide bounded: AI helps with drafting, iteration, and other bounded technical tasks.
 
 ## 12. AI In Software Development
 
-- Add the second point: validation remains essential.
-- Use the second pass to bring in the reliability and ambiguity concerns.
+- Add the second point on critical habits.
+- Emphasize that critical reading, writing, and comparison matter more, not less, when AI is involved.
+- The main risk here is overreliance rather than only correctness in the narrow sense.
 
 ## 13. AI In Software Development
 
 - Complete the sequence with the balanced position.
-- State the full claim clearly: AI is useful in practice, but it is not reliable enough to remove human judgment.
+- State the full claim clearly: the core challenge is responsible integration of AI into development and education.
 - Frame this as part of your own agenda rather than a generic AI opinion.
-- The teaching implication is that students need disciplined habits around validation and tool use.
+- The durable goal is not prompting skill by itself but long-term skills in judgment, reading, writing, and architectural understanding.
 
 ## 14. AI And Computing Education
 
@@ -91,7 +109,7 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 ## 16. AI And Computing Education
 
 - Complete the sequence with the durable goal of judgment.
-- Refer explicitly to the joint paper with Petri Juntunen on AI in CSEd through citation `[5]`.
+- Refer explicitly to the joint paper with Petri Juntunen on AI in CSEd through citation `[1]`.
 - End on the point that students should know when to trust, verify, and ignore AI.
 
 ## 17. How Research Informs My Teaching
@@ -110,29 +128,43 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 
 ## 19. Teaching Infrastructure
 
-- Mention the concrete teaching infrastructure you have built: the yearly web futures lecture, the writing guide, SurviveJS, and books.
+- Refer to the writing guide by title: `The Process of Scientific Writing`.
+- Use the slide to show that you build teaching infrastructure both through materials and through public learning communities.
+- Connect the photo directly to your work organizing meetups and conferences such as Future Frontend and React Finland.
 - Note that you will lead `Designing and Building Scalable Web Applications` from January 2027.
 - Briefly mention the special career course in early June as a teaching initiative connecting study and professional trajectories.
 - Use this slide to show that you do not only teach courses; you build scaffolding around learning.
 
-## 20. Supervision As Frontier Teaching
+## 20. Thesis Journey Tracker
+
+- Use this slide to make the developer background legible as lecturer-relevant infrastructure rather than as side-project work.
+- Thesis Journey Tracker should read as supervision infrastructure: phases, meetings, and notes in one place.
+- Keep the slide visual. The screenshot should do most of the work.
+
+## 21. Supervisor Search
+
+- Present this as student-facing infrastructure rather than internal admin tooling.
+- The key point is lighter access to supervision: students can find a suitable MSc thesis supervisor with less friction.
+- Keep the slide visual. The screenshot should do most of the work.
+
+## 22. Supervision As Frontier Teaching
 
 - Present supervision as a place where research, teaching, and industry signals meet.
 - The number of supervised theses matters because it gives you early visibility into emerging themes.
 - Mention that current supervision topics include agentic AI, AIOps, and AI-supported web engineering.
 - Stress your mentoring style: help students build a durable model of the topic, not just finish a document.
 
-## 21. Selected Supervision Cases
+## 23. Selected Supervision Cases
 
 - Use the three examples to show a coherent profile: AI for web development, edge/serverless systems, and WebAssembly at the edge.
 - Mention that Pyry Pohjalainen's thesis led to publication through AAAI Magazine, as that signals supervision quality and external visibility.
 
-## 22. Part 2
+## 24. Part 2
 
 - Use this divider slide to mark the shift from highlights to future direction.
 - Signal that the next slides focus on future research and the lecturer role.
 
-## 23. Future Vision: Agentic Hypermedia
+## 25. Future Vision: Agentic Hypermedia
 
 - This is the signature future slide.
 - Explain the core claim: as AI agents become participants in software use, hypermedia becomes relevant again.
@@ -141,59 +173,52 @@ Keep this document in sync with the slide deck whenever slide content changes. T
 - The opportunity is to design systems that are lighter for users, clearer for developers, and easier for agents to navigate.
 - Emphasize that this is both a research direction and a teaching direction.
 
-## 24. Goals As a Tenure-Track Lecturer
+## 26. Goals As a Tenure-Track Lecturer
 
 - Make the case that the role matches work you are already doing.
 - Start with the teaching goal only.
 - Your teaching goal is research-led education around changing architectures and AI-aware software development.
 
-## 25. Goals As a Tenure-Track Lecturer
+## 27. Goals As a Tenure-Track Lecturer
 
 - Add the supervision goal while keeping the right-hand framing cards stable.
 - Your supervision goal is to build a pipeline between publishable research, industry relevance, and student growth.
 
-## 26. Goals As a Tenure-Track Lecturer
+## 28. Goals As a Tenure-Track Lecturer
 
 - Complete the sequence with the community-facing goal.
 - Your community goal is to extend Aalto through public educational infrastructure, outward-facing teaching work, and Future Frontend.
+- Make the infrastructure concrete: guides, advising tools, and open learning materials are part of the role, not side projects.
 - Say explicitly that this is a good fit for Aalto CS because the department values interdisciplinarity, collaboration, and impact beyond a single subfield.
 
-## 27. Part 3
+## 29. Part 3
 
-- Use this divider slide to slow the pace before the final discussion section.
+- Use this divider slide to slow the pace before the final conclusion section.
 - It should make the Q&A phase feel intentional rather than abrupt.
 
-## 28. Discussion
+## 30. Conclusion
 
-- Use the closing question to pivot from presentation to discussion: if AI changes how software is produced and used, what remains durable in computing education?
+- Use the closing question to pivot from presentation to the conclusion: if AI changes how software is produced and used, what remains durable in computing education?
 - Start with the first priority only.
 - Architecture: students need to see the whole system and compare designs.
 
-## 29. Discussion
+## 31. Conclusion
 
 - Add the second priority while keeping the framing question unchanged.
 - Judgment: students need to work responsibly with AI instead of relying on it blindly.
 
-## 30. Discussion
+## 32. Conclusion
 
 - Complete the sequence with the third priority.
 - Model-building: students need durable ways of thinking that survive rapid tool turnover.
 
-## 31. Q&A
+## 33. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
-- Use it only after the discussion slide has already framed the closing question.
-
-## 32. References
-
-- Keep this slide compact and purely bibliographic.
-- It exists to resolve citations `[1]` to `[4]` from the earlier slides without overloading them.
-
-## 33. References
-
-- Continue the bibliography on a second slide rather than compressing the typography too far.
-- This slide resolves citations `[5]` to `[8]`, including the Fielding, Healey, and Brew references grounding the architecture and teaching-nexus sketches.
+- Use it only after the conclusion slide has already framed the closing question.
 
 ## 34. References
 
-- Use this final short slide to resolve the semantic web citation used on the vision slide.
+- Keep this slide compact and purely bibliographic.
+- It should resolve only the live citation set used on the slides.
+- The current active set is `[1]` to `[5]`: AI in CSEd, Fielding, Healey, Brew, and Berners-Lee et al.
