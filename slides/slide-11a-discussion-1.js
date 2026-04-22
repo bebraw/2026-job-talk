@@ -3,6 +3,7 @@ const {
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
+const { centeredTextBlock, sectionContentFrame } = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
@@ -15,6 +16,18 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const bodyText = "AI already changes what we teach and how we teach it.\nWhat do students still need to understand as tools change?";
+  const textFrame = sectionContentFrame({
+    left: 0.9,
+    right: 8.26,
+    top: 1.8,
+    bottom: 4.82
+  });
+  const textLayout = centeredTextBlock(textFrame, bodyText, {
+    fontFace,
+    fontSize: 16,
+    margin: 0
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -34,17 +47,16 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText(
     "discussion-left-body",
-    "AI already changes what we teach and how we teach it.\nWhat do students still need to understand as tools change?",
+    bodyText,
     {
-      x: 0.9,
-      y: 1.96,
-      w: 7.36,
-      h: 2.62,
+      x: textLayout.x,
+      y: textLayout.y,
+      w: textLayout.w,
+      h: textLayout.h,
       fontFace,
       fontSize: 16,
       color: theme.accent,
-      margin: 0,
-      valign: "middle"
+      margin: 0
     },
     {
       group: "discussion-left"

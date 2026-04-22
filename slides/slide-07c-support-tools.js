@@ -2,6 +2,7 @@ const {
   addAccentRule,
   addPageBadge
 } = require("../generator/helpers");
+const { createFrame, fitContainBox } = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 const path = require("path");
@@ -15,6 +16,17 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const contentFrame = createFrame({
+    x: 1.1,
+    y: 1.24,
+    w: 7.8,
+    bottom: 5.42
+  });
+  const imageBox = fitContainBox(contentFrame, {
+    alignY: "top",
+    contentWidth: 7.26,
+    contentHeight: 4.08
+  });
   slide.background = { color: theme.bg };
 
   canvas.addText("support-tools-tracker-title", slideConfig.title, {
@@ -41,10 +53,10 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addImage("support-tools-tracker-image", {
     path: path.join(__dirname, "assets/screenshots/thesis-journey-tracker-dashboard-large.png"),
-    x: 1.37,
-    y: 1.34,
-    w: 7.26,
-    h: 4.08
+    x: imageBox.x,
+    y: imageBox.y,
+    w: imageBox.w,
+    h: imageBox.h
   }, {
     group: "support-tools-main"
   });

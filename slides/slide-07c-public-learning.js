@@ -4,6 +4,15 @@ const {
   addPanel,
   addSectionTitle
 } = require("../generator/helpers");
+const {
+  boxBelow,
+  bulletItemHeight,
+  centerBox,
+  insetFrame,
+  sectionContentFrame,
+  splitColumns,
+  titleStackLayout
+} = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 const path = require("path");
@@ -17,6 +26,64 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const contentFrame = sectionContentFrame({
+    top: 1.9
+  });
+  const columns = splitColumns(contentFrame, {
+    gap: 0.54,
+    leftWidth: 4.2
+  });
+  const leftLayout = titleStackLayout(columns.left, {
+    titleHeight: 0.24,
+    titleGap: 0.26,
+    itemGap: 0.34,
+    items: [
+      {
+        height: bulletItemHeight({
+          body: "Meetups and the conference keep me grounded in current practice.",
+          bodyH: 0.38
+        })
+      },
+      {
+        height: bulletItemHeight({
+          body: "webpack-merge is one example; earlier work includes webpack and Blender.",
+          bodyH: 0.38
+        })
+      }
+    ]
+  });
+  const mediaFrame = sectionContentFrame({
+    x: columns.right.x,
+    left: columns.right.x,
+    right: columns.right.x + columns.right.w,
+    top: columns.right.y + 0.18,
+    bottom: columns.right.y + 3.08
+  });
+  const panelBox = centerBox(mediaFrame, {
+    w: 3.44,
+    h: 2.28
+  });
+  const imageBox = centerBox(insetFrame(panelBox, {
+    top: 0.14,
+    right: 0.18,
+    bottom: 0.14,
+    left: 0.18
+  }), {
+    w: 3.08,
+    h: 2.05
+  });
+  const captionTitleBox = boxBelow(panelBox, {
+    x: panelBox.x,
+    w: 3.28,
+    h: 0.2,
+    gap: 0.26
+  });
+  const captionBodyBox = boxBelow(captionTitleBox, {
+    x: panelBox.x,
+    w: 3.36,
+    h: 0.18,
+    gap: 0.08
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -27,9 +94,9 @@ function createSlide(pres, theme, options = {}) {
   );
 
   canvas.addText("public-learning-left-title", "Teaching also happens outside courses", {
-    x: 0.62,
-    y: 2.34,
-    w: 3.72,
+    x: columns.left.x,
+    y: leftLayout.titleY,
+    w: columns.left.w,
     h: 0.24,
     fontFace,
     fontSize: 12.6,
@@ -42,9 +109,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "public-learning-bullet-community",
-    x: 0.62,
-    y: 2.74,
-    w: 4.2,
+    x: columns.left.x,
+    y: leftLayout.items[0].y,
+    w: columns.left.w,
     title: "I organize Future Frontend.",
     body: "Meetups and the conference keep me grounded in current practice.",
     bodyH: 0.38,
@@ -53,9 +120,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "public-learning-bullet-outward",
-    x: 0.62,
-    y: 3.74,
-    w: 4.2,
+    x: columns.left.x,
+    y: leftLayout.items[1].y,
+    w: columns.left.w,
     title: "My developer background supports my teaching.",
     body: "webpack-merge is one example; earlier work includes webpack and Blender.",
     bodyH: 0.38,
@@ -64,10 +131,10 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addPanel(canvas, pres, theme, "public-learning-photo-frame", {
-    x: 5.36,
-    y: 2.08,
-    w: 3.44,
-    h: 2.28,
+    x: panelBox.x,
+    y: panelBox.y,
+    w: panelBox.w,
+    h: panelBox.h,
     lineColor: theme.light,
     fillColor: theme.panel,
     group: "public-learning-right"
@@ -75,19 +142,19 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addImage("public-learning-photo", {
     path: path.join(__dirname, "assets/photos/future-frontend-2024.jpg"),
-    x: 5.54,
-    y: 2.22,
-    w: 3.08,
-    h: 2.05
+    x: imageBox.x,
+    y: imageBox.y,
+    w: imageBox.w,
+    h: imageBox.h
   }, {
     group: "public-learning-right"
   });
 
   canvas.addText("public-learning-photo-title", "Teaching outside the classroom", {
-    x: 5.36,
-    y: 4.56,
-    w: 3.28,
-    h: 0.2,
+    x: captionTitleBox.x,
+    y: captionTitleBox.y,
+    w: captionTitleBox.w,
+    h: captionTitleBox.h,
     fontFace,
     fontSize: 11.2,
     bold: true,
@@ -98,10 +165,10 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addText("public-learning-photo-credit", "Future Frontend is one way I do it.", {
-    x: 5.36,
-    y: 4.84,
-    w: 3.36,
-    h: 0.18,
+    x: captionBodyBox.x,
+    y: captionBodyBox.y,
+    w: captionBodyBox.w,
+    h: captionBodyBox.h,
     fontFace,
     fontSize: 8.6,
     color: theme.muted,

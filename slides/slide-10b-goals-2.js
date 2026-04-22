@@ -4,6 +4,7 @@ const {
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
+const { bulletItemHeight, sectionContentFrame, stackInFrame } = require("../generator/layout");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -15,6 +16,27 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const contentFrame = sectionContentFrame({
+    left: 0.96,
+    right: 8.3,
+    top: 1.96
+  });
+  const [claimLayout, studentsLayout] = stackInFrame(contentFrame, [
+    {
+      height: bulletItemHeight({
+        body: "This is already visible in my teaching, supervision, and research direction.",
+        bodyH: 0.34
+      })
+    },
+    {
+      height: bulletItemHeight({
+        body: "Supervision is part of research, not separate from it.",
+        bodyH: 0.3
+      })
+    }
+  ], {
+    gap: 0.36
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -34,9 +56,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "closing-bullet-claim",
-    x: 0.96,
-    y: 2.6,
-    w: 7.34,
+    x: contentFrame.x,
+    y: claimLayout.y,
+    w: contentFrame.w,
     title: "I connect research, students, and practice in the agentic/web space.",
     body: "This is already visible in my teaching, supervision, and research direction.",
     bodyH: 0.34,
@@ -47,9 +69,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "closing-bullet-students",
-    x: 0.96,
-    y: 3.68,
-    w: 7.34,
+    x: contentFrame.x,
+    y: studentsLayout.y,
+    w: contentFrame.w,
     title: "Students contribute to real research through supervision.",
     body: "Supervision is part of research, not separate from it.",
     bodyH: 0.3,

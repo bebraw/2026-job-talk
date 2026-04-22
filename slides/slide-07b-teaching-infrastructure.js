@@ -4,6 +4,14 @@ const {
   addPanel,
   addSectionTitle
 } = require("../generator/helpers");
+const {
+  bulletItemHeight,
+  centerBox,
+  insetFrame,
+  sectionContentFrame,
+  splitColumns,
+  titleStackLayout
+} = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 const path = require("path");
@@ -17,6 +25,46 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const contentFrame = sectionContentFrame({
+    bottom: 5.1,
+    top: 1.88
+  });
+  const columns = splitColumns(contentFrame, {
+    gap: 0.82,
+    leftWidth: 4.18
+  });
+  const leftLayout = titleStackLayout(columns.left, {
+    titleHeight: 0.44,
+    titleGap: 0.34,
+    itemGap: 0.3,
+    items: [
+      {
+        height: bulletItemHeight({
+          body: "\"The Process of Scientific Writing\" makes publishing expectations concrete.",
+          bodyH: 0.34
+        })
+      },
+      {
+        height: bulletItemHeight({
+          body: "It supports supervision through a shared writing process.",
+          bodyH: 0.34
+        })
+      }
+    ]
+  });
+  const figureFrame = centerBox(columns.right, {
+    w: 2.56,
+    h: 3.36
+  });
+  const bookBox = centerBox(insetFrame(figureFrame, {
+    top: 0.18,
+    right: 0.28,
+    bottom: 0.18,
+    left: 0.28
+  }), {
+    w: 1.98,
+    h: 3.02
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -27,9 +75,9 @@ function createSlide(pres, theme, options = {}) {
   );
 
   canvas.addText("teaching-infrastructure-left-title", "A writing process students can use", {
-    x: 0.62,
-    y: 2.34,
-    w: 3.6,
+    x: columns.left.x,
+    y: leftLayout.titleY,
+    w: columns.left.w,
     h: 0.44,
     fontFace,
     fontSize: 12.6,
@@ -42,9 +90,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "teaching-infrastructure-bullet-materials",
-    x: 0.62,
-    y: 3,
-    w: 4.18,
+    x: columns.left.x,
+    y: leftLayout.items[0].y,
+    w: columns.left.w,
     title: "Shared writing process improves supervision.",
     body: "\"The Process of Scientific Writing\" makes publishing expectations concrete.",
     bodyH: 0.34,
@@ -53,9 +101,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "teaching-infrastructure-bullet-durable",
-    x: 0.62,
-    y: 3.9,
-    w: 4.18,
+    x: columns.left.x,
+    y: leftLayout.items[1].y,
+    w: columns.left.w,
     title: "Students can use it on their own.",
     body: "It supports supervision through a shared writing process.",
     bodyH: 0.34,
@@ -63,10 +111,10 @@ function createSlide(pres, theme, options = {}) {
   });
 
   addPanel(canvas, pres, theme, "teaching-infrastructure-book-frame", {
-    x: 5.62,
-    y: 1.92,
-    w: 2.56,
-    h: 3.36,
+    x: figureFrame.x,
+    y: figureFrame.y,
+    w: figureFrame.w,
+    h: figureFrame.h,
     lineColor: theme.light,
     fillColor: theme.panel,
     group: "teaching-infrastructure-right"
@@ -74,10 +122,10 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addImage("teaching-infrastructure-book", {
     path: path.join(__dirname, "assets/photos/process-cover.png"),
-    x: 5.92,
-    y: 2.1,
-    w: 1.98,
-    h: 3.02
+    x: bookBox.x,
+    y: bookBox.y,
+    w: bookBox.w,
+    h: bookBox.h
   }, {
     group: "teaching-infrastructure-right"
   });

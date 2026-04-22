@@ -101,13 +101,13 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Explain that research helps you organize a fast-moving field into durable models that students can adapt later.
 - Use the research-teaching nexus sketch to ground the slide in existing higher-education literature rather than a purely custom loop.
 - Healey provides the recognizable nexus vocabulary; Brew supports the more reciprocal, community-oriented interpretation.
-- Use the first pass to establish the heading and the first core point only.
+- Use the first pass to establish the first core point only; avoid adding a redundant inner heading under the slide title.
 
 ## 14. How Research Informs My Teaching
 
 - Add the second point on the next slide so the teaching approach unfolds step by step.
 - State the reverse direction explicitly here: teaching and supervision also feed research back.
-- Keep the large `Teaching approach` heading visually prominent and treat the diagram as a compact scholarly anchor, not as the main content.
+- Keep the bullets as the main content and treat the diagram as a compact scholarly anchor, not as the main content.
 
 ## 15. How Research Informs My Teaching
 

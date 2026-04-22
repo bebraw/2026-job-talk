@@ -3,6 +3,7 @@ const {
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
+const { centeredTextBlock, sectionContentFrame } = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
@@ -15,6 +16,18 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
+  const bodyText = "AI already changes what we teach and how we teach it.\nWhat do students still need to understand as tools change?\n\nHow should we teach architecture in an agentic world?\n\nHow do we help students build judgment rather than overreliance on AI?";
+  const textFrame = sectionContentFrame({
+    left: 0.82,
+    right: 8.9,
+    top: 1.78,
+    bottom: 4.9
+  });
+  const textLayout = centeredTextBlock(textFrame, bodyText, {
+    fontFace,
+    fontSize: 15.2,
+    margin: 0
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -34,17 +47,16 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText(
     "discussion-left-body",
-    "AI already changes what we teach and how we teach it.\nWhat do students still need to understand as tools change?\n\nHow should we teach architecture in an agentic world?\n\nHow do we help students build judgment rather than overreliance on AI?",
+    bodyText,
     {
-      x: 0.82,
-      y: 1.9,
-      w: 8.08,
-      h: 2.76,
+      x: textLayout.x,
+      y: textLayout.y,
+      w: textLayout.w,
+      h: textLayout.h,
       fontFace,
       fontSize: 15.2,
       color: theme.accent,
-      margin: 0,
-      valign: "middle"
+      margin: 0
     },
     {
       group: "discussion-left"
