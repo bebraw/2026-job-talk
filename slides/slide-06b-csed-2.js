@@ -44,7 +44,7 @@ function createSlide(pres, theme, options = {}) {
     x: 0.62,
     y: 2.68,
     w: 4.24,
-    title: "Institutions have to adapt, not just students.",
+    title: "Curriculum and pedagogy need rethinking.",
     group: "csed-left"
   });
 

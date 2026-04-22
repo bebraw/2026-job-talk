@@ -63,7 +63,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Agentic/web space",
-    body: "This adds a useful specialization within a broad department.",
+    body: "This deepens one technical area within a broad department.",
     bodyFontSize: 8.8,
     group: "closing-right"
   });
