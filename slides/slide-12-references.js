@@ -8,7 +8,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 35,
+  index: 31,
   title: "References"
 };
 

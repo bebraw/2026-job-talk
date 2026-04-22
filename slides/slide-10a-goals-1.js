@@ -9,7 +9,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 27,
+  index: 23,
   title: "Goals as a tenure-track lecturer"
 };
 
@@ -39,7 +39,7 @@ function createSlide(pres, theme, options = {}) {
     y: 2.06,
     w: 4.44,
     title: "Build research-led teaching around changing architectures.",
-    body: "Teach students to reason about systems, not just tools.",
+    body: "Teach students to reason about systems.",
     bodyH: 0.3,
     titleFontSize: 10.6,
     bodyFontSize: 9.8,
@@ -53,7 +53,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Curriculum focus",
-    body: "Architecture, AI-aware development, and reflective practice.",
+    body: "Architecture, AI-aware development, reflection.",
     group: "closing-right"
   });
 
@@ -64,7 +64,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Research profile",
-    body: "Teaching informed by building tools such as webpack-merge.",
+    body: "Teaching shaped by building tools like webpack-merge.",
     group: "closing-right"
   });
 
@@ -75,7 +75,7 @@ function createSlide(pres, theme, options = {}) {
     w: 3.08,
     h: 0.76,
     title: "Impact and service",
-    body: "I build guides and tools students can use outside courses.",
+    body: "Guides and tools students use outside courses.",
     group: "closing-right"
   });
 

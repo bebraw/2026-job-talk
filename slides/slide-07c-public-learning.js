@@ -10,7 +10,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 20,
+  index: 17,
   title: "Public learning communities"
 };
 
@@ -46,7 +46,7 @@ function createSlide(pres, theme, options = {}) {
     y: 2.74,
     w: 4.2,
     title: "I organize Future Frontend.",
-    body: "Meetups and the conference bring current practice into the room.",
+    body: "Meetups and the conference bring current practice in.",
     bodyH: 0.38,
     group: "public-learning-left"
   });
@@ -57,7 +57,7 @@ function createSlide(pres, theme, options = {}) {
     y: 3.74,
     w: 4.2,
     title: "I also build tools practitioners know.",
-    body: "I have built tools practitioners know, including webpack-merge, and earlier contributed to webpack and Blender.",
+    body: "webpack-merge is one example; earlier work includes webpack and Blender.",
     bodyH: 0.38,
     group: "public-learning-left"
   });

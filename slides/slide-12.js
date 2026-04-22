@@ -7,7 +7,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "closing",
-  index: 34,
+  index: 30,
   title: "Q&A"
 };
 

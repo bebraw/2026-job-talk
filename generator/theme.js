@@ -6,7 +6,7 @@ const theme = {
   light: "dcefed",
   bg: "ffffff",
   panel: "f7fcfb",
-  slideCount: 35,
+  slideCount: 31,
   progressTrack: "dcefed",
   progressFill: "09b5c4",
   darkSlide: {
