@@ -67,38 +67,33 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "vision-bullet-hypermedia",
     x: 0.94,
-    y: 2.72,
+    y: 2.8,
     w: 3.88,
     title: "How do we keep the web usable by agents?",
-    body: "Recover hypermedia so capabilities stay explicit and navigable.",
-    bodyH: 0.3,
-    bodyFontSize: 8.4,
+    titleH: 0.34,
+    titleFontSize: 9.2,
     group: "vision-left"
   });
 
   addBulletItem(canvas, pres, theme, {
     id: "vision-bullet-architectures",
     x: 0.94,
-    y: 3.5,
+    y: 3.56,
     w: 3.88,
-    title: "How do the semantic web and knowledge bases matter again?",
-    body: "Ground hypermedia in the semantic web and knowledge bases.",
-    bodyH: 0.3,
+    title: "How do semantic web ideas and knowledge bases support agent-facing systems?",
+    titleH: 0.46,
     titleFontSize: 8.6,
-    bodyFontSize: 8.4,
     group: "vision-left"
   });
 
   addBulletItem(canvas, pres, theme, {
     id: "vision-bullet-education",
     x: 0.94,
-    y: 4.28,
+    y: 4.32,
     w: 3.88,
     title: "What should remain stable in web architecture as agents become users?",
-    body: "Architecture and judgment matter as tools keep changing.",
-    bodyH: 0.24,
-    titleFontSize: 8.2,
-    bodyFontSize: 8.4,
+    titleH: 0.34,
+    titleFontSize: 8.6,
     group: "vision-left"
   });
 

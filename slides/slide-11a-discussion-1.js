@@ -37,13 +37,14 @@ function createSlide(pres, theme, options = {}) {
     "AI already changes what we teach and how we teach it.\nWhat do students still need to understand as tools change?",
     {
       x: 0.9,
-      y: 2.42,
+      y: 1.96,
       w: 7.36,
-      h: 1.38,
+      h: 2.62,
       fontFace,
       fontSize: 16,
       color: theme.accent,
-      margin: 0
+      margin: 0,
+      valign: "middle"
     },
     {
       group: "discussion-left"
