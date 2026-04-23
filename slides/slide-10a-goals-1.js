@@ -27,7 +27,9 @@ function createSlide(pres, theme, options = {}) {
         titleH: 0.52
       })
     }
-  ]);
+  ], {
+    justify: "top"
+  });
   slide.background = { color: theme.bg };
 
   addSectionTitle(

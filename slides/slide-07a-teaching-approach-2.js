@@ -39,6 +39,7 @@ function createSlide(pres, theme, options = {}) {
     titleHeight: 0,
     titleGap: 0,
     itemGap: 0.26,
+    justify: "top",
     items: [
       {
         height: bulletItemHeight({

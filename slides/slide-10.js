@@ -38,7 +38,8 @@ function createSlide(pres, theme, options = {}) {
       })
     }
   ], {
-    gap: 0.34
+    gap: 0.34,
+    justify: "top"
   });
   slide.background = { color: theme.bg };
 

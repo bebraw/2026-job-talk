@@ -28,7 +28,7 @@ function createSlide(pres, theme, options = {}) {
   const contentFrame = sectionContentFrame({
     left: 0.9,
     right: 8.94,
-    top: 1.66,
+    top: 1.84,
     bottom: 5.02
   });
   const columns = splitColumns(contentFrame, {
@@ -39,6 +39,7 @@ function createSlide(pres, theme, options = {}) {
     titleHeight: 0,
     titleGap: 0,
     itemGap: 0.24,
+    justify: "top",
     items: [
       {
         height: bulletItemHeight({

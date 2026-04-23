@@ -20,15 +20,15 @@ function createSlide(pres, theme, options = {}) {
   const contentFrame = sectionContentFrame({
     left: 0.78,
     right: 8.78,
-    top: 2.58,
-    bottom: 5.02
+    top: 2.32,
+    bottom: 4.9
   });
   const cardLayouts = stackInFrame(contentFrame, [
     { height: 0.84 },
     { height: 0.84 }
   ], {
     gap: 0.1,
-    justify: "center"
+    justify: "top"
   });
   slide.background = { color: theme.bg };
 
@@ -49,7 +49,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("simple-framing-line", "How do we reduce unnecessary complexity without giving up capability?", {
     x: 0.82,
-    y: 2.08,
+    y: 1.74,
     w: 7.86,
     h: 0.24,
     fontFace,

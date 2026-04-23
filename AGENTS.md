@@ -38,6 +38,8 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - On screenshot-led slides, prioritize screenshot scale over decorative framing; remove border panels when they reduce legibility.
 - Framed photos and artifact images must keep visible inset padding on all sides so they do not look cramped inside their frame.
 - Apply that padding rule to photos, book covers, and similar visual artifacts; charts, diagrams, and screenshots may use tighter framing when legibility is the priority.
+- Build sequences must keep previously revealed content fixed in place across steps.
+- Do not re-center or vertically rebalance earlier bullets, cards, or diagrams when adding later build items; anchor the shared content to consistent coordinates or use top-justified layouts with the same frame geometry across the sequence.
 
 ### Workflow Rules
 
@@ -49,6 +51,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Keep the outline slide visually simple: prioritize clean vertical rhythm and structural clarity over decorative accents.
 - Validate vertical rhythm on rendered slides, not only in source coordinates: headings, content blocks, media, and captions should feel intentionally spaced rather than top-heavy, bottom-heavy, or unevenly compressed.
 - Use vertical balance as a default heuristic on content slides: the main content block should usually sit so the gap from the title area to the top of the content feels close to the gap from the bottom of the content to the bottom progress bar; if one side reads visibly heavier, rebalance the slide instead of accepting the drift.
+- Validate build sequences visually after edits: when two or more slides form a reveal/build, compare the rendered steps to confirm that shared items do not jump between slides.
 - Keep caption, source, and reference-note spacing tight enough to read as attached metadata: the gap below a visual should usually stay smaller than the gap between major content groups, and large detached caption gaps should be treated as a layout issue.
 - In stacked claim or bullet lists, keep title-to-body spacing consistent across sibling items; if one title wraps longer, adjust offsets or shorten copy instead of letting its body sit tighter than the others.
 - Secondary consequence, implication, or teaching-takeaway lines must read as subordinate to the slide’s main claims: phrase them as follow-on consequences, and keep their styling lighter than the primary claim area so they do not compete for hierarchy.
