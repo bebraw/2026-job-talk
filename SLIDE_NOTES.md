@@ -17,6 +17,8 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - The exact source is: `https://almanac.httparchive.org/en/2025/page-weight`.
 - Lead with the claim that we often have the practices to reduce complexity, but too little incentive to adopt them.
 - Use the growth in page weight as evidence of a broader architectural problem rather than as the whole argument.
+- Make the chart visually dominant enough to read as primary evidence rather than a small supporting graphic.
+- Label the source line as `Reference:` rather than `Evidence:`.
 - Emphasize that scale has created real complexity costs: payload, latency, maintenance burden, and conceptual overhead.
 
 ## 03. Why This Matters Now
@@ -175,6 +177,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - State that on 13 October 2026, you will organize AI meets SDLC at Marsio.
 - Keep the merged CS-E4770 claim visible above the seminar line.
 - Use the seminar to show that you connect teaching, research, and industry around AI and software development already within Aalto.
+- Keep the visible date phrasing as `13th of October 2026`; do not normalize it unless you explicitly decide to change the wording.
 
 ## 24. Part 4
 

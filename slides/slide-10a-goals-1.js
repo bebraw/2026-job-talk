@@ -19,7 +19,7 @@ function createSlide(pres, theme, options = {}) {
   const contentFrame = sectionContentFrame({
     left: 0.96,
     right: 8.3,
-    top: 1.96
+    top: 2.52
   });
   const [claimLayout] = stackInFrame(contentFrame, [
     {

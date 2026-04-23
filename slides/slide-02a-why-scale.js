@@ -24,16 +24,16 @@ function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
   const chartFrame = sectionContentFrame({
-    left: 1.64,
-    right: 8.36,
-    top: 2.08,
-    bottom: 4.92
+    left: 0.92,
+    right: 9.08,
+    top: 1.68,
+    bottom: 4.98
   });
   const imageFrame = insetFrame(chartFrame, {
-    top: 0.14,
-    right: 0.8,
-    bottom: 0.03,
-    left: 0.8
+    top: 0,
+    right: 0.16,
+    bottom: 0,
+    left: 0.16
   });
   const imageBox = fitContainBox(createFrame(imageFrame), {
     contentWidth: 5.12,
@@ -45,7 +45,7 @@ function createSlide(pres, theme, options = {}) {
     y: undefined,
     w: chartFrame.w - 0.16,
     h: 0.14,
-    gap: 0.28
+    gap: 0.18
   });
   slide.background = { color: theme.bg };
 
@@ -66,7 +66,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("why-main-claim", "We often have the practices to reduce complexity, but too little incentive to adopt them.", {
     x: 0.86,
-    y: 1.66,
+    y: 1.26,
     w: 7.72,
     h: 0.28,
     fontFace,
@@ -89,7 +89,7 @@ function createSlide(pres, theme, options = {}) {
     group: "why-main"
   });
 
-  canvas.addText("why-chart-source", "Evidence: HTTP Archive Web Almanac 2025, Page Weight, Fig. 14.1", {
+  canvas.addText("why-chart-source", "Reference: HTTP Archive Web Almanac 2025, Page Weight, Fig. 14.1", {
     x: sourceBox.x,
     y: sourceBox.y,
     w: sourceBox.w,

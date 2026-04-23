@@ -27,6 +27,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - When citations change, remove unused references and renumber the remaining set sequentially.
 - When references change, validate the references slide layout explicitly: keep all entries fully above the bottom progress bar and review the rebuilt demo PDF to confirm nothing overflows or collides.
 - On the references slide, keep each URL visibly attached to its citation while treating the link text as subordinate metadata: use compact wrapped labels when needed, keep the full URL as the hyperlink target, and never allow visible link text to overflow its column.
+- On content slides, use `Reference:` as the standard label for source lines below charts, images, and other cited visuals; do not invent alternative labels such as `Evidence:` unless there is a specific reason.
 - Non-full-bleed images must keep visible distance from surrounding content: leave whitespace to nearby headers, captions, neighboring panels, and the bottom progress bar instead of letting the image crowd them.
 - Labels for diagrams and figures should read as captions attached to the visual, preferably below it, instead of floating above it where they compete with slide headings and body content.
 - Figure captions and citation labels should keep a visible gap from the image itself; they should read as attached to the visual, not pressed against it.
@@ -50,6 +51,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Keep the outline slide visually simple: prioritize clean vertical rhythm and structural clarity over decorative accents.
 - Validate vertical rhythm on rendered slides, not only in source coordinates: headings, content blocks, media, and captions should feel intentionally spaced rather than top-heavy, bottom-heavy, or unevenly compressed.
 - Use vertical balance as a default heuristic on content slides: the main content block should usually sit so the gap from the title area to the top of the content feels close to the gap from the bottom of the content to the bottom progress bar; if one side reads visibly heavier, rebalance the slide instead of accepting the drift.
+- Treat `vertical-balance` and `text-tight` warnings as heuristic review prompts, not automatic blockers: if the rendered slide is intentional, readable, and the whitespace is serving the composition, it is acceptable to keep the warning rather than forcing a cosmetic adjustment.
 - Validate build sequences visually after edits: when two or more slides form a reveal/build, compare the rendered steps to confirm that shared items do not jump between slides.
 - Keep caption, source, and reference-note spacing tight enough to read as attached metadata: the gap below a visual should usually stay smaller than the gap between major content groups, and large detached caption gaps should be treated as a layout issue.
 - In stacked claim or bullet lists, keep title-to-body spacing consistent across sibling items; if one title wraps longer, adjust offsets or shorten copy instead of letting its body sit tighter than the others.
