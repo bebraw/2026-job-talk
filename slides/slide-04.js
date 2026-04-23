@@ -5,6 +5,7 @@ const {
   addSectionTitle
 } = require("../generator/helpers");
 const { sectionContentFrame, stackInFrame } = require("../generator/layout");
+const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -19,7 +20,7 @@ function createSlide(pres, theme, options = {}) {
   const contentFrame = sectionContentFrame({
     left: 0.78,
     right: 8.78,
-    top: 1.98,
+    top: 2.32,
     bottom: 4.9
   });
   const cardLayouts = stackInFrame(contentFrame, [
@@ -45,6 +46,20 @@ function createSlide(pres, theme, options = {}) {
     y: 0.68,
     w: 1.76,
     group: "section-header"
+  });
+
+  canvas.addText("simple-framing-line", "How do we reduce unnecessary complexity without giving up capability?", {
+    x: 0.82,
+    y: 1.74,
+    w: 7.86,
+    h: 0.24,
+    fontFace,
+    fontSize: 11.4,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "simple-main"
   });
 
   addCompactCard(canvas, pres, theme, {

@@ -16,16 +16,16 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  const bodyText = "AI already changes what we teach and how we teach it.\nWhat do students still need to understand as tools change?";
+  const bodyText = "I bring a distinctive specialization in web architecture, agent-facing systems, and modern software practice.";
   const textFrame = sectionContentFrame({
-    left: 0.9,
-    right: 8.26,
+    left: 0.94,
+    right: 8.34,
     top: 1.8,
     bottom: 4.82
   });
   const textLayout = centeredTextBlock(textFrame, bodyText, {
     fontFace,
-    fontSize: 16,
+    fontSize: 17.4,
     margin: 0
   });
   slide.background = { color: theme.bg };
@@ -54,7 +54,7 @@ function createSlide(pres, theme, options = {}) {
       w: textLayout.w,
       h: textLayout.h,
       fontFace,
-      fontSize: 16,
+      fontSize: 17.4,
       color: theme.accent,
       margin: 0
     },

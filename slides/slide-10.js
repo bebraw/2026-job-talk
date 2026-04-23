@@ -24,24 +24,21 @@ function createSlide(pres, theme, options = {}) {
   const [claimLayout, studentsLayout, infrastructureLayout] = stackInFrame(contentFrame, [
     {
       height: bulletItemHeight({
-        body: "This is already visible in my teaching, supervision, and research direction.",
-        bodyH: 0.34
+        titleH: 0.52
       })
     },
     {
       height: bulletItemHeight({
-        body: "Supervision is part of research, not separate from it.",
-        bodyH: 0.3
+        titleH: 0.34
       })
     },
     {
       height: bulletItemHeight({
-        body: "This supports learning, supervision, and Aalto's connection to practice.",
-        bodyH: 0.34
+        titleH: 0.52
       })
     }
   ], {
-    gap: 0.36
+    gap: 0.34
   });
   slide.background = { color: theme.bg };
 
@@ -65,11 +62,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: claimLayout.y,
     w: contentFrame.w,
-    title: "I connect research, students, and practice in the agentic/web space.",
-    body: "This is already visible in my teaching, supervision, and research direction.",
-    bodyH: 0.34,
-    titleFontSize: 10.0,
-    bodyFontSize: 9.4,
+    title: "I would strengthen Aalto's profile in web architecture, agent-facing systems, and modern software practice.",
+    titleH: 0.52,
+    titleFontSize: 10.2,
     group: "closing-main"
   });
 
@@ -78,11 +73,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: studentsLayout.y,
     w: contentFrame.w,
-    title: "Students contribute to real research through supervision.",
-    body: "Supervision is part of research, not separate from it.",
-    bodyH: 0.3,
-    titleFontSize: 10.0,
-    bodyFontSize: 9.8,
+    title: "I already build research through student work in my topic areas.",
+    titleH: 0.34,
+    titleFontSize: 10.4,
     group: "closing-main"
   });
 
@@ -91,11 +84,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: infrastructureLayout.y,
     w: contentFrame.w,
-    title: "I build educational infrastructure and maintain active external ties.",
-    body: "This supports learning, supervision, and Aalto's connection to practice.",
-    bodyH: 0.34,
-    titleFontSize: 9.8,
-    bodyFontSize: 9.4,
+    title: "I build infrastructure and communities that make this work visible, usable, and connected to practice.",
+    titleH: 0.52,
+    titleFontSize: 10.0,
     group: "closing-main"
   });
 

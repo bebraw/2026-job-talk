@@ -23,7 +23,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Keep the second motivation slide visual.
 - Use a simple progression of interaction modes rather than a benchmark-count graphic.
 - Keep each card body as a short cue rather than a mini-explanation.
-- Build the visual as `search and click` -> `agentic search` -> `browser use`.
+- Build the visual as `search and click` -> `agentic search` -> `browser use`, but make the lead claim explicit: the web is increasingly shaped by software agents.
 - Use `Mind2Web 2` to justify the claim that the old search model is query -> URL list -> manual synthesis.
 - Use `OpenAI deep research` for the shift toward systems that browse many sources and return citation-backed reports.
 - Use `Anthropic computer use`, `OpenAI Operator`, and `Google Project Mariner` as evidence that agents now operate websites built for humans.
@@ -53,20 +53,21 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Start from the background exactly: the web moved from static content to application development, application size has grown sharply, and mobile constraints still matter.
 - State the primary purpose directly: explore the space between static and dynamic web development.
 - Use the two main claims from the conclusion: the mainstream SPA model is not ideal for all use cases, and hybrid rendering techniques help control SPA-related costs.
-- Connect this to teaching through rendering tradeoffs: students should learn how to compare strategies case by case, not just absorb framework preferences.
+- Keep this slide fully in research mode; move the teaching consequence to the later teaching block instead of previewing it here.
 
 ## 07. Hybrid Rendering Techniques
 
-- Use direct references to your papers here rather than generic technique labels alone.
+- Lead with audience-facing route labels rather than paper titles alone.
 - Use edge-powered islands, resumability, and edge computing for SSG as concrete examples of the design space.
+- Treat the paper titles as subordinate support rather than the main message.
 - Treat this as the follow-up slide that makes the abstract framing more concrete.
 
 ## 08. Simplification Agenda
 
 - Make the point that simplification is not nostalgia or anti-technology.
 - Your agenda is to reduce unnecessary overhead while preserving capability.
-- Use the paper titles directly on the slide rather than generic labels or paraphrases.
-- Treat the papers themselves as the agenda markers rather than paraphrased labels.
+- Make the agenda explicit with the question `How do we reduce unnecessary complexity without giving up capability?`
+- Treat the papers as evidence of the agenda rather than as the whole message.
 - The current three agenda markers are `Revisiting Hypermedia, The Forgotten Web Application Development Paradigm`, `The Rise of Disappearing Frameworks in Web Development`, and `The Case for HTML First Web Development`.
 
 ## 09. Part 2
@@ -166,20 +167,20 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 ## 22. My Contribution To Aalto
 
 - Reframe the section away from generic goals and toward your concrete value-add to Aalto.
-- Use this first slide for the first strong claim only: you connect research, students, and practice in the agentic/web space.
+- Use this first slide for one specialization claim only: you would strengthen Aalto's profile in web architecture, agent-facing systems, and modern software practice.
 - Treat the section as evidence that the role would deepen work already visible in teaching, supervision, and community-building.
 - Start the sequence with one claim only, centered and balanced so the later build has a clear starting point.
 
 ## 23. My Contribution To Aalto
 
-- Turn this into a build slide: keep the first claim visible and add the student-research claim beneath it.
-- Make the supervision logic explicit here: students contribute to real research through supervision.
+- Turn this into a build slide: keep the first claim visible and add the established student-research claim beneath it.
+- Make the supervision logic explicit here: you already build research through student work in your topic areas.
 - Keep the spacing between the two claims deliberate so the sequence reads as accumulation rather than repetition.
 
 ## 24. My Contribution To Aalto
 
 - Complete the build by showing all three claims together.
-- State that you build educational infrastructure around learning and supervision while maintaining active external ties.
+- State that you build infrastructure and communities that make this work visible, usable, and connected to practice.
 - Use the final slide to make the Aalto fit explicit while keeping the full three-point stack balanced from top to bottom.
 
 ## 25. Part 4
@@ -189,25 +190,15 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 ## 26. Conclusion
 
-- Use the closing sequence as a build of questions rather than answers.
-- Start with the broadest question only: AI already changes both content and pedagogy, so ask what should stay at the center of computing education.
+- Replace the question build with one direct claim.
+- End on the hiring-case summary: you bring a distinctive specialization in web architecture, agent-facing systems, and modern software practice.
 
-## 27. Conclusion
-
-- Add the second question while keeping the first visible.
-- Use this slide to ask how architecture should be taught in an agentic world.
-
-## 28. Conclusion
-
-- Complete the sequence with a third question rather than an answer card.
-- Use the final build to ask how students can develop judgment rather than dependency.
-
-## 29. Q&A
+## 27. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
-- Use it only after the conclusion slide has already framed the closing question.
+- Use it only after the conclusion slide has already framed the closing claim.
 
-## 30. References
+## 28. References
 
 - Keep this slide compact and purely bibliographic.
 - It should resolve only the live citation set used on the slides.

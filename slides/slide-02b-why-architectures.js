@@ -19,19 +19,19 @@ const stages = [
     id: "why-mode-search",
     x: 0.82,
     label: "Search and click",
-    body: "The old interaction model is link-following and interpretation. [6]"
+    body: "Users searched, opened links,\nand did the synthesis\nthemselves. [6]"
   },
   {
     id: "why-mode-agentic",
     x: 3.38,
     label: "Agentic search",
-    body: "Systems now do part of the browsing and synthesis work. [7], [8]"
+    body: "Systems now browse and\ncompare sources on the\nuser's behalf. [7], [8]"
   },
   {
     id: "why-mode-browser",
     x: 5.94,
     label: "Browser use",
-    body: "Websites are becoming indirect machine interfaces. [9], [10]"
+    body: "Websites now increasingly\nserve agents as well as\npeople. [9], [10]"
   }
 ];
 
@@ -55,7 +55,7 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  canvas.addText("why-shift-title", "From human browsing to delegated interaction", {
+  canvas.addText("why-shift-title", "The web is increasingly shaped by software agents.", {
     x: 0.86,
     y: 1.66,
     w: 6.6,
@@ -99,9 +99,9 @@ function createSlide(pres, theme, options = {}) {
       x: x + 0.18,
       y: 2.8,
       w: 1.72,
-      h: 0.74,
+      h: 0.9,
       fontFace,
-      fontSize: 9.4,
+      fontSize: 8.8,
       color: theme.muted,
       margin: 0,
       align: "center"

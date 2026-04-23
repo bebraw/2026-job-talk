@@ -24,8 +24,7 @@ function createSlide(pres, theme, options = {}) {
   const [claimLayout] = stackInFrame(contentFrame, [
     {
       height: bulletItemHeight({
-        body: "This is already visible in my teaching, supervision, and research direction.",
-        bodyH: 0.34
+        titleH: 0.52
       })
     }
   ]);
@@ -51,11 +50,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: claimLayout.y,
     w: contentFrame.w,
-    title: "I connect research, students, and practice in the agentic/web space.",
-    body: "This is already visible in my teaching, supervision, and research direction.",
-    bodyH: 0.34,
-    titleFontSize: 10.0,
-    bodyFontSize: 9.4,
+    title: "I would strengthen Aalto's profile in web architecture, agent-facing systems, and modern software practice.",
+    titleH: 0.52,
+    titleFontSize: 10.2,
     group: "closing-main"
   });
 

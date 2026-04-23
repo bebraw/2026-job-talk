@@ -28,8 +28,6 @@ const slideModules = [
   require("../slides/slide-10"),
   require("../slides/slide-11-section-part3"),
   require("../slides/slide-11a-discussion-1"),
-  require("../slides/slide-11b-discussion-2"),
-  require("../slides/slide-11"),
   require("../slides/slide-12"),
   require("../slides/slide-12-references")
 ];

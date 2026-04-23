@@ -41,7 +41,7 @@ function createSlide(pres, theme, options = {}) {
     "Dissertation: Vepsäläinen, J. (2025). Emergence of hybrid rendering models in web application development.",
     {
       x: 0.72,
-      y: 1.54,
+      y: 1.68,
       w: 7.9,
       h: 0.18,
       group: "hybrid-reference"
@@ -50,7 +50,7 @@ function createSlide(pres, theme, options = {}) {
 
   addPanel(canvas, pres, theme, "hybrid-left-panel", {
     x: 0.62,
-    y: 2.24,
+    y: 2.42,
     w: 4.55,
     h: 2.42,
     lineColor: theme.light,
@@ -60,7 +60,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("hybrid-left-title", "Dissertation background", {
     x: 0.9,
-    y: 2.46,
+    y: 2.64,
     w: 2.9,
     h: 0.24,
     fontFace,
@@ -75,7 +75,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "hybrid-bullet-space",
     x: 0.9,
-    y: 2.82,
+    y: 3.0,
     w: 3.96,
     title: "From static content to web applications.",
     body: "The platform was designed for static content, then evolved into an application platform.",
@@ -88,7 +88,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "hybrid-bullet-experience",
     x: 0.9,
-    y: 3.68,
+    y: 3.86,
     w: 3.96,
     title: "Choose rendering strategies case by case.",
     body: "Application size tripled in a decade while mobile constraints remained.",
@@ -100,7 +100,7 @@ function createSlide(pres, theme, options = {}) {
 
   addPanel(canvas, pres, theme, "hybrid-right-panel", {
     x: 5.62,
-    y: 2.24,
+    y: 2.42,
     w: 3.18,
     h: 2.62,
     lineColor: theme.secondary,
@@ -111,7 +111,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("hybrid-right-title", "Main claims", {
     x: 5.92,
-    y: 2.42,
+    y: 2.6,
     w: 1.9,
     h: 0.24,
     fontFace,
@@ -126,7 +126,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "hybrid-bullet-claim-space",
     x: 5.92,
-    y: 2.76,
+    y: 2.94,
     w: 2.54,
     title: "Rendering should follow use cases.",
     body: "The mainstream SPA model should be used more sparingly.",
@@ -145,7 +145,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "hybrid-bullet-claim-tradeoffs",
     x: 5.92,
-    y: 3.68,
+    y: 3.86,
     w: 2.54,
     title: "Hybrid rendering narrows dynamic behavior to where it is needed.",
     body: "Islands constrain dynamic scope. Resumability avoids hydration and enables code-splitting.",
@@ -160,20 +160,6 @@ function createSlide(pres, theme, options = {}) {
     titleColor: theme.darkSlide.title,
     bodyColor: theme.darkSlide.body,
     group: "hybrid-right"
-  });
-
-  canvas.addText("hybrid-note", "Teaching consequence: students need to understand rendering tradeoffs, not framework preferences.", {
-    x: 0.72,
-    y: 5.02,
-    w: 7.5,
-    h: 0.28,
-    fontFace,
-    fontSize: 10.2,
-    color: theme.muted,
-    margin: 0
-  }, {
-    group: "hybrid-note",
-    skipOverlap: true
   });
 
   addPageBadge(canvas, pres, theme, slideConfig.index);
