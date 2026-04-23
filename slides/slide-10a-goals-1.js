@@ -9,7 +9,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 23,
+  index: 22,
   title: "My contribution to Aalto"
 };
 

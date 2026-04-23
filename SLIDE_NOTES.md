@@ -139,26 +139,20 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Phrase the developer example accurately: `webpack-merge` can be presented as your work, while `webpack` and `Blender` should read as earlier contributions rather than ongoing involvement.
 - Keep the developer line compact; the example should act as recognition, not as a project history.
 
-## 19. Thesis Journey Tracker
+## 19. Tools That Support My Work With Students
 
-- Use this slide to make the developer background legible as lecturer-relevant infrastructure rather than as side-project work.
-- Thesis Journey Tracker should read as supervision infrastructure: phases, meetings, and notes in one place.
-- Keep the slide visual. The screenshot should do most of the work.
-- Prioritize screenshot scale over decorative framing.
+- Merge the two tool examples into one comparison slide.
+- Use Thesis Journey Tracker to show supervision infrastructure: phases, meetings, and notes in one place.
+- Use Supervisor Search to show student-facing infrastructure: students can find a suitable MSc thesis supervisor with less friction.
+- Crop both screenshots intentionally so the key interaction areas remain legible at presentation scale.
+- Keep the slide visual and comparative rather than turning it into a feature list.
 
-## 20. Supervisor Search
-
-- Present this as student-facing infrastructure rather than internal admin tooling.
-- The key point is lighter access to supervision: students can find a suitable MSc thesis supervisor with less friction.
-- Keep the slide visual. The screenshot should do most of the work.
-- Prioritize screenshot scale over decorative framing.
-
-## 21. Part 3
+## 20. Part 3
 
 - Use this divider slide to mark the shift from highlights to future direction.
 - Signal that the next slides focus on future research and the lecturer role.
 
-## 22. Future Vision: Agentic Hypermedia
+## 21. Future Vision: Agentic Hypermedia
 
 - This is the signature future slide.
 - Explain the core claim: as AI agents become participants in software use, hypermedia becomes relevant again.
@@ -168,41 +162,41 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - The opportunity is to design systems that are lighter for users, clearer for developers, and easier for agents to navigate.
 - Emphasize that this is both a research direction and a teaching direction.
 
-## 23. My Contribution To Aalto
+## 22. My Contribution To Aalto
 
 - Reframe the section away from generic goals and toward your concrete value-add to Aalto.
 - Use this first slide for one specialization claim only: you would strengthen Aalto's profile in web architecture, agent-facing systems, and modern software practice.
 - Treat the section as evidence that the role would deepen work already visible in teaching, supervision, and community-building.
 - Start the sequence with one claim only, centered and balanced so the later build has a clear starting point.
 
-## 24. My Contribution To Aalto
+## 23. My Contribution To Aalto
 
 - Turn this into a build slide: keep the first claim visible and add the established student-research claim beneath it.
 - Make the supervision logic explicit here: you already build research through student work in your topic areas.
 - Keep the spacing between the two claims deliberate so the sequence reads as accumulation rather than repetition.
 
-## 25. My Contribution To Aalto
+## 24. My Contribution To Aalto
 
 - Complete the build by showing all three claims together.
 - State that you build infrastructure and communities that make this work visible, usable, and connected to practice.
 - Use the final slide to make the Aalto fit explicit while keeping the full three-point stack balanced from top to bottom.
 
-## 26. Part 4
+## 25. Part 4
 
 - Use this divider slide to slow the pace before the final conclusion section.
 - It should make the Q&A phase feel intentional rather than abrupt.
 
-## 27. Conclusion
+## 26. Conclusion
 
 - Replace the question build with one direct claim.
 - End on the hiring-case summary: you bring a distinctive specialization in web architecture, agent-facing systems, and modern software practice.
 
-## 28. Q&A
+## 27. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
 - Use it only after the conclusion slide has already framed the closing claim.
 
-## 29. References
+## 28. References
 
 - Keep this slide compact and purely bibliographic.
 - It should resolve only the live citation set used on the slides.

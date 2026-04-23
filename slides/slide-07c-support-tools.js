@@ -1,8 +1,9 @@
 const {
   addAccentRule,
+  addPanel,
   addPageBadge
 } = require("../generator/helpers");
-const { createFrame, fitContainBox } = require("../generator/layout");
+const { createFrame, splitColumns } = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 const path = require("path");
@@ -17,15 +18,26 @@ function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
   const contentFrame = createFrame({
-    x: 1.1,
-    y: 1.24,
-    w: 7.8,
-    bottom: 5.42
+    x: 0.72,
+    y: 1.54,
+    w: 8.58,
+    bottom: 5.18
   });
-  const imageBox = fitContainBox(contentFrame, {
-    alignY: "top",
-    contentWidth: 7.26,
-    contentHeight: 4.08
+  const columns = splitColumns(contentFrame, {
+    gap: 0.42,
+    leftWidth: 4.08
+  });
+  const leftImageBox = createFrame({
+    x: columns.left.x,
+    y: 2.24,
+    w: columns.left.w,
+    h: 2.44
+  });
+  const rightImageBox = createFrame({
+    x: columns.right.x,
+    y: 2.24,
+    w: columns.right.w,
+    h: 2.44
   });
   slide.background = { color: theme.bg };
 
@@ -51,12 +63,112 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
+  canvas.addText("support-tools-tracker-label", "Thesis Journey Tracker", {
+    x: columns.left.x,
+    y: 1.58,
+    w: columns.left.w,
+    h: 0.24,
+    fontFace,
+    fontSize: 12,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "support-tools-main"
+  });
+
+  canvas.addText("support-tools-tracker-body", "Phases, meetings, and notes in one place.", {
+    x: columns.left.x,
+    y: 1.88,
+    w: columns.left.w,
+    h: 0.18,
+    fontFace,
+    fontSize: 9.4,
+    color: theme.muted,
+    margin: 0
+  }, {
+    group: "support-tools-main"
+  });
+
+  addPanel(canvas, pres, theme, "support-tools-tracker-frame", {
+    x: leftImageBox.x,
+    y: leftImageBox.y,
+    w: leftImageBox.w,
+    h: leftImageBox.h,
+    lineColor: theme.light,
+    linePt: 0.9,
+    fillColor: "FFFFFF",
+    group: "support-tools-main"
+  });
+
   canvas.addImage("support-tools-tracker-image", {
     path: path.join(__dirname, "assets/screenshots/thesis-journey-tracker-dashboard-large.png"),
-    x: imageBox.x,
-    y: imageBox.y,
-    w: imageBox.w,
-    h: imageBox.h
+    x: leftImageBox.x + 0.08,
+    y: leftImageBox.y + 0.08,
+    w: leftImageBox.w - 0.16,
+    h: leftImageBox.h - 0.16,
+    sizing: {
+      type: "crop",
+      x: "6%",
+      y: "9%",
+      w: "88%",
+      h: "59%"
+    }
+  }, {
+    group: "support-tools-main"
+  });
+
+  canvas.addText("support-tools-search-label", "Supervisor Search", {
+    x: columns.right.x,
+    y: 1.58,
+    w: columns.right.w,
+    h: 0.24,
+    fontFace,
+    fontSize: 12,
+    bold: true,
+    color: theme.accent,
+    margin: 0
+  }, {
+    group: "support-tools-main"
+  });
+
+  canvas.addText("support-tools-search-body", "Find suitable MSc supervisors without leaving the page.", {
+    x: columns.right.x,
+    y: 1.88,
+    w: columns.right.w,
+    h: 0.18,
+    fontFace,
+    fontSize: 9.4,
+    color: theme.muted,
+    margin: 0
+  }, {
+    group: "support-tools-main"
+  });
+
+  addPanel(canvas, pres, theme, "support-tools-search-frame", {
+    x: rightImageBox.x,
+    y: rightImageBox.y,
+    w: rightImageBox.w,
+    h: rightImageBox.h,
+    lineColor: theme.light,
+    linePt: 0.9,
+    fillColor: "FFFFFF",
+    group: "support-tools-main"
+  });
+
+  canvas.addImage("support-tools-search-image", {
+    path: path.join(__dirname, "assets/screenshots/supervisor-search-home-top.png"),
+    x: rightImageBox.x + 0.08,
+    y: rightImageBox.y + 0.08,
+    w: rightImageBox.w - 0.16,
+    h: rightImageBox.h - 0.16,
+    sizing: {
+      type: "crop",
+      x: "5%",
+      y: "0%",
+      w: "90%",
+      h: "72%"
+    }
   }, {
     group: "support-tools-main"
   });
