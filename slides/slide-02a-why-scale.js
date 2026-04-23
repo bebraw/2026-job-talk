@@ -1,6 +1,5 @@
 const {
   addAccentRule,
-  addPanel,
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
@@ -27,8 +26,8 @@ function createSlide(pres, theme, options = {}) {
   const chartFrame = sectionContentFrame({
     left: 1.64,
     right: 8.36,
-    top: 1.76,
-    bottom: 4.96
+    top: 2.08,
+    bottom: 4.92
   });
   const imageFrame = insetFrame(chartFrame, {
     top: 0.14,
@@ -65,13 +64,18 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  addPanel(canvas, pres, theme, "why-chart-frame", {
-    x: chartFrame.x,
-    y: chartFrame.y,
-    w: chartFrame.w,
-    h: chartFrame.h,
-    lineColor: theme.light,
-    fillColor: "FFFFFF",
+  canvas.addText("why-main-claim", "We often have the practices to reduce complexity, but too little incentive to adopt them.", {
+    x: 0.86,
+    y: 1.66,
+    w: 7.72,
+    h: 0.28,
+    fontFace,
+    fontSize: 12.0,
+    bold: true,
+    color: theme.accent,
+    margin: 0,
+    align: "left"
+  }, {
     group: "why-main"
   });
 
@@ -85,7 +89,7 @@ function createSlide(pres, theme, options = {}) {
     group: "why-main"
   });
 
-  canvas.addText("why-chart-source", "Source: HTTP Archive Web Almanac 2025, Page Weight, Fig. 14.1", {
+  canvas.addText("why-chart-source", "Evidence: HTTP Archive Web Almanac 2025, Page Weight, Fig. 14.1", {
     x: sourceBox.x,
     y: sourceBox.y,
     w: sourceBox.w,

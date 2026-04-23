@@ -34,6 +34,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - When using charts or screenshots, reserve dedicated whitespace for captions and source lines; never place slide text on top of the image content area.
 - In stacked claim or bullet panels, keep visible vertical breathing room between the panel heading and the first item, and between adjacent items; bodies should not visually crowd the next claim.
 - Treat spacing as hierarchy: gaps within a group should stay visibly smaller than gaps between groups, and inter-group gaps should usually be at least about `1.5x` the intra-group gap.
+- When a slide uses a framing sentence above a row of cards or panels, treat the sentence and the row as one visual block: keep a clear gap between them, and avoid placing the whole block so high that the slide reads top-heavy.
 - Keep reading content left-aligned by default; reserve centered multiline text for short standalone prompts, discussion questions, or other intentionally isolated statements.
 - On screenshot-led slides, prioritize screenshot scale over decorative framing.
 - Build sequences must keep previously revealed content fixed in place across steps.

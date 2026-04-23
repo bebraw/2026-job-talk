@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 const slideConfig = {
   type: "content",
   index: 22,
-  title: "My contribution to Aalto"
+  title: "Future teaching at Aalto"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -35,7 +35,7 @@ function createSlide(pres, theme, options = {}) {
   addSectionTitle(
     canvas,
     theme,
-    "Contribution",
+    "Teaching",
     slideConfig.title
   );
 
@@ -52,9 +52,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: claimLayout.y,
     w: contentFrame.w,
-    title: "I would strengthen Aalto's profile in web architecture, agent-facing systems, and modern software practice.",
+    title: "Starting in January 2027, I will teach Designing and Building Scalable Web Applications (CS-E4770).",
     titleH: 0.52,
-    titleFontSize: 10.2,
+    titleFontSize: 10.0,
     group: "closing-main"
   });
 

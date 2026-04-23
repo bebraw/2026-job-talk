@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 const slideConfig = {
   type: "content",
   index: 24,
-  title: "My contribution to Aalto"
+  title: "Future teaching at Aalto"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -46,7 +46,7 @@ function createSlide(pres, theme, options = {}) {
   addSectionTitle(
     canvas,
     theme,
-    "Contribution",
+    "Teaching",
     slideConfig.title
   );
 
@@ -63,9 +63,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: claimLayout.y,
     w: contentFrame.w,
-    title: "I would strengthen Aalto's profile in web architecture, agent-facing systems, and modern software practice.",
+    title: "Starting in January 2027, I will teach Designing and Building Scalable Web Applications (CS-E4770).",
     titleH: 0.52,
-    titleFontSize: 10.2,
+    titleFontSize: 10.0,
     group: "closing-main"
   });
 
@@ -74,9 +74,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: studentsLayout.y,
     w: contentFrame.w,
-    title: "I already build research through student work in my topic areas.",
+    title: "In CS-E4770, I will teach web architecture as a core computer science topic, not only as framework practice.",
     titleH: 0.34,
-    titleFontSize: 10.4,
+    titleFontSize: 10.0,
     group: "closing-main"
   });
 
@@ -85,9 +85,9 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: infrastructureLayout.y,
     w: contentFrame.w,
-    title: "I build infrastructure and communities that make this work visible, usable, and connected to practice.",
+    title: "I will use CS-E4770 to connect courses, projects, theses, and supervision around scalable and agent-facing web systems.",
     titleH: 0.52,
-    titleFontSize: 10.0,
+    titleFontSize: 9.6,
     group: "closing-main"
   });
 

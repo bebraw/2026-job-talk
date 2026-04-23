@@ -15,7 +15,8 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Start with current empirical proof of growth rather than with an abstract slogan.
 - Use HTTP Archive's `Web Almanac 2025`, `Page Weight`, `Figure 14.1` as the chart on the first motivation slide.
 - The exact source is: `https://almanac.httparchive.org/en/2025/page-weight`.
-- Frame the web as the largest application platform and therefore a legitimate CS topic, not a niche engineering concern.
+- Lead with the claim that we often have the practices to reduce complexity, but too little incentive to adopt them.
+- Use the growth in page weight as evidence of a broader architectural problem rather than as the whole argument.
 - Emphasize that scale has created real complexity costs: payload, latency, maintenance burden, and conceptual overhead.
 
 ## 03. Why This Matters Now
@@ -28,7 +29,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Use `OpenAI deep research` for the shift toward systems that browse many sources and return citation-backed reports.
 - Use `Anthropic computer use`, `OpenAI Operator`, and `Google Project Mariner` as evidence that agents now operate websites built for humans.
 - Cite this slide with numbered references `[6]-[10]` rather than long source lines.
-- The point is not only that research exists, but that the interface model of the web is changing.
+- The point is not only that research exists, but that agents now shape the web in two ways: in development flows and as consumers of websites.
 - Land the consequence aloud rather than on a separate follow-up slide.
 - Make explicit in the spoken transition that the web now serves two kinds of clients: humans and agents.
 - Tie that directly to the scope of the talk: software architecture, AI, and computing education.
@@ -162,24 +163,23 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - The opportunity is to design systems that are lighter for users, clearer for developers, and easier for agents to navigate.
 - Emphasize that this is both a research direction and a teaching direction.
 
-## 22. My Contribution To Aalto
+## 22. Future Teaching At Aalto
 
-- Reframe the section away from generic goals and toward your concrete value-add to Aalto.
-- Use this first slide for one specialization claim only: you would strengthen Aalto's profile in web architecture, agent-facing systems, and modern software practice.
-- Treat the section as evidence that the role would deepen work already visible in teaching, supervision, and community-building.
-- Start the sequence with one claim only, centered and balanced so the later build has a clear starting point.
+- Use this slide to anchor your future teaching agenda in a concrete Aalto commitment.
+- State clearly that starting in January 2027, you will teach Designing and Building Scalable Web Applications (CS-E4770).
+- Treat the course mention as evidence that your future plans at Aalto are already concrete, not speculative.
 
-## 23. My Contribution To Aalto
+## 23. Future Teaching At Aalto
 
-- Turn this into a build slide: keep the first claim visible and add the established student-research claim beneath it.
-- Make the supervision logic explicit here: you already build research through student work in your topic areas.
-- Keep the spacing between the two claims deliberate so the sequence reads as accumulation rather than repetition.
+- Turn this into a build slide by keeping the CS-E4770 commitment visible and adding the teaching claim beneath it.
+- Make explicit that in CS-E4770, you will teach web architecture as a core computer science topic, not only as framework practice.
+- Keep the wording direct and discipline-facing so the course reads as relevant to the broader CS community.
 
-## 24. My Contribution To Aalto
+## 24. Future Teaching At Aalto
 
-- Complete the build by showing all three claims together.
-- State that you build infrastructure and communities that make this work visible, usable, and connected to practice.
-- Use the final slide to make the Aalto fit explicit while keeping the full three-point stack balanced from top to bottom.
+- Complete the build by showing the course commitment, the disciplinary framing, and the pipeline claim together.
+- State that you will use CS-E4770 to connect courses, projects, theses, and supervision around scalable and agent-facing web systems.
+- Use the final slide to show that your future teaching and research plans at Aalto are connected through one concrete platform.
 
 ## 25. Part 4
 
