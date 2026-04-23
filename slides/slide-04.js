@@ -23,11 +23,11 @@ function createSlide(pres, theme, options = {}) {
     bottom: 4.9
   });
   const cardLayouts = stackInFrame(contentFrame, [
-    { height: 0.92 },
-    { height: 0.92 },
-    { height: 0.92 }
+    { height: 0.84 },
+    { height: 0.84 },
+    { height: 0.84 }
   ], {
-    gap: 0.08,
+    gap: 0.1,
     justify: "top"
   });
   slide.background = { color: theme.bg };
@@ -52,10 +52,10 @@ function createSlide(pres, theme, options = {}) {
     x: cardLayouts[0].x,
     y: cardLayouts[0].y,
     w: cardLayouts[0].w,
-    h: 0.92,
+    h: cardLayouts[0].h,
     titleY: 0.1,
-    titleH: 0.54,
-    bodyY: 0.68,
+    titleH: 0.34,
+    bodyY: 0.46,
     bodyH: 0.16,
     title: "Revisiting Hypermedia, The Forgotten Web Application Development Paradigm",
     titleFontSize: 10.3,
@@ -69,15 +69,15 @@ function createSlide(pres, theme, options = {}) {
     x: cardLayouts[1].x,
     y: cardLayouts[1].y,
     w: cardLayouts[1].w,
-    h: 0.92,
+    h: cardLayouts[1].h,
     titleY: 0.1,
-    titleH: 0.54,
-    bodyY: 0.66,
-    bodyH: 0.18,
+    titleH: 0.34,
+    bodyY: 0.46,
+    bodyH: 0.16,
     title: "The Rise of Disappearing Frameworks in Web Development",
     titleFontSize: 10.3,
     body: "Juho Vepsäläinen, Arto Hellas, Petri Vuorimaa • ICWE 2023",
-    bodyFontSize: 8.1,
+    bodyFontSize: 8.8,
     group: "simple-main"
   });
 
@@ -86,10 +86,10 @@ function createSlide(pres, theme, options = {}) {
     x: cardLayouts[2].x,
     y: cardLayouts[2].y,
     w: cardLayouts[2].w,
-    h: 0.92,
-    titleY: 0.12,
-    titleH: 0.38,
-    bodyY: 0.6,
+    h: cardLayouts[2].h,
+    titleY: 0.1,
+    titleH: 0.34,
+    bodyY: 0.46,
     bodyH: 0.16,
     title: "The Case for HTML First Web Development",
     titleFontSize: 10.3,
