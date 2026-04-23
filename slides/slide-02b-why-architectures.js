@@ -2,7 +2,6 @@ const {
   addAccentRule,
   addPageBadge,
   addPanel,
-  addReferenceNote,
   addSectionTitle
 } = require("../generator/helpers");
 const { fontFace } = require("../generator/theme");
@@ -17,21 +16,21 @@ const slideConfig = {
 const stages = [
   {
     id: "why-mode-search",
-    x: 0.82,
+    x: 0.72,
     label: "Search and click",
-    body: "Users searched, opened links,\nand did the synthesis\nthemselves. [6]"
+    body: "Users searched, opened links, and did the synthesis themselves. [6]"
   },
   {
     id: "why-mode-agentic",
-    x: 3.38,
+    x: 3.28,
     label: "Agentic search",
-    body: "Systems now browse and\ncompare sources on the\nuser's behalf. [7], [8]"
+    body: "Systems now browse and compare sources on the user's behalf. [7], [8]"
   },
   {
     id: "why-mode-browser",
-    x: 5.94,
+    x: 5.84,
     label: "Browser use",
-    body: "Websites now increasingly\nserve agents as well as\npeople. [9], [10]"
+    body: "Websites now increasingly serve agents as well as people. [9], [10]"
   }
 ];
 
@@ -72,47 +71,47 @@ function createSlide(pres, theme, options = {}) {
   stages.forEach(({ id, x, label, body }, index) => {
     addPanel(canvas, pres, theme, `${id}-panel`, {
       x,
-      y: 2.16,
-      w: 2.08,
-      h: 2.1,
+      y: 2.18,
+      w: 2.24,
+      h: 1.72,
       lineColor: theme.light,
       fillColor: "FFFFFF",
       group: "why-shift"
     });
 
     canvas.addText(`${id}-label`, label, {
-      x: x + 0.18,
+      x: x + 0.22,
       y: 2.42,
-      w: 1.72,
-      h: 0.24,
+      w: 1.8,
+      h: 0.3,
       fontFace,
-      fontSize: 13.2,
+      fontSize: 12.6,
       bold: true,
       color: theme.text,
       margin: 0,
-      align: "center"
+      align: "left"
     }, {
       group: "why-shift"
     });
 
     canvas.addText(`${id}-body`, body, {
-      x: x + 0.18,
-      y: 2.8,
-      w: 1.72,
-      h: 0.9,
+      x: x + 0.22,
+      y: 2.82,
+      w: 1.8,
+      h: 0.66,
       fontFace,
-      fontSize: 8.8,
+      fontSize: 9.1,
       color: theme.muted,
       margin: 0,
-      align: "center"
+      align: "left"
     }, {
       group: "why-shift"
     });
   });
 
   canvas.addShape("why-shift-arrow-1", pres.ShapeType.chevron, {
-    x: 2.94,
-    y: 3.02,
+    x: 3.02,
+    y: 2.94,
     w: 0.22,
     h: 0.34,
     line: { color: theme.light, transparency: 100 },
@@ -122,8 +121,8 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addShape("why-shift-arrow-2", pres.ShapeType.chevron, {
-    x: 5.5,
-    y: 3.02,
+    x: 5.58,
+    y: 2.94,
     w: 0.22,
     h: 0.34,
     line: { color: theme.light, transparency: 100 },
@@ -131,20 +130,6 @@ function createSlide(pres, theme, options = {}) {
   }, {
     group: "why-shift"
   });
-
-  addReferenceNote(
-    canvas,
-    theme,
-    "Sources: [6]-[10] See references.",
-    {
-      x: 0.9,
-      y: 5.0,
-      w: 8,
-      h: 0.22,
-      group: "why-shift-source"
-    }
-  );
-
   addPageBadge(canvas, pres, theme, slideConfig.index);
   return canvas.finalize();
 }
