@@ -4,7 +4,7 @@ const {
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
-const { sectionContentFrame, stackInFrame } = require("../generator/layout");
+const { createFrame, sectionContentFrame, stackInFrame } = require("../generator/layout");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -19,17 +19,17 @@ function createSlide(pres, theme, options = {}) {
   const contentFrame = sectionContentFrame({
     left: 0.78,
     right: 8.78,
-    top: 1.98,
-    bottom: 4.9
+    top: 2.42,
+    bottom: 4.96
   });
-  const cardLayouts = stackInFrame(contentFrame, [
-    { height: 0.84 },
-    { height: 0.84 },
-    { height: 0.84 }
-  ], {
-    gap: 0.1,
-    justify: "top"
-  });
+  const gap = 0.24;
+  const columnWidth = (contentFrame.w - gap * 2) / 3;
+  const cardLayouts = [0, 1, 2].map((index) => createFrame({
+    x: contentFrame.x + index * (columnWidth + gap),
+    y: contentFrame.y,
+    w: columnWidth,
+    h: 2.38
+  }));
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -54,13 +54,13 @@ function createSlide(pres, theme, options = {}) {
     w: cardLayouts[0].w,
     h: cardLayouts[0].h,
     titleY: 0.12,
-    titleH: 0.22,
-    bodyY: 0.38,
-    bodyH: 0.3,
+    titleH: 0.34,
+    bodyY: 0.54,
+    bodyH: 0.7,
     title: "Constrain dynamic scope",
-    titleFontSize: 10.8,
-    body: "Limit dynamic behavior to where it is needed.\nEdge-powered islands • JWE 2025",
-    bodyFontSize: 8.2,
+    titleFontSize: 10.6,
+    body: "Limit dynamic behavior\nto where it is needed.\n\nIslands • JWE 2025",
+    bodyFontSize: 8.1,
     group: "hybrid-techniques-main"
   });
 
@@ -71,13 +71,13 @@ function createSlide(pres, theme, options = {}) {
     w: cardLayouts[1].w,
     h: cardLayouts[1].h,
     titleY: 0.12,
-    titleH: 0.22,
-    bodyY: 0.38,
-    bodyH: 0.3,
+    titleH: 0.34,
+    bodyY: 0.54,
+    bodyH: 0.7,
     title: "Reduce client-side work",
-    titleFontSize: 10.8,
-    body: "Avoid unnecessary browser work at startup.\nResumability • IEEE Access 2024",
-    bodyFontSize: 8.2,
+    titleFontSize: 10.6,
+    body: "Avoid unnecessary\nbrowser work at startup.\n\nResumability • 2024",
+    bodyFontSize: 8.1,
     group: "hybrid-techniques-main"
   });
 
@@ -88,13 +88,13 @@ function createSlide(pres, theme, options = {}) {
     w: cardLayouts[2].w,
     h: cardLayouts[2].h,
     titleY: 0.12,
-    titleH: 0.22,
-    bodyY: 0.38,
-    bodyH: 0.3,
+    titleH: 0.34,
+    bodyY: 0.54,
+    bodyH: 0.7,
     title: "Move work to the edge",
-    titleFontSize: 10.8,
-    body: "Place computation where it best supports delivery and cost.\nEdge computing for SSG • WEBIST 2023",
-    bodyFontSize: 8.2,
+    titleFontSize: 10.6,
+    body: "Place computation where\nit best supports delivery\nand cost.\n\nEdge for SSG • 2023",
+    bodyFontSize: 8.1,
     group: "hybrid-techniques-main"
   });
 

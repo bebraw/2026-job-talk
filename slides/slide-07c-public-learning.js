@@ -1,14 +1,12 @@
 const {
   addBulletItem,
   addPageBadge,
-  addPanel,
   addSectionTitle
 } = require("../generator/helpers");
 const {
   boxBelow,
   bulletItemHeight,
   centerBox,
-  insetFrame,
   sectionContentFrame,
   splitColumns,
   titleStackLayout
@@ -59,27 +57,18 @@ function createSlide(pres, theme, options = {}) {
     top: columns.right.y + 0.18,
     bottom: columns.right.y + 3.08
   });
-  const panelBox = centerBox(mediaFrame, {
+  const imageBox = centerBox(mediaFrame, {
     w: 3.44,
     h: 2.28
   });
-  const imageBox = centerBox(insetFrame(panelBox, {
-    top: 0.14,
-    right: 0.18,
-    bottom: 0.14,
-    left: 0.18
-  }), {
-    w: 3.08,
-    h: 2.05
-  });
-  const captionTitleBox = boxBelow(panelBox, {
-    x: panelBox.x,
+  const captionTitleBox = boxBelow(imageBox, {
+    x: imageBox.x,
     w: 3.28,
     h: 0.2,
     gap: 0.26
   });
   const captionBodyBox = boxBelow(captionTitleBox, {
-    x: panelBox.x,
+    x: imageBox.x,
     w: 3.36,
     h: 0.18,
     gap: 0.08
@@ -128,16 +117,6 @@ function createSlide(pres, theme, options = {}) {
     bodyH: 0.38,
     titleFontSize: 9.8,
     group: "public-learning-left"
-  });
-
-  addPanel(canvas, pres, theme, "public-learning-photo-frame", {
-    x: panelBox.x,
-    y: panelBox.y,
-    w: panelBox.w,
-    h: panelBox.h,
-    lineColor: theme.light,
-    fillColor: theme.panel,
-    group: "public-learning-right"
   });
 
   canvas.addImage("public-learning-photo", {

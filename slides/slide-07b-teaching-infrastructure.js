@@ -110,13 +110,15 @@ function createSlide(pres, theme, options = {}) {
     group: "teaching-infrastructure-left"
   });
 
-  addPanel(canvas, pres, theme, "teaching-infrastructure-book-frame", {
-    x: figureFrame.x,
-    y: figureFrame.y,
-    w: figureFrame.w,
-    h: figureFrame.h,
+  addPanel(canvas, pres, theme, "teaching-infrastructure-book-border", {
+    x: bookBox.x - 0.02,
+    y: bookBox.y - 0.02,
+    w: bookBox.w + 0.04,
+    h: bookBox.h + 0.04,
+    rectRadius: 0.02,
     lineColor: theme.light,
-    fillColor: theme.panel,
+    linePt: 0.8,
+    fillColor: "FFFFFF",
     group: "teaching-infrastructure-right"
   });
 
