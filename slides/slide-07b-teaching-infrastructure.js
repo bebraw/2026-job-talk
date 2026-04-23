@@ -1,7 +1,6 @@
 const {
   addBulletItem,
   addPageBadge,
-  addPanel,
   addSectionTitle
 } = require("../generator/helpers");
 const {
@@ -108,18 +107,6 @@ function createSlide(pres, theme, options = {}) {
     body: "It supports supervision through a shared writing process.",
     bodyH: 0.34,
     group: "teaching-infrastructure-left"
-  });
-
-  addPanel(canvas, pres, theme, "teaching-infrastructure-book-border", {
-    x: bookBox.x - 0.02,
-    y: bookBox.y - 0.02,
-    w: bookBox.w + 0.04,
-    h: bookBox.h + 0.04,
-    rectRadius: 0.02,
-    lineColor: theme.light,
-    linePt: 0.8,
-    fillColor: "FFFFFF",
-    group: "teaching-infrastructure-right"
   });
 
   canvas.addImage("teaching-infrastructure-book", {
