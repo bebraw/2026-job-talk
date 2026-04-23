@@ -109,6 +109,17 @@ function createSlide(pres, theme, options = {}) {
     group: "teaching-infrastructure-left"
   });
 
+  canvas.addShape("teaching-infrastructure-book-border", pres.ShapeType.rect, {
+    x: bookBox.x,
+    y: bookBox.y,
+    w: bookBox.w,
+    h: bookBox.h,
+    line: { color: theme.muted, pt: 0.8, transparency: 64 },
+    fill: { color: theme.bg, transparency: 100 }
+  }, {
+    group: "teaching-infrastructure-right"
+  });
+
   canvas.addImage("teaching-infrastructure-book", {
     path: path.join(__dirname, "assets/photos/process-cover.png"),
     x: bookBox.x,
