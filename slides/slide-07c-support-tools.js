@@ -1,9 +1,8 @@
 const {
   addAccentRule,
-  addPanel,
   addPageBadge
 } = require("../generator/helpers");
-const { createFrame, splitColumns } = require("../generator/layout");
+const { createFrame, fitContainBox, splitColumns } = require("../generator/layout");
 const { fontFace } = require("../generator/theme");
 const { createSlideCanvas } = require("../generator/validation");
 const path = require("path");
@@ -38,6 +37,16 @@ function createSlide(pres, theme, options = {}) {
     y: 2.24,
     w: columns.right.w,
     h: 2.44
+  });
+  const trackerImagePlacement = fitContainBox(leftImageBox, {
+    contentWidth: 1.77,
+    contentHeight: 1,
+    alignY: "top"
+  });
+  const searchImagePlacement = fitContainBox(rightImageBox, {
+    contentWidth: 1.6,
+    contentHeight: 1,
+    alignY: "top"
   });
   slide.background = { color: theme.bg };
 
@@ -90,30 +99,12 @@ function createSlide(pres, theme, options = {}) {
     group: "support-tools-main"
   });
 
-  addPanel(canvas, pres, theme, "support-tools-tracker-frame", {
-    x: leftImageBox.x,
-    y: leftImageBox.y,
-    w: leftImageBox.w,
-    h: leftImageBox.h,
-    lineColor: theme.light,
-    linePt: 0.9,
-    fillColor: "FFFFFF",
-    group: "support-tools-main"
-  });
-
   canvas.addImage("support-tools-tracker-image", {
-    path: path.join(__dirname, "assets/screenshots/thesis-journey-tracker-dashboard-large.png"),
-    x: leftImageBox.x + 0.08,
-    y: leftImageBox.y + 0.08,
-    w: leftImageBox.w - 0.16,
-    h: leftImageBox.h - 0.16,
-    sizing: {
-      type: "crop",
-      x: "6%",
-      y: "9%",
-      w: "88%",
-      h: "59%"
-    }
+    path: path.join(__dirname, "assets/screenshots/thesis-journey-tracker-focused.png"),
+    x: trackerImagePlacement.x,
+    y: trackerImagePlacement.y,
+    w: trackerImagePlacement.w,
+    h: trackerImagePlacement.h
   }, {
     group: "support-tools-main"
   });
@@ -145,23 +136,12 @@ function createSlide(pres, theme, options = {}) {
     group: "support-tools-main"
   });
 
-  addPanel(canvas, pres, theme, "support-tools-search-frame", {
-    x: rightImageBox.x,
-    y: rightImageBox.y,
-    w: rightImageBox.w,
-    h: rightImageBox.h,
-    lineColor: theme.light,
-    linePt: 0.9,
-    fillColor: "FFFFFF",
-    group: "support-tools-main"
-  });
-
   canvas.addImage("support-tools-search-image", {
     path: path.join(__dirname, "assets/screenshots/supervisor-search-home-top.png"),
-    x: rightImageBox.x + 0.08,
-    y: rightImageBox.y + 0.08,
-    w: rightImageBox.w - 0.16,
-    h: rightImageBox.h - 0.16,
+    x: searchImagePlacement.x,
+    y: searchImagePlacement.y,
+    w: searchImagePlacement.w,
+    h: searchImagePlacement.h,
     sizing: {
       type: "crop",
       x: "5%",

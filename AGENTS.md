@@ -12,6 +12,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - Limit dark infoboxes to a small set of slides across the whole presentation rather than repeating them everywhere.
 - Use the aqua accent only when it carries structure.
 - On light content slides, avoid decorative top-edge aqua marks when the progress bar or typography already provides enough hierarchy.
+- Do not add decorative borders or frames around images or screenshots; use whitespace, scale, and cropping to separate them instead.
 - Treat projected-slide typography as presentation content, not document content.
 - Use Microsoft’s `18 pt` minimum as the floor for normal projected text, and use the common `30 pt` readability rule as the pressure test for whether a slide is too dense.
 - Keep slide text simple and minimal.
@@ -26,8 +27,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - When citations change, remove unused references and renumber the remaining set sequentially.
 - When references change, validate the references slide layout explicitly: keep all entries fully above the bottom progress bar and review the rebuilt demo PDF to confirm nothing overflows or collides.
 - On the references slide, keep each URL visibly attached to its citation while treating the link text as subordinate metadata: use compact wrapped labels when needed, keep the full URL as the hyperlink target, and never allow visible link text to overflow its column.
-- Non-full-bleed images must keep visible distance from surrounding content: leave whitespace to nearby headers, captions, neighboring panels, and the bottom progress bar instead of letting the image or its frame crowd them.
-- For framed images, keep both outer clearance and inner inset padding visible so the image reads as intentionally placed rather than edge-to-edge.
+- Non-full-bleed images must keep visible distance from surrounding content: leave whitespace to nearby headers, captions, neighboring panels, and the bottom progress bar instead of letting the image crowd them.
 - Labels for diagrams and figures should read as captions attached to the visual, preferably below it, instead of floating above it where they compete with slide headings and body content.
 - Figure captions and citation labels should keep a visible gap from the image itself; they should read as attached to the visual, not pressed against it.
 - When a slide includes an image plus a caption, source line, or reference note, validate the gap explicitly across all such slides after edits instead of checking only the slide you just touched.
@@ -35,9 +35,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 - In stacked claim or bullet panels, keep visible vertical breathing room between the panel heading and the first item, and between adjacent items; bodies should not visually crowd the next claim.
 - Treat spacing as hierarchy: gaps within a group should stay visibly smaller than gaps between groups, and inter-group gaps should usually be at least about `1.5x` the intra-group gap.
 - Keep reading content left-aligned by default; reserve centered multiline text for short standalone prompts, discussion questions, or other intentionally isolated statements.
-- On screenshot-led slides, prioritize screenshot scale over decorative framing; remove border panels when they reduce legibility.
-- Framed photos and artifact images must keep visible inset padding on all sides so they do not look cramped inside their frame.
-- Apply that padding rule to photos, book covers, and similar visual artifacts; charts, diagrams, and screenshots may use tighter framing when legibility is the priority.
+- On screenshot-led slides, prioritize screenshot scale over decorative framing.
 - Build sequences must keep previously revealed content fixed in place across steps.
 - Do not re-center or vertically rebalance earlier bullets, cards, or diagrams when adding later build items; anchor the shared content to consistent coordinates or use top-justified layouts with the same frame geometry across the sequence.
 
