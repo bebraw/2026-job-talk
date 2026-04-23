@@ -9,7 +9,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 19,
+  index: 20,
   title: "Tools that support my work with students"
 };
 

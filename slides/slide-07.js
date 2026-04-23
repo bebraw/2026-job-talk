@@ -18,7 +18,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 13,
+  index: 14,
   title: "How research informs my teaching"
 };
 

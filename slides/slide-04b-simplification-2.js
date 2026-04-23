@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 9,
+  index: 8,
   title: "Simplification agenda"
 };
 
@@ -20,16 +20,15 @@ function createSlide(pres, theme, options = {}) {
   const contentFrame = sectionContentFrame({
     left: 0.78,
     right: 8.78,
-    top: 2.32,
-    bottom: 4.9
+    top: 2.58,
+    bottom: 5.02
   });
   const cardLayouts = stackInFrame(contentFrame, [
-    { height: 0.84 },
     { height: 0.84 },
     { height: 0.84 }
   ], {
     gap: 0.1,
-    justify: "top"
+    justify: "center"
   });
   slide.background = { color: theme.bg };
 
@@ -50,7 +49,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("simple-framing-line", "How do we reduce unnecessary complexity without giving up capability?", {
     x: 0.82,
-    y: 1.74,
+    y: 2.08,
     w: 7.86,
     h: 0.24,
     fontFace,
@@ -92,23 +91,6 @@ function createSlide(pres, theme, options = {}) {
     title: "The Rise of Disappearing Frameworks in Web Development",
     titleFontSize: 10.3,
     body: "Juho Vepsäläinen, Arto Hellas, Petri Vuorimaa • ICWE 2023",
-    bodyFontSize: 8.8,
-    group: "simple-main"
-  });
-
-  addCompactCard(canvas, pres, theme, {
-    id: "simple-card-frameworks",
-    x: cardLayouts[2].x,
-    y: cardLayouts[2].y,
-    w: cardLayouts[2].w,
-    h: cardLayouts[2].h,
-    titleY: 0.1,
-    titleH: 0.34,
-    bodyY: 0.46,
-    bodyH: 0.16,
-    title: "The Case for HTML First Web Development",
-    titleFontSize: 10.3,
-    body: "Vepsäläinen • JWE (accepted) • 2026",
     bodyFontSize: 8.8,
     group: "simple-main"
   });

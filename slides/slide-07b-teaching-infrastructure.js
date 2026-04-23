@@ -18,7 +18,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 16,
+  index: 17,
   title: "Writing support"
 };
 

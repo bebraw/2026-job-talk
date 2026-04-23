@@ -17,10 +17,10 @@ function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
   const contentFrame = sectionContentFrame({
-    left: 0.78,
-    right: 8.78,
-    top: 2.42,
-    bottom: 4.96
+    left: 0.62,
+    right: 9.18,
+    top: 2.22,
+    bottom: 5.14
   });
   const gap = 0.24;
   const columnWidth = (contentFrame.w - gap * 2) / 3;
@@ -28,7 +28,7 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x + index * (columnWidth + gap),
     y: contentFrame.y,
     w: columnWidth,
-    h: 2.38
+    h: 2.62
   }));
   slide.background = { color: theme.bg };
 
@@ -54,13 +54,13 @@ function createSlide(pres, theme, options = {}) {
     w: cardLayouts[0].w,
     h: cardLayouts[0].h,
     titleY: 0.12,
-    titleH: 0.34,
+    titleH: 0.38,
     bodyY: 0.54,
-    bodyH: 0.7,
+    bodyH: 1.12,
     title: "Constrain dynamic scope",
-    titleFontSize: 10.6,
-    body: "Limit dynamic behavior\nto where it is needed.\n\nIslands • JWE 2025",
-    bodyFontSize: 8.1,
+    titleFontSize: 11.2,
+    body: "Limit dynamic behavior\nto where needed.\n\nThe Potential of Serverless\nEdge-powered Islands for\nWeb Development\nJuho Vepsäläinen,\nPetri Vuorimaa,\nArto Hellas",
+    bodyFontSize: 7.2,
     group: "hybrid-techniques-main"
   });
 
@@ -71,13 +71,13 @@ function createSlide(pres, theme, options = {}) {
     w: cardLayouts[1].w,
     h: cardLayouts[1].h,
     titleY: 0.12,
-    titleH: 0.34,
+    titleH: 0.38,
     bodyY: 0.54,
-    bodyH: 0.7,
+    bodyH: 1.12,
     title: "Reduce client-side work",
-    titleFontSize: 10.6,
-    body: "Avoid unnecessary\nbrowser work at startup.\n\nResumability • 2024",
-    bodyFontSize: 8.1,
+    titleFontSize: 11.2,
+    body: "Avoid unnecessary\nbrowser work at startup.\n\nResumability - a New Primitive\nfor Developing Web Applications\nJuho Vepsäläinen,\nMisko Hevery,\nPetri Vuorimaa",
+    bodyFontSize: 7.2,
     group: "hybrid-techniques-main"
   });
 
@@ -88,13 +88,13 @@ function createSlide(pres, theme, options = {}) {
     w: cardLayouts[2].w,
     h: cardLayouts[2].h,
     titleY: 0.12,
-    titleH: 0.34,
+    titleH: 0.38,
     bodyY: 0.54,
-    bodyH: 0.7,
+    bodyH: 1.12,
     title: "Move work to the edge",
-    titleFontSize: 10.6,
-    body: "Place computation where\nit best supports delivery\nand cost.\n\nEdge for SSG • 2023",
-    bodyFontSize: 8.1,
+    titleFontSize: 11.2,
+    body: "Place computation\nwhere it best supports\ndelivery and cost.\n\nImplications of Edge Computing\nfor Static Site Generation\nJuho Vepsäläinen,\nArto Hellas,\nPetri Vuorimaa",
+    bodyFontSize: 7.2,
     group: "hybrid-techniques-main"
   });
 

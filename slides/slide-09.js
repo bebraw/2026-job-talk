@@ -21,7 +21,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 21,
+  index: 22,
   title: "Future vision: agentic hypermedia"
 };
 
