@@ -24,7 +24,7 @@ function createSlide(pres, theme, options = {}) {
   const [claimLayout] = stackInFrame(contentFrame, [
     {
       height: bulletItemHeight({
-        titleH: 0.52
+        titleH: 0.88
       })
     }
   ], {
@@ -52,8 +52,8 @@ function createSlide(pres, theme, options = {}) {
     x: contentFrame.x,
     y: claimLayout.y,
     w: contentFrame.w,
-    title: "Starting in January 2027, I will teach Designing and Building Scalable Web Applications (CS-E4770).",
-    titleH: 0.52,
+    title: "Starting in January 2027, I will teach Designing and Building Scalable Web Applications (CS-E4770) and use it to teach web architecture as a core computer science topic, not only as framework practice.",
+    titleH: 0.88,
     titleFontSize: 10.0,
     group: "closing-main"
   });

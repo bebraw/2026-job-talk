@@ -165,38 +165,33 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 ## 22. Future Teaching At Aalto
 
-- Use this slide to anchor your future teaching agenda in a concrete Aalto commitment.
-- State clearly that starting in January 2027, you will teach Designing and Building Scalable Web Applications (CS-E4770).
-- Treat the course mention as evidence that your future plans at Aalto are already concrete, not speculative.
+- Use this slide to anchor your future teaching agenda in one compact course-based claim rather than a two-step build.
+- State clearly that starting in January 2027, you will teach Designing and Building Scalable Web Applications (CS-E4770) and use it to teach web architecture as a core computer science topic, not only as framework practice.
+- Keep the line readable at slide scale; if it feels too dense, shorten the wording rather than shrinking the type further.
 
 ## 23. Future Teaching At Aalto
 
-- Turn this into a build slide by keeping the CS-E4770 commitment visible and adding the teaching claim beneath it.
-- Make explicit that in CS-E4770, you will teach web architecture as a core computer science topic, not only as framework practice.
-- Keep the wording direct and discipline-facing so the course reads as relevant to the broader CS community.
+- Use the second slide to add a concrete Aalto event that broadens the future-teaching story beyond one course.
+- State that on 13 October 2026, you will organize AI meets SDLC at Marsio.
+- Keep the merged CS-E4770 claim visible above the seminar line.
+- Use the seminar to show that you connect teaching, research, and industry around AI and software development already within Aalto.
 
-## 24. Future Teaching At Aalto
-
-- Complete the build by showing the course commitment, the disciplinary framing, and the pipeline claim together.
-- State that you will use CS-E4770 to connect courses, projects, theses, and supervision around scalable and agent-facing web systems.
-- Use the final slide to show that your future teaching and research plans at Aalto are connected through one concrete platform.
-
-## 25. Part 4
+## 24. Part 4
 
 - Use this divider slide to slow the pace before the final conclusion section.
 - It should make the Q&A phase feel intentional rather than abrupt.
 
-## 26. Conclusion
+## 25. Conclusion
 
 - Replace the question build with one direct claim.
 - End on the hiring-case summary: you bring a distinctive specialization in web architecture, agent-facing systems, and modern software practice.
 
-## 27. Q&A
+## 26. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
 - Use it only after the conclusion slide has already framed the closing claim.
 
-## 28. References
+## 27. References
 
 - Keep this slide compact and purely bibliographic.
 - It should resolve only the live citation set used on the slides.
