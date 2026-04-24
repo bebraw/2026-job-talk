@@ -44,6 +44,7 @@ These are durable deck-level design and workflow rules. Read and follow them bef
 ### Workflow Rules
 
 - Rebuild the demo presentation after every deck change so the latest `slides/output/demo-presentation.pdf` is always ready for review.
+- Do not retain orphan slide modules: every `slides/*.js` slide file must either be included in `generator/deck.js` or removed in the same change.
 - Treat `text-overflow`, out-of-bounds, and layout-overlap validation failures as blocking for slide work; do not leave clipped or colliding content in the deck.
 - Keep roadmap and section-summary slides in sync with the active deck structure.
 - When adding, removing, or renaming a part or subsection divider, update the roadmap slide in the same change so visible deck structure does not drift.

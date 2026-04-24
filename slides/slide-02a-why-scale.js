@@ -66,7 +66,7 @@ function createSlide(pres, theme, options = {}) {
 
   canvas.addText("why-main-claim", "We often have the practices to reduce complexity, but too little incentive to adopt them.", {
     x: 0.86,
-    y: 1.26,
+    y: 1.38,
     w: 7.72,
     h: 0.28,
     fontFace,
