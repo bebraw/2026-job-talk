@@ -16,7 +16,7 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  const bodyText = "I bring a distinctive specialization in web architecture, agent-facing systems, and modern software practice.";
+  const bodyText = "I strengthen Aalto's web architecture teaching with research on agent-facing systems.";
   const textFrame = sectionContentFrame({
     left: 0.94,
     right: 8.34,
