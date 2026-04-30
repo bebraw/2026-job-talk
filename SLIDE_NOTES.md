@@ -174,29 +174,34 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 ## 23. Future Teaching At Aalto
 
-- Use the second slide to add a concrete Aalto event that broadens the future-teaching story beyond one course.
+- Use the second slide to add one concrete Aalto event that broadens the future-teaching story beyond one course.
 - State that on 13 October 2026, you will organize AI meets SDLC at Marsio.
 - Keep the merged CS-E4770 claim visible above the seminar line.
 - Use the seminar to show that you connect teaching, research, and industry around AI and software development already within Aalto.
-- Mention CS-E400215 briefly as supporting evidence that your teaching also includes student career development; keep it subordinate to the main web architecture claim.
 - Keep the visible date phrasing as `13th of October 2026`; do not normalize it unless you explicitly decide to change the wording.
 
-## 24. Part 4
+## 24. Future Teaching At Aalto
+
+- Use the third build slide to add CS-E400215 as supporting evidence that your teaching also includes student career development.
+- Keep the first two points fixed in place from the previous build step; only the career-course point should appear here.
+- Keep the career-course point subordinate by sequence and placement, not by changing its visual style.
+
+## 25. Part 4
 
 - Use this divider slide to slow the pace before the final conclusion section.
 - It should make the Q&A phase feel intentional rather than abrupt.
 
-## 25. Conclusion
+## 26. Conclusion
 
 - Replace the question build with one direct claim.
 - End on the hiring-case summary: you bring a distinctive specialization in web architecture, agent-facing systems, and modern software practice.
 
-## 26. Q&A
+## 27. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
 - Use it only after the conclusion slide has already framed the closing claim.
 
-## 27. References
+## 28. References
 
 - Keep this slide compact and purely bibliographic.
 - It should resolve only the live citation set used on the slides.

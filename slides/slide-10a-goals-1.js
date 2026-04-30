@@ -4,7 +4,6 @@ const {
   addPageBadge,
   addSectionTitle
 } = require("../generator/helpers");
-const { bulletItemHeight, sectionContentFrame, stackInFrame } = require("../generator/layout");
 const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
@@ -16,20 +15,9 @@ const slideConfig = {
 function createSlide(pres, theme, options = {}) {
   const canvas = createSlideCanvas(pres, slideConfig, options);
   const { slide } = canvas;
-  const contentFrame = sectionContentFrame({
-    left: 0.96,
-    right: 8.3,
-    top: 2.52
-  });
-  const [claimLayout] = stackInFrame(contentFrame, [
-    {
-      height: bulletItemHeight({
-        titleH: 0.88
-      })
-    }
-  ], {
-    justify: "top"
-  });
+  const bulletX = 0.96;
+  const bulletW = 7.34;
+  const claimY = 2.26;
   slide.background = { color: theme.bg };
 
   addSectionTitle(
@@ -49,9 +37,9 @@ function createSlide(pres, theme, options = {}) {
 
   addBulletItem(canvas, pres, theme, {
     id: "closing-bullet-claim",
-    x: contentFrame.x,
-    y: claimLayout.y,
-    w: contentFrame.w,
+    x: bulletX,
+    y: claimY,
+    w: bulletW,
     title: "Starting in January 2027, I will teach Designing and Building Scalable Web Applications (CS-E4770) and use it to teach web architecture as a core computer science topic, not only as framework practice.",
     titleH: 0.88,
     titleFontSize: 10.0,
