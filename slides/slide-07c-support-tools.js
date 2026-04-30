@@ -10,7 +10,7 @@ const path = require("path");
 const slideConfig = {
   type: "content",
   index: 19,
-  title: "Tools that support my work with students"
+  title: "Tools that support my teaching work"
 };
 
 function createSlide(pres, theme, options = {}) {
@@ -149,6 +149,44 @@ function createSlide(pres, theme, options = {}) {
       w: "90%",
       h: "72%"
     }
+  }, {
+    group: "support-tools-main"
+  });
+
+  canvas.addShape("support-tools-slideotter-dot", pres.ShapeType.ellipse, {
+    x: contentFrame.x,
+    y: 4.84,
+    w: 0.12,
+    h: 0.12,
+    line: { color: theme.primary, transparency: 100 },
+    fill: { color: theme.primary }
+  }, {
+    group: "support-tools-main"
+  });
+
+  canvas.addText("support-tools-slideotter-line", [
+    {
+      text: "Slideotter",
+      options: {
+        bold: true,
+        color: theme.accent
+      }
+    },
+    {
+      text: "  Structured, reviewable slide authoring.",
+      options: {
+        color: theme.muted
+      }
+    }
+  ], {
+    x: contentFrame.x + 0.22,
+    y: 4.82,
+    w: contentFrame.w - 0.22,
+    h: 0.2,
+    fontFace,
+    fontSize: 8.8,
+    color: theme.muted,
+    margin: 0
   }, {
     group: "support-tools-main"
   });

@@ -142,11 +142,12 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Phrase the developer example accurately: `webpack-merge` can be presented as your work, while `webpack` and `Blender` should read as earlier contributions rather than ongoing involvement.
 - Keep the developer line compact; the example should act as recognition, not as a project history.
 
-## 19. Tools That Support My Work With Students
+## 19. Tools That Support My Teaching Work
 
 - Merge the two tool examples into one comparison slide.
 - Use Thesis Journey Tracker to show supervision infrastructure: phases, meetings, and notes in one place.
 - Use Supervisor Search to show student-facing infrastructure: students can find a suitable MSc thesis supervisor with less friction.
+- Use the Slideotter line as a small live-demo hook after the talk; it should broaden the slide from student-facing tools to teaching infrastructure without becoming a third feature tour.
 - Crop both screenshots intentionally so the key interaction areas remain legible at presentation scale.
 - Keep the slide visual and comparative rather than turning it into a feature list.
 
