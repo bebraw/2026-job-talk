@@ -55,10 +55,11 @@ function createSlide(pres, theme, options = {}) {
     w: 2.56,
     h: 3.36
   });
+  figureFrame.y -= 0.16;
   const bookBox = centerBox(insetFrame(figureFrame, {
-    top: 0.18,
+    top: 0.06,
     right: 0.28,
-    bottom: 0.18,
+    bottom: 0.3,
     left: 0.28
   }), {
     w: 1.98,
@@ -126,6 +127,24 @@ function createSlide(pres, theme, options = {}) {
     y: bookBox.y,
     w: bookBox.w,
     h: bookBox.h
+  }, {
+    group: "teaching-infrastructure-right"
+  });
+
+  canvas.addText("teaching-infrastructure-book-url", "learnscientificwriting.com", {
+    x: figureFrame.x,
+    y: bookBox.y + bookBox.h + 0.18,
+    w: figureFrame.w,
+    h: 0.24,
+    fontFace,
+    fontSize: 10.0,
+    bold: true,
+    color: theme.accent,
+    margin: 0,
+    align: "center",
+    hyperlink: {
+      url: "http://learnscientificwriting.com/"
+    }
   }, {
     group: "teaching-infrastructure-right"
   });

@@ -130,6 +130,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 
 - Refer to the writing guide by title: `The Process of Scientific Writing`.
 - Use this slide to make the writing guide visible as a concrete teaching artifact rather than only a bullet point.
+- Point out that the guide is now available at `learnscientificwriting.com`; use the URL as evidence that students can access the process beyond supervision meetings.
 - Show the cover large enough that the title is readable at slide scale.
 - Use this slide to show that you do not only teach courses; you build scaffolding around learning.
 
