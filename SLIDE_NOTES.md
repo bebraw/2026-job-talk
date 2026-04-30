@@ -177,6 +177,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - State that on 13 October 2026, you will organize AI meets SDLC at Marsio.
 - Keep the merged CS-E4770 claim visible above the seminar line.
 - Use the seminar to show that you connect teaching, research, and industry around AI and software development already within Aalto.
+- Mention CS-E400215 briefly as supporting evidence that your teaching also includes student career development; keep it subordinate to the main web architecture claim.
 - Keep the visible date phrasing as `13th of October 2026`; do not normalize it unless you explicitly decide to change the wording.
 
 ## 24. Part 4

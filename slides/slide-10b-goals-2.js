@@ -25,7 +25,7 @@ function createSlide(pres, theme, options = {}) {
     right: 8.3,
     top: 2.34,
   });
-  const [claimLayout, seminarLayout] = stackInFrame(
+  const [claimLayout, seminarLayout, careerLayout] = stackInFrame(
     contentFrame,
     [
       {
@@ -38,9 +38,14 @@ function createSlide(pres, theme, options = {}) {
           titleH: 0.52,
         }),
       },
+      {
+        height: bulletItemHeight({
+          titleH: 0.4,
+        }),
+      },
     ],
     {
-      gap: 0.34,
+      gap: 0.28,
       justify: "top",
     },
   );
@@ -76,6 +81,18 @@ function createSlide(pres, theme, options = {}) {
     title:
       "On 13th of October 2026, I will organize AI meets SDLC at Marsio to connect teaching, research, and industry.",
     titleH: 0.52,
+    titleFontSize: 10.0,
+    group: "closing-main",
+  });
+
+  addBulletItem(canvas, pres, theme, {
+    id: "closing-bullet-career",
+    x: contentFrame.x,
+    y: careerLayout.y,
+    w: contentFrame.w,
+    title:
+      "In June 2026, I will run CS-E400215, supporting students' career development in computer science.",
+    titleH: 0.4,
     titleFontSize: 10.0,
     group: "closing-main",
   });
