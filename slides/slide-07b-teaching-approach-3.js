@@ -84,7 +84,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "teach-bullet-anoop",
     x: 0.94,
-    y: 4.14,
+    y: 4.24,
     w: 7.92,
     title:
       "Anoop Bidikar (2024): Flagship: Reimagining Stateful Serverless Architectures at the Edge",
