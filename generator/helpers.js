@@ -140,6 +140,7 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     bulletCenterColor = theme.primary,
     titleColor = theme.accent,
     bodyColor = theme.muted,
+    hyperlink,
     group = id
   } = options;
 
@@ -174,7 +175,8 @@ function addBulletItem(canvas, pres, theme, options = {}) {
     fontSize: titleFontSize,
     bold: true,
     color: titleColor,
-    margin: 0
+    margin: 0,
+    hyperlink
   }, {
     group
   });

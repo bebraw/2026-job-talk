@@ -50,9 +50,13 @@ function createSlide(pres, theme, options = {}) {
     y: seminarY,
     w: bulletW,
     title:
-      "On 13th of October 2026, I will organize AI meets SDLC at Marsio to connect teaching, research, and industry.",
+      "On 13th of October 2026, I will organize AI meets SDLC at Marsio to connect teaching, research, and industry (sdlcai.org).",
     titleH: 0.52,
     titleFontSize: 10.0,
+    hyperlink: {
+      url: "https://www.sdlcai.org/",
+      tooltip: "https://www.sdlcai.org/",
+    },
     group: "closing-main",
   });
 

@@ -178,6 +178,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Use the second slide to add one concrete Aalto event that broadens the future-teaching story beyond one course.
 - State that on 13 October 2026, you will organize AI meets SDLC at Marsio.
 - Keep the merged CS-E4770 claim visible above the seminar line.
+- Link the visible `sdlcai.org` seminar site to `https://www.sdlcai.org/`.
 - Use the seminar to show that you connect teaching, research, and industry around AI and software development already within Aalto.
 - Keep the visible date phrasing as `13th of October 2026`; do not normalize it unless you explicitly decide to change the wording.
 
