@@ -7,6 +7,7 @@
     "build:diagrams": "node generator/render-diagrams.js",
     "build": "npm run build:diagrams && node generator/compile.js",
     "build:all": "npm run build",
+    "archive:update": "npm run build && node generator/update-archive.js",
     "validate:geometry": "node generator/validate-geometry.js",
     "validate:links": "node generator/validate-links.js",
     "validate:text": "node generator/validate-text.js",

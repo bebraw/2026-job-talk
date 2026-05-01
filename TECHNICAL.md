@@ -43,6 +43,12 @@ Refresh the committed render baseline after intentionally changing the deck desi
 npm run baseline:render
 ```
 
+Update the checked-in archive PDF from a fresh build:
+
+```bash
+npm run archive:update
+```
+
 ## Development Layout
 
 - `slides/slide-01.js` to `slides/slide-04.js` hold the demo deck content.
