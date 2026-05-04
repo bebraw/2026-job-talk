@@ -32,7 +32,7 @@ const strengths = [
     id: "community",
     x: 7.04,
     title: "Reach",
-    body: "tools, students\nindustry communities",
+    body: "books, tools\ndeveloper communities",
     icon: "bridge"
   }
 ];

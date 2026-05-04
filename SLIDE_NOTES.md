@@ -204,7 +204,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 ## 27. Conclusion
 
 - Use this as a visual hiring-case summary rather than a text-heavy final claim.
-- Show three strengths: research on web architecture and agent-facing systems, teaching scalable web applications and AI-aware practice, and outward reach through tools, students, and industry communities.
+- Show three strengths: research on web architecture and agent-facing systems, teaching scalable web applications and AI-aware practice, and outward reach through books, tools, and developer communities.
 - Land the department contribution aloud: your teaching is research-based, tested in real web practice, and connected to developer communities.
 - Keep the visual simple and do not add extra explanatory bullets on the slide.
 
