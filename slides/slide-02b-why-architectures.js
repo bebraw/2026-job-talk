@@ -23,14 +23,14 @@ const stages = [
   {
     id: "why-mode-agentic",
     x: 3.28,
-    label: "Agentic search",
-    body: "Systems now browse and compare sources on the user's behalf. [7], [8]"
+    label: "Agentic use",
+    body: "Systems browse, compare sources, and operate websites on the user's behalf. [1]-[4]"
   },
   {
     id: "why-mode-browser",
     x: 5.84,
-    label: "Browser use",
-    body: "Agents increasingly operate websites directly, not only retrieve information. [9], [10]"
+    label: "Agent-ready design",
+    body: "Web applications need clearer semantics, workflows, and system boundaries."
   }
 ];
 
@@ -54,7 +54,7 @@ function createSlide(pres, theme, options = {}) {
     group: "section-header"
   });
 
-  canvas.addText("why-shift-title", "Agents now shape the web in two ways: they help build websites and increasingly consume them.", {
+  canvas.addText("why-shift-title", "Agents now shape the web as builders, users, and a design pressure on architecture.", {
     x: 0.86,
     y: 1.78,
     w: 7.7,

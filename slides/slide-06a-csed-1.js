@@ -15,7 +15,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 11,
+  index: 12,
   title: "AI and computing education"
 };
 
@@ -132,7 +132,7 @@ function createSlide(pres, theme, options = {}) {
   addReferenceNote(
     canvas,
     theme,
-    "[1] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
+    "[7] Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help?",
     {
       x: 0.72,
       y: 4.8,

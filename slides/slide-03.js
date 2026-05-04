@@ -11,7 +11,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 6,
+  index: 7,
   title: "Hybrid rendering models"
 };
 

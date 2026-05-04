@@ -5,6 +5,7 @@ const slideModules = [
   require("../slides/slide-01"),
   require("../slides/slide-02a-why-scale"),
   require("../slides/slide-02b-why-architectures"),
+  require("../slides/slide-02c-web-engineering"),
   require("../slides/slide-02-contents"),
   require("../slides/slide-03-section-part1"),
   require("../slides/slide-03"),

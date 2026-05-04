@@ -26,17 +26,25 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Keep the second motivation slide visual.
 - Use a simple progression of interaction modes rather than a benchmark-count graphic.
 - Keep each card body as a short cue rather than a mini-explanation.
-- Build the visual as `search and click` -> `agentic search` -> `browser use`, but make the lead claim explicit: the web is increasingly shaped by software agents.
-- Use `Mind2Web 2` to justify the claim that the old search model is query -> URL list -> manual synthesis.
+- Build the visual as `agentic development` -> `agentic use` -> `agent-ready design`, but make the lead claim explicit: the web is increasingly shaped by software agents.
 - Use `OpenAI deep research` for the shift toward systems that browse many sources and return citation-backed reports.
-- Use `Anthropic computer use`, `OpenAI Operator`, and `Google Project Mariner` as evidence that agents now operate websites built for humans.
-- Cite this slide with numbered references `[6]-[10]` rather than long source lines.
-- The point is not only that research exists, but that agents now shape the web in two ways: in development flows and as consumers of websites.
-- Land the consequence aloud rather than on a separate follow-up slide.
+- Use `Anthropic computer use`, `OpenAI Operator`, and `Google Project Mariner` as evidence that agentic use includes operating websites built for humans, not only summarizing pages.
+- Cite this slide with numbered references `[1]-[4]` rather than long source lines.
+- The point is not only that research exists, but that agents now shape the web in development flows, in use, and as a design pressure.
+- Land the consequence aloud: architecture, semantics, and workflow design become teachable software engineering concerns.
 - Make explicit in the spoken transition that the web now serves two kinds of clients: humans and agents.
 - Tie that directly to the scope of the talk: software architecture, AI, and computing education.
 
-## 04. Roadmap
+## 04. Web Engineering Belongs In Software Engineering
+
+- Use this bridge slide before the outline to make the hiring-case connection explicit.
+- State that web engineering is not only frontend tooling or short-lived frameworks; it is a concrete environment where students practice core software engineering skills.
+- Use the slide as a numbers-led argument that the web remains widely used: Developer Nation reports 40.9% of enterprise developers in Web/SaaS, and Stack Overflow reports JavaScript at 66% and HTML/CSS at 62%.
+- Keep the slide visually simple. Do the interpretation aloud: students learn software engineering in a large, current, practical environment.
+- Emphasize aloud that this is why your web background fits a software engineering lecturer position: the domain gives students immediate, testable systems while still teaching durable principles.
+- Keep the slide short. The nuance belongs in the spoken transition from motivation to outline.
+
+## 05. Roadmap
 
 - Explain that the talk follows the requested structure.
 - First motivate why this topic matters to a broader CS audience.
@@ -44,12 +52,12 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Close with future vision, lecturer goals, and conclusion.
 - Keep the roadmap wording aligned with active part and subsection divider slides.
 
-## 05. Part 1
+## 06. Part 1
 
 - Use this divider slide to signal the transition from motivation to the research block.
 - Make clear that the next set of slides focuses on research highlights first.
 
-## 06. Hybrid Rendering Models
+## 07. Hybrid Rendering Models
 
 - Ground the slide in the dissertation abstract and conclusion rather than in a generic static-versus-dynamic slogan.
 - Point to the dissertation explicitly so the audience can follow up later.
@@ -58,52 +66,52 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Use the two main claims from the conclusion: the mainstream SPA model is not ideal for all use cases, and hybrid rendering techniques help control SPA-related costs.
 - Keep this slide fully in research mode; move the teaching consequence to the later teaching block instead of previewing it here.
 
-## 07. Simplification Agenda
+## 08. Simplification Agenda
 
 - Make the point that simplification is not nostalgia or anti-technology.
 - Your agenda is to reduce unnecessary overhead while preserving capability.
 - Use this first pass to show only the first agenda marker so you can introduce the theme without rushing through all three papers at once.
 - Keep the framing question visible so the paper reads as one example within the agenda.
 
-## 08. Simplification Agenda
+## 09. Simplification Agenda
 
 - Add the second agenda marker while keeping the first visible.
 - Treat this as a deliberate build slide rather than a new argument.
 
-## 09. Simplification Agenda
+## 10. Simplification Agenda
 
 - Complete the build by showing all three agenda markers together.
 - Make the agenda explicit with the question `How do we reduce unnecessary complexity without giving up capability?`
 - Treat the papers as evidence of the agenda rather than as the whole message.
 - The current three agenda markers are `Revisiting Hypermedia, The Forgotten Web Application Development Paradigm`, `The Rise of Disappearing Frameworks in Web Development`, and `The Case for HTML First Web Development`.
 
-## 10. Part 2
+## 11. Part 2
 
 - Use this local divider to mark the shift from research highlights to educational consequences and teaching practice.
 - Make the transition explicit: the same pressures changing web architecture also change what and how we teach.
 - Treat it as a pacing slide, not as a new argumentative claim.
 
-## 11. AI And Computing Education
+## 12. AI And Computing Education
 
 - Start from the institutional claim in the paper: universities have to adapt, not just students.
 - Use the first pass to frame AI in CSEd as a curricular and institutional issue.
 - Make the right side concrete immediately through assessment and classroom design: flipped learning, oral examinations, and dialogical assessment.
 
-## 12. AI And Computing Education
+## 13. AI And Computing Education
 
 - Add the second point as `Integrity is not the only issue.`
 - Use the second pass to broaden the challenge set: trust, over-reliance, bias, and unequal access.
 - The point here is that academic misconduct is only one symptom of a broader pedagogical shift.
 
-## 13. AI And Computing Education
+## 14. AI And Computing Education
 
 - Complete the sequence with the durable goal of judgment.
-- Refer explicitly to the joint paper with Petri Juntunen on AI in CSEd through citation `[1]`.
+- Refer explicitly to the joint paper with Petri Juntunen on AI in CSEd through citation `[7]`.
 - End on the point that students should know when to trust, verify, and ignore AI.
 - Make the right side concrete here as well: critical reading, writing, debugging, and reflection.
 - This sequence should now read as a progression from institutional adaptation to broader risks to durable skills.
 
-## 14. How Research Informs My Teaching
+## 15. How Research Informs My Teaching
 
 - Describe your teaching style as dialogue-based and constructivist.
 - Explain that research helps you organize a fast-moving field into durable models that students can adapt later.
@@ -111,13 +119,13 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Healey provides the recognizable nexus vocabulary; Brew supports the more reciprocal, community-oriented interpretation.
 - Use the first pass to establish the first core point only; avoid adding a redundant inner heading under the slide title.
 
-## 15. How Research Informs My Teaching
+## 16. How Research Informs My Teaching
 
 - Add the second point on the next slide so the teaching approach unfolds step by step.
 - State the reverse direction explicitly here: teaching and supervision also feed research back.
 - Keep the bullets as the main content and treat the diagram as a compact scholarly anchor, not as the main content.
 
-## 16. How Research Informs My Teaching
+## 17. How Research Informs My Teaching
 
 - Use this as the dedicated `research with students` evidence slide.
 - Keep only the supervision numbers that support the claim directly: BSc and MSc thesis counts.
@@ -126,7 +134,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Use the three cases as concise evidence of theme and level: AI for web development, edge/serverless systems, and WebAssembly at the edge.
 - Mention that the Pyry Pohjalainen thesis led to publication through AAAI Magazine, as that signals quality and external visibility.
 
-## 17. Teaching Infrastructure
+## 18. Teaching Infrastructure
 
 - Refer to the writing guide by title: `The Process of Scientific Writing`.
 - Use this slide to make the writing guide visible as a concrete teaching artifact rather than only a bullet point.
@@ -134,7 +142,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Show the cover large enough that the title is readable at slide scale.
 - Use this slide to show that you do not only teach courses; you build scaffolding around learning.
 
-## 18. Public Learning Communities
+## 19. Public Learning Communities
 
 - Use the follow-up slide to move the conference/community point out of the writing-support slide.
 - Keep the current conference photo here and connect it directly to Future Frontend.
@@ -143,7 +151,7 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Phrase the developer example accurately: `webpack-merge` can be presented as your work, while `webpack` and `Blender` should read as earlier contributions rather than ongoing involvement.
 - Keep the developer line compact; the example should act as recognition, not as a project history.
 
-## 19. Tools That Support My Teaching Work
+## 20. Tools That Support My Teaching Work
 
 - Merge the two tool examples into one comparison slide.
 - Use Thesis Journey Tracker to show supervision infrastructure: phases, meetings, and notes in one place.
@@ -152,12 +160,12 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Crop both screenshots intentionally so the key interaction areas remain legible at presentation scale.
 - Keep the slide visual and comparative rather than turning it into a feature list.
 
-## 20. Part 3
+## 21. Part 3
 
 - Use this divider slide to mark the shift from highlights to future direction.
 - Signal that the next slides focus on future research and the lecturer role.
 
-## 21. Future Vision: Agentic Hypermedia
+## 22. Future Vision: Agentic Hypermedia
 
 - This is the signature future slide.
 - Explain the core claim: as AI agents become participants in software use, hypermedia becomes relevant again.
@@ -167,13 +175,13 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - The opportunity is to design systems that are lighter for users, clearer for developers, and easier for agents to navigate.
 - Emphasize that this is both a research direction and a teaching direction.
 
-## 22. Future Teaching At Aalto
+## 23. Future Teaching At Aalto
 
 - Use this slide to anchor your future teaching agenda in one compact course-based claim rather than a two-step build.
 - State clearly that starting in January 2027, you will teach Designing and Building Scalable Web Applications (CS-E4770) and use it to teach web architecture as a core computer science topic, not only as framework practice.
 - Keep the line readable at slide scale; if it feels too dense, shorten the wording rather than shrinking the type further.
 
-## 23. Future Teaching At Aalto
+## 24. Future Teaching At Aalto
 
 - Use the second slide to add one concrete Aalto event that broadens the future-teaching story beyond one course.
 - State that on 13 October 2026, you will organize AI meets SDLC at Marsio.
@@ -182,30 +190,32 @@ Durable deck-level design and workflow rules live in `AGENTS.md`. Keep this file
 - Use the seminar to show that you connect teaching, research, and industry around AI and software development already within Aalto.
 - Keep the visible date phrasing as `13th of October 2026`; do not normalize it unless you explicitly decide to change the wording.
 
-## 24. Future Teaching At Aalto
+## 25. Future Teaching At Aalto
 
 - Use the third build slide to add CS-E400215 as supporting evidence that your teaching also includes student career development.
 - Keep the first two points fixed in place from the previous build step; only the career-course point should appear here.
 - Keep the career-course point subordinate by sequence and placement, not by changing its visual style.
 
-## 25. Part 4
+## 26. Part 4
 
 - Use this divider slide to slow the pace before the final conclusion section.
 - It should make the Q&A phase feel intentional rather than abrupt.
 
-## 26. Conclusion
+## 27. Conclusion
 
-- Replace the question build with one direct claim.
-- End on the hiring-case summary: you bring a distinctive specialization in web architecture, agent-facing systems, and modern software practice.
+- Use this as a visual hiring-case summary rather than a text-heavy final claim.
+- Show three strengths: research on web architecture and agent-facing systems, teaching scalable web applications and AI-aware practice, and outward reach through tools, students, and industry communities.
+- Land the department contribution aloud: your teaching is research-based, tested in real web practice, and connected to developer communities.
+- Keep the visual simple and do not add extra explanatory bullets on the slide.
 
-## 27. Q&A
+## 28. Q&A
 
 - Keep this slide minimal and let it hold the room during questions.
 - Use it only after the conclusion slide has already framed the closing claim.
 
-## 28. References
+## 29. References
 
 - Keep this slide compact and purely bibliographic.
 - It should resolve only the live citation set used on the slides.
-- The current active set is `[1]` to `[10]`: AI in CSEd, Fielding, Healey, Brew, Berners-Lee et al., Mind2Web 2, OpenAI deep research, OpenAI Operator, Anthropic computer use, and Google Gemini 2.0 / Project Mariner.
+- The current active set is `[1]` to `[11]`: OpenAI deep research, OpenAI Operator, Anthropic computer use, Google Gemini 2.0 / Project Mariner, Developer Nation Q1 2025, Stack Overflow Developer Survey 2025, AI in CSEd, Healey, Brew, Fielding, and Berners-Lee et al.
 - Keep reference layout stable when this set changes: all entries must remain visible on one slide, with working links where reliable URLs are available.

@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 8,
+  index: 9,
   title: "Simplification agenda"
 };
 

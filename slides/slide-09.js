@@ -21,7 +21,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 21,
+  index: 22,
   title: "Future vision: agentic hypermedia"
 };
 
@@ -152,7 +152,7 @@ function createSlide(pres, theme, options = {}) {
   addReferenceNote(
     canvas,
     theme,
-    "[2], [5] Fielding; Berners-Lee et al.",
+    "[10], [11] Fielding; Berners-Lee et al.",
     {
       x: noteBox.x,
       y: noteBox.y,

@@ -6,7 +6,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 4,
+  index: 5,
   title: "Outline"
 };
 

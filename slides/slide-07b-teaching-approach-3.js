@@ -10,7 +10,7 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 16,
+  index: 17,
   title: "Research with students",
 };
 
@@ -76,7 +76,7 @@ function createSlide(pres, theme, options = {}) {
     w: 7.92,
     title:
       "Pyry Pohjalainen (2025): Artificial Intelligence for Web Development: Perspectives from Industry and Literature; published at AAAI Magazine",
-    titleH: 0.24,
+    titleH: 0.42,
     titleFontSize: 10.6,
     group: "teach-main",
   });
@@ -84,7 +84,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "teach-bullet-anoop",
     x: 0.94,
-    y: 4.24,
+    y: 4.36,
     w: 7.92,
     title:
       "Anoop Bidikar (2024): Flagship: Reimagining Stateful Serverless Architectures at the Edge",
@@ -96,7 +96,7 @@ function createSlide(pres, theme, options = {}) {
   addBulletItem(canvas, pres, theme, {
     id: "teach-bullet-antti",
     x: 0.94,
-    y: 4.58,
+    y: 4.7,
     w: 7.92,
     title:
       "Antti Nousiainen (2024): The potential of WebAssembly in Edge Computing",

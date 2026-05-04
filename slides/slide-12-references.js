@@ -14,68 +14,73 @@ const { createSlideCanvas } = require("../generator/validation");
 
 const slideConfig = {
   type: "content",
-  index: 28,
+  index: 29,
   title: "References",
 };
 
 const references = [
   {
     id: 1,
-    citation:
-      "Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help? Preprint.",
-    url: "https://www.researchgate.net/publication/400516716_Artificial_intelligence_for_computer_science_education_-_hype_or_help",
-  },
-  {
-    id: 2,
-    citation:
-      "Fielding, R. T. (2000). Architectural Styles and the Design of Network-based Software Architectures. PhD dissertation, UC Irvine.",
-    url: "https://ics.uci.edu/~fielding/pubs/dissertation/",
-  },
-  {
-    id: 3,
-    citation:
-      "Healey, M. (2005). Linking research and teaching to benefit student learning. Journal of Geography in Higher Education, 29(2), 183-201.",
-    url: "https://doi.org/10.1080/03098260500130387",
-  },
-  {
-    id: 4,
-    citation:
-      "Brew, A. (2012). Teaching and research: new relationships and inquiry-based higher education. Higher Education Research & Development, 31(1), 101-114.",
-    url: "https://doi.org/10.1080/07294360.2012.642844",
-  },
-  {
-    id: 5,
-    citation:
-      "Berners-Lee, T., Hendler, J., & Lassila, O. (2001). The Semantic Web. Scientific American, 284(5), 34-43.",
-    url: "https://lassila.org/publications/2001/SciAm.html",
-  },
-  {
-    id: 6,
-    citation:
-      "Gou, B., Huang, Z., Ning, Y., et al. (2025). Mind2Web 2: Evaluating Agentic Search with Agent-as-a-Judge. NeurIPS Datasets & Benchmarks.",
-    url: "https://osu-nlp-group.github.io/Mind2Web-2/",
-  },
-  {
-    id: 7,
     citation: "OpenAI. (2025). Introducing deep research.",
     url: "https://openai.com/index/introducing-deep-research/",
   },
   {
-    id: 8,
+    id: 2,
     citation: "OpenAI. (2025). Introducing Operator.",
     url: "https://openai.com/index/introducing-operator/",
   },
   {
-    id: 9,
+    id: 3,
     citation:
       "Anthropic. (2024). Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku.",
     url: "https://www.anthropic.com/news/3-5-models-and-computer-use",
   },
   {
-    id: 10,
+    id: 4,
     citation:
       "Google. (2024). Google introduces Gemini 2.0: A new AI model for the agentic era.",
     url: "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-ai-update-december-2024/",
+  },
+  {
+    id: 5,
+    citation:
+      "Developer Nation. (2025). Developer Nation 29th Survey Report, Q1 2025.",
+    url: "https://www.developernation.net/developer-reports/dn29/",
+  },
+  {
+    id: 6,
+    citation: "Stack Overflow. (2025). 2025 Developer Survey: Technology.",
+    url: "https://survey.stackoverflow.co/2025/technology/",
+  },
+  {
+    id: 7,
+    citation:
+      "Vepsäläinen, J., & Juntunen, P. (2026). Artificial intelligence for computer science education - hype or help? Preprint.",
+    url: "https://www.researchgate.net/publication/400516716_Artificial_intelligence_for_computer_science_education_-_hype_or_help",
+  },
+  {
+    id: 8,
+    citation:
+      "Healey, M. (2005). Linking research and teaching to benefit student learning. Journal of Geography in Higher Education, 29(2), 183-201.",
+    url: "https://doi.org/10.1080/03098260500130387",
+  },
+  {
+    id: 9,
+    citation:
+      "Brew, A. (2012). Teaching and research: new relationships and inquiry-based higher education. Higher Education Research & Development, 31(1), 101-114.",
+    url: "https://doi.org/10.1080/07294360.2012.642844",
+  },
+  {
+    id: 10,
+    citation:
+      "Fielding, R. T. (2000). Architectural Styles and the Design of Network-based Software Architectures. PhD dissertation, UC Irvine.",
+    url: "https://ics.uci.edu/~fielding/pubs/dissertation/",
+  },
+  {
+    id: 11,
+    citation:
+      "Berners-Lee, T., Hendler, J., & Lassila, O. (2001). The Semantic Web. Scientific American, 284(5), 34-43.",
+    url: "https://lassila.org/publications/2001/SciAm.html",
   },
 ];
 
@@ -256,8 +261,8 @@ function createSlide(pres, theme, options = {}) {
 
   const leftColumn = references.slice(0, 5);
   const rightColumn = references.slice(5);
-  const startY = 1.74;
-  const rowGap = 0.7;
+  const startY = 1.56;
+  const rowGap = 0.62;
 
   leftColumn.forEach((ref, index) => {
     addReferenceEntry(canvas, theme, ref, {

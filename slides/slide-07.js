@@ -18,7 +18,7 @@ const path = require("path");
 
 const slideConfig = {
   type: "content",
-  index: 14,
+  index: 15,
   title: "How research informs my teaching"
 };
 
@@ -99,7 +99,7 @@ function createSlide(pres, theme, options = {}) {
     group: "teach-loop"
   });
 
-  canvas.addText("teach-loop-title", "Research-teaching nexus [3,4]", {
+  canvas.addText("teach-loop-title", "Research-teaching nexus [8,9]", {
     x: captionBox.x,
     y: captionBox.y,
     w: captionBox.w,
