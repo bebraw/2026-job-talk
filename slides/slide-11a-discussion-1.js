@@ -204,9 +204,9 @@ function createSlide(pres, theme, options = {}) {
   });
 
   canvas.addText("conclusion-framing", "What I bring to the department", {
-    x: 0.76,
+    x: 0.72,
     y: 1.54,
-    w: 7.7,
+    w: 8.56,
     h: 0.34,
     fontFace,
     fontSize: 15.2,
